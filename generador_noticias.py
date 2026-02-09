@@ -17,7 +17,7 @@ FUENTES = [
 ]
 
 # Configuración del modelo
-model = genai.GenerativeModel('gemini-pro')
+model = genai.GenerativeModel("gemini-2.5-flash")
 
 def obtener_noticias_crudas():
     print("Buscando noticias en la red...")

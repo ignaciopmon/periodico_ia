@@ -2,8 +2,8 @@ name: Publicar Diario IA
 
 on:
   schedule:
-    - cron: '0 8,20 * * *' # Se ejecuta a las 8:00 y a las 20:00 cada día
-  workflow_dispatch: # Permite ejecutarlo manualmente con un botón
+    - cron: '0 7,19 * * *' # Se ejecuta a las 7:00 y 19:00 UTC (8 y 20 en España aprox)
+  workflow_dispatch: # Botón para lanzar manual
 
 permissions:
   contents: write
@@ -30,8 +30,8 @@ jobs:
 
       - name: Publicar cambios
         run: |
-          git config --global user.name 'Editor IA'
+          git config --global user.name 'Periodista IA'
           git config --global user.email 'bot@noreply.github.com'
           git add index.html
-          git commit -m "Edición actualizada por IA" || exit 0
+          git commit -m "Nueva edición del periódico" || echo "No hay cambios"
           git push
