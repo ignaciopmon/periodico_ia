@@ -4,26 +4,46 @@ import datetime
 import os
 import json
 import random
+import time
 
 # --- CONFIGURACIÓN ---
 API_KEY = os.environ.get("GEMINI_API_KEY")
 genai.configure(api_key=API_KEY)
 
-# Usamos el modelo rápido y gratuito
+# Usamos el modelo Flash que ya tienes comprobado
 model = genai.GenerativeModel("gemini-2.5-flash")
 
-# --- FUENTES DIVERSIFICADAS ---
-# Diccionario para obligar a coger temas distintos
+# --- FUENTES ROBUSTAS (Con respaldo) ---
+# Si la primera falla, intenta la segunda.
 FUENTES = {
-    "Actualidad": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada",
-    "Tecnología": "https://www.xataka.com/index.xml",
-    "Cultura": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/cultura",
-    "Economía": "https://www.eleconomista.es/rss/rss-economia.php",
+    "Nacional": [
+        "https://www.elmundo.es/rss/espana.xml",
+        "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/espana",
+    ],
+    "Economía": [
+        "https://www.eleconomista.es/rss/rss-economia.php",
+        "https://www.cincodias.com/rss/feed.html",
+    ],
+    "Tecnología": [
+        "https://www.xataka.com/index.xml",
+        "https://www.20minutos.es/rss/tecnologia/",
+    ],
+    "Internacional": [
+        "https://www.elmundo.es/rss/internacional.xml",
+        "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/internacional",
+    ],
+}
+
+# Imágenes de relleno por si falla la original (Stock gratuito)
+IMAGENES_DEFAULT = {
+    "Nacional": "https://images.unsplash.com/photo-1541872703-74c5963631df?auto=format&fit=crop&w=800&q=80",
+    "Economía": "https://images.unsplash.com/photo-1611974765270-ca1258634369?auto=format&fit=crop&w=800&q=80",
+    "Tecnología": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    "Internacional": "https://images.unsplash.com/photo-1529101091760-61df6be5d18b?auto=format&fit=crop&w=800&q=80",
 }
 
 
 def limpiar_json(texto_sucio):
-    """Limpia el texto markdown que a veces devuelve la IA"""
     texto = texto_sucio.replace("```json", "").replace("```", "")
     start = texto.find("{")
     end = texto.rfind("}") + 1
@@ -32,91 +52,78 @@ def limpiar_json(texto_sucio):
     return texto
 
 
-def obtener_noticias_crudas():
-    print("📰 Buscando noticias variadas en la red...")
-    noticias_seleccionadas = []
+def obtener_noticia_de_seccion(categoria, urls):
+    print(f"🔍 Buscando en sección: {categoria}...")
 
-    # Recorremos cada categoría para asegurar variedad
-    for categoria, url_feed in FUENTES.items():
+    for url in urls:
         try:
-            feed = feedparser.parse(url_feed)
+            feed = feedparser.parse(url)
             if feed.entries:
-                # Cogemos la primera entrada de cada sección (la más nueva)
-                # Si queremos más variedad, podríamos hacer random.choice(feed.entries[:3])
-                entry = feed.entries[0]
+                # Cogemos la primera que tenga algo de contenido
+                for entry in feed.entries[:3]:
+                    if len(entry.summary) > 50:  # Evitar noticias vacías
+                        imagen = None
+                        if "media_content" in entry:
+                            imagen = entry.media_content[0]["url"]
+                        elif "links" in entry:
+                            for link in entry.links:
+                                if link["type"].startswith("image"):
+                                    imagen = link["href"]
+                                    break
 
-                imagen = None
-                # Intentamos pescar la imagen
-                if "media_content" in entry:
-                    imagen = entry.media_content[0]["url"]
-                elif "links" in entry:
-                    for link in entry.links:
-                        if link["type"].startswith("image"):
-                            imagen = link["href"]
-                            break
+                        # Si no hay imagen, usamos la de defecto YA
+                        if not imagen:
+                            imagen = IMAGENES_DEFAULT[categoria]
 
-                noticias_seleccionadas.append(
-                    {
-                        "titulo_original": entry.title,
-                        "resumen": entry.summary[
-                            :500
-                        ],  # Limitamos texto para no saturar
-                        "link_origen": entry.link,
-                        "imagen": imagen,
-                        "seccion_origen": categoria,
-                    }
-                )
+                        return {
+                            "titulo_original": entry.title,
+                            "resumen": entry.summary,
+                            "link_origen": entry.link,
+                            "imagen": imagen,
+                            "seccion": categoria,
+                        }
         except Exception as e:
-            print(f"⚠️ Error leyendo feed de {categoria}: {e}")
+            print(f"⚠️ Falló la fuente {url}: {e}")
+            continue  # Intentamos con la siguiente URL de la lista
 
-    return noticias_seleccionadas
+    return None
 
 
 def redactar_articulo(noticia_cruda):
-    # Decidir si hacemos noticia normal o artículo de opinión (30% prob)
-    tipo_articulo = "Noticia"
-    estilo = "objetivo y periodístico"
-    extra_prompt = ""
-
-    if random.random() < 0.3:
-        tipo_articulo = "Opinión"
-        estilo = "subjetivo, crítico, con un toque de humor ácido o filosófico"
-        extra_prompt = "No te limites a informar, da tu opinión de IA sobre por qué esto es importante o ridículo."
-
-    print(f"✍️ Redactando ({tipo_articulo}): {noticia_cruda['titulo_original']}...")
+    print(f"✍️ Redactando a fondo: {noticia_cruda['titulo_original']}...")
 
     prompt = f"""
-    Actúa como un redactor de periódico IA. Tienes que escribir un artículo breve basado en esto:
-    Contexto: "{noticia_cruda['resumen']}"
-    Sección original: {noticia_cruda['seccion_origen']}
+    Eres el redactor jefe de un periódico serio. Tienes que escribir una noticia COMPLETA basada en esto:
+    "{noticia_cruda['resumen']}"
     
-    TIPO DE ARTÍCULO: {tipo_articulo}
-    ESTILO: {estilo}
-    {extra_prompt}
+    INSTRUCCIONES ESTRICTAS:
+    1. EXTENSIÓN: El cuerpo debe tener MÍNIMO 300 palabras. Es fundamental que sea largo y detallado.
+    2. ESTRUCTURA: Usa párrafos claros. No hagas listas, escribe prosa periodística.
+    3. TONO: Objetivo, profesional, 'Diario El País' o 'New York Times'.
+    4. TITULAR: Serio e informativo (máx 12 palabras).
     
-    Instrucciones:
-    1. Titular: Máximo 10 palabras. Impactante.
-    2. Cuerpo: Máximo 120 palabras.
-    3. Categoría: Usa una sola palabra (ej: Política, Tech, Cine, Dinero, Reflexión).
-    4. Devuelve SOLO un JSON válido con este formato:
+    Devuelve SOLO este JSON:
     {{
         "titular": "...",
         "cuerpo": "...",
-        "categoria": "..."
+        "categoria": "{noticia_cruda['seccion']}"
     }}
     """
 
     try:
+        # Usamos stream=False para esperar la respuesta completa
         response = model.generate_content(prompt)
         texto_limpio = limpiar_json(response.text)
         datos = json.loads(texto_limpio)
 
-        # Añadimos metadatos extra
         datos["imagen"] = noticia_cruda["imagen"]
-        datos["tipo"] = tipo_articulo  # Para pintar diferente si es opinión
+        # Fallback extra por si la IA olvida la categoría
+        if "categoria" not in datos:
+            datos["categoria"] = noticia_cruda["seccion"]
+
         return datos
     except Exception as e:
-        print(f"❌ Error al generar texto con IA: {e}")
+        print(f"❌ Error redactando: {e}")
         return None
 
 
@@ -124,19 +131,25 @@ def generar_html(articulos):
     fecha_actual = datetime.datetime.now().strftime("%d/%m/%Y %H:%M")
 
     css = """
-        body { font-family: 'Georgia', serif; background: #f0f0f0; margin: 0; padding: 20px; color: #333; }
-        header { text-align: center; border-bottom: 4px double #333; padding-bottom: 20px; margin-bottom: 30px; }
-        h1 { font-family: 'Impact', sans-serif; font-size: 4em; margin: 0; text-transform: uppercase; letter-spacing: -2px; }
-        .subtitulo { font-style: italic; color: #555; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
-        .card { background: white; padding: 20px; border: 1px solid #ccc; box-shadow: 3px 3px 10px rgba(0,0,0,0.1); transition: transform 0.2s; }
-        .card:hover { transform: translateY(-5px); }
-        .tag { background: #333; color: white; padding: 4px 8px; font-size: 0.7em; text-transform: uppercase; font-weight: bold; }
-        .opinion-tag { background: #d9534f; } /* Rojo para opinión */
-        img { width: 100%; height: 200px; object-fit: cover; margin: 10px 0; filter: sepia(20%); }
-        h2 { font-size: 1.4em; margin: 10px 0; line-height: 1.2; font-family: 'Arial', sans-serif; font-weight: bold; }
-        p { font-size: 0.95em; line-height: 1.5; color: #444; }
-        footer { margin-top: 50px; text-align: center; font-size: 0.8em; color: #777; border-top: 1px solid #ccc; padding-top: 20px; }
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400&display=swap');
+        body { font-family: 'Roboto', sans-serif; background: #f9f9f9; margin: 0; color: #1a1a1a; }
+        .container { max-width: 1000px; margin: 0 auto; background: white; box-shadow: 0 0 20px rgba(0,0,0,0.05); min-height: 100vh; }
+        header { padding: 40px 20px; text-align: center; border-bottom: 1px solid #ddd; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin: 0; text-transform: uppercase; letter-spacing: -1px; }
+        .fecha { color: #888; margin-top: 10px; font-size: 0.9rem; border-top: 1px solid #eee; display: inline-block; padding-top: 5px; }
+        
+        .noticia { padding: 40px; border-bottom: 1px solid #eee; }
+        .noticia:last-child { border-bottom: none; }
+        .categoria-tag { color: #d93025; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; margin-bottom: 10px; display: block;}
+        
+        .noticia h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin: 10px 0 20px 0; line-height: 1.1; }
+        
+        /* Imagen con manejo de errores */
+        .img-container { width: 100%; height: 400px; overflow: hidden; background: #eee; margin-bottom: 25px; }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+        
+        .cuerpo { font-size: 1.1rem; line-height: 1.8; color: #333; text-align: justify; }
+        .cuerpo p { margin-bottom: 15px; }
     """
 
     html = f"""
@@ -149,38 +162,28 @@ def generar_html(articulos):
         <style>{css}</style>
     </head>
     <body>
-        <header>
-            <h1>EL DIARIO AUTÓNOMO</h1>
-            <p class="subtitulo">Noticias curadas y escritas por Inteligencia Artificial</p>
-            <p><strong>Edición:</strong> {fecha_actual}</p>
-        </header>
-        
-        <div class="grid">
+        <div class="container">
+            <header>
+                <h1>El Diario Autónomo</h1>
+                <div class="fecha">{fecha_actual} | Edición IA Global</div>
+            </header>
     """
 
     for art in articulos:
-        # Lógica visual para opinión vs noticia normal
-        clase_tag = "opinion-tag" if art.get("tipo") == "Opinión" else ""
-        etiqueta_visual = (
-            "OPINIÓN" if art.get("tipo") == "Opinión" else art["categoria"]
-        )
-
-        img_html = f'<img src="{art["imagen"]}">' if art["imagen"] else ""
-
+        # El evento onerror reemplaza la imagen si falla por una genérica transparente
         html += f"""
-            <article class="card">
-                <span class="tag {clase_tag}">{etiqueta_visual}</span>
-                {img_html}
+            <article class="noticia">
+                <span class="categoria-tag">{art['categoria']}</span>
                 <h2>{art['titular']}</h2>
-                <p>{art['cuerpo']}</p>
+                <div class="img-container">
+                    <img src="{art['imagen']}" onerror="this.onerror=null;this.src='https://via.placeholder.com/800x400?text=Imagen+No+Disponible';">
+                </div>
+                <div class="cuerpo">{art['cuerpo'].replace(chr(10), '<br><br>')}</div>
             </article>
         """
 
     html += """
         </div>
-        <footer>
-            <p>Proyecto experimental de redacción autónoma.</p>
-        </footer>
     </body>
     </html>
     """
@@ -190,20 +193,28 @@ def generar_html(articulos):
 
 
 def main():
-    raw_news = obtener_noticias_crudas()
-
     articulos_finales = []
-    for raw in raw_news:
-        # Pequeña pausa para no saturar si hiciera falta, pero con Flash no suele hacer falta
-        articulo = redactar_articulo(raw)
-        if articulo:
-            articulos_finales.append(articulo)
 
-    if articulos_finales:
+    # Recorremos cada categoría
+    for categoria, urls in FUENTES.items():
+        raw = obtener_noticia_de_seccion(categoria, urls)
+        if raw:
+            # Pausa de 2 segundos para no agobiar a la API
+            time.sleep(2)
+            articulo = redactar_articulo(raw)
+            if articulo:
+                articulos_finales.append(articulo)
+        else:
+            print(f"⚠️ No se encontraron noticias para {categoria}")
+
+    if len(articulos_finales) > 0:
         generar_html(articulos_finales)
-        print("✅ ¡Edición publicada con éxito!")
+        print("✅ ¡Edición publicada!")
     else:
-        print("⚠️ No se han podido generar noticias.")
+        print("❌ Error fatal: No se generó ninguna noticia.")
+        # Generar un HTML de error para que al menos se vea algo
+        with open("index.html", "w") as f:
+            f.write("<h1>Error técnico: No hay noticias disponibles.</h1>")
 
 
 if __name__ == "__main__":
