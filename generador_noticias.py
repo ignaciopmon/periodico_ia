@@ -99,8 +99,8 @@ def redactar_articulo(noticia_cruda):
     SECCIÓN: {noticia_cruda['seccion']}
     
     INSTRUCCIONES CRÍTICAS DE CONTEXTO (IMPORTANTE):
-    1. USAR CONOCIMIENTO INTERNO: El texto original es corto. USA TU CONOCIMIENTO PREVIO sobre los partidos políticos (VOX, PSOE, PP, Sumar, etc.), empresas (SpaceX, Tesla) o figuras públicas para dar el contexto correcto.
-    2. NO ALUCINES ADJETIVOS: Si el partido es VOX o Podemos, no los llames "emergentes". Si es el PP, no lo llames "nuevo". Sé preciso con la historia política de España y el mundo.
+    1. USAR CONOCIMIENTO INTERNO: El texto original es corto. USA TU CONOCIMIENTO PREVIO sobre cualquier tema o figuras públicas para dar el contexto correcto.
+    2. NO ALUCINES: Sé preciso con la historia política de España y el mundo, con el deporte, la economía, etc. Si no sabes algo, mejor omítelo que inventarlo.
     3. DATOS REALES: Si el texto dice "17,9%", respeta el dato numérico, pero explica qué implica eso según tu conocimiento del panorama político habitual.
     
     INSTRUCCIONES DE FORMATO:
