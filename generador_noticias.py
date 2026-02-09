@@ -93,14 +93,20 @@ def redactar_articulo(noticia_cruda):
     print(f"✍️ Redactando a fondo: {noticia_cruda['titulo_original']}...")
 
     prompt = f"""
-    Eres el redactor jefe de un periódico serio. Tienes que escribir una noticia COMPLETA basada en esto:
-    "{noticia_cruda['resumen']}"
+    Eres un periodista experto en política y actualidad internacional. Vas a recibir un teletipo (texto breve) y debes convertirlo en una noticia completa.
     
-    INSTRUCCIONES ESTRICTAS:
-    1. EXTENSIÓN: El cuerpo debe tener MÍNIMO 300 palabras. Es fundamental que sea largo y detallado.
-    2. ESTRUCTURA: Usa párrafos claros. No hagas listas, escribe prosa periodística.
-    3. TONO: Objetivo, profesional, 'Diario El País' o 'New York Times'.
-    4. TITULAR: Serio e informativo (máx 12 palabras).
+    FUENTE ORIGINAL: "{noticia_cruda['resumen']}"
+    SECCIÓN: {noticia_cruda['seccion']}
+    
+    INSTRUCCIONES CRÍTICAS DE CONTEXTO (IMPORTANTE):
+    1. USAR CONOCIMIENTO INTERNO: El texto original es corto. USA TU CONOCIMIENTO PREVIO sobre los partidos políticos (VOX, PSOE, PP, Sumar, etc.), empresas (SpaceX, Tesla) o figuras públicas para dar el contexto correcto.
+    2. NO ALUCINES ADJETIVOS: Si el partido es VOX o Podemos, no los llames "emergentes". Si es el PP, no lo llames "nuevo". Sé preciso con la historia política de España y el mundo.
+    3. DATOS REALES: Si el texto dice "17,9%", respeta el dato numérico, pero explica qué implica eso según tu conocimiento del panorama político habitual.
+    
+    INSTRUCCIONES DE FORMATO:
+    1. Extensión: Mínimo 350 palabras.
+    2. Titular: Periodístico, serio, sin clickbait barato. Máximo 12 palabras.
+    3. Estilo: Formal, objetivo, prensa de calidad.
     
     Devuelve SOLO este JSON:
     {{
@@ -111,13 +117,17 @@ def redactar_articulo(noticia_cruda):
     """
 
     try:
-        # Usamos stream=False para esperar la respuesta completa
-        response = model.generate_content(prompt)
+        # response = model.generate_content(prompt)
+        # Añadimos configuración para que sea menos "creativo" y más preciso
+        generation_config = genai.types.GenerationConfig(
+            temperature=0.3  # Bajamos la temperatura para que no invente cosas raras
+        )
+        response = model.generate_content(prompt, generation_config=generation_config)
+
         texto_limpio = limpiar_json(response.text)
         datos = json.loads(texto_limpio)
 
         datos["imagen"] = noticia_cruda["imagen"]
-        # Fallback extra por si la IA olvida la categoría
         if "categoria" not in datos:
             datos["categoria"] = noticia_cruda["seccion"]
 
