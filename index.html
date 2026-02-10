@@ -4,118 +4,155 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Resumen Inteligente IA</title>
+        <title>El Diario IA - Edición del Día</title>
         <style>
-    :root { --primary: #2c3e50; --accent: #e74c3c; --bg: #f4f7f6; }
-    body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: var(--bg); margin: 0; padding: 20px; color: #333; }
-    header { text-align: center; margin-bottom: 40px; padding: 20px 0; border-bottom: 2px solid #ddd; }
-    h1 { font-size: 3em; margin: 0; color: var(--primary); letter-spacing: -1px; }
-    .date { color: #7f8c8d; font-style: italic; margin-top: 5px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
-    .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.2s; display: flex; flex-direction: column; }
-    .card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-    .card-img { height: 200px; width: 100%; object-fit: cover; }
-    .card-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
-    .tag { align-self: flex-start; background: var(--primary); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.75em; text-transform: uppercase; font-weight: bold; margin-bottom: 10px; }
-    .tag.Economía { background: #27ae60; }
-    .tag.Tecnología { background: #8e44ad; }
-    .tag.Nacional { background: #c0392b; }
-    h2 { margin: 0 0 10px 0; font-size: 1.4em; line-height: 1.3; color: var(--primary); }
-    .body-text { font-size: 0.95em; line-height: 1.6; color: #555; flex-grow: 1; }
-    .read-more { display: block; margin-top: 15px; text-align: right; color: var(--accent); text-decoration: none; font-weight: bold; font-size: 0.9em; }
-    @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:wght@400;700;900&display=swap');
+    
+    :root { --black: #121212; --dark-gray: #333; --border: #e2e2e2; --accent: #c0392b; --bg: #f9f9f9; }
+    
+    body { font-family: 'Merriweather', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 20px; line-height: 1.6; }
+    
+    /* CABECERA */
+    header { text-align: center; border-bottom: 4px double var(--black); padding-bottom: 20px; margin-bottom: 40px; max-width: 1100px; margin-left: auto; margin-right: auto; }
+    .brand { font-family: 'Playfair Display', serif; font-size: 4.5rem; font-weight: 900; letter-spacing: -2px; margin: 0; text-transform: uppercase; line-height: 1; }
+    .meta-bar { border-top: 1px solid var(--black); border-bottom: 1px solid var(--black); padding: 8px 0; margin-top: 15px; display: flex; justify-content: space-between; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
+    
+    /* LAYOUT */
+    .container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(12, 1fr); gap: 30px; }
+    
+    /* ESTILOS DE NOTICIA */
+    article { margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+    article:last-child { border: none; }
+    
+    .tag { font-family: sans-serif; font-size: 0.75rem; font-weight: bold; color: var(--accent); text-transform: uppercase; display: block; margin-bottom: 8px; letter-spacing: 1px; }
+    
+    h2 { font-family: 'Playfair Display', serif; margin: 10px 0; font-weight: 700; line-height: 1.1; }
+    .bajada { font-size: 1.1rem; color: #555; margin-bottom: 15px; font-style: italic; line-height: 1.4; }
+    .cuerpo { font-size: 0.95rem; color: var(--dark-gray); text-align: justify; }
+    .cuerpo p { margin-bottom: 15px; }
+    
+    img { width: 100%; height: auto; display: block; margin-bottom: 15px; filter: grayscale(20%); transition: filter 0.3s; }
+    article:hover img { filter: grayscale(0%); }
+    
+    .read-more { font-family: sans-serif; font-size: 0.8rem; text-decoration: none; color: var(--black); border-bottom: 1px solid var(--black); font-weight: bold; }
+    
+    /* TIPOS DE TARJETAS */
+    
+    /* NOTICIA PRINCIPAL (PORTADA) */
+    .hero { grid-column: span 12; display: grid; grid-template-columns: 1.5fr 1fr; gap: 30px; border-bottom: 3px solid var(--black); margin-bottom: 40px; padding-bottom: 40px; }
+    .hero img { height: 400px; object-fit: cover; width: 100%; order: 2; }
+    .hero-content { order: 1; display: flex; flex-direction: column; justify-content: center; }
+    .hero h2 { font-size: 3rem; margin-bottom: 15px; }
+    .hero .bajada { font-size: 1.3rem; }
+    
+    /* NOTICIAS SECUNDARIAS */
+    .secondary { grid-column: span 4; }
+    .secondary h2 { font-size: 1.5rem; }
+    .secondary img { height: 200px; object-fit: cover; }
+    
+    /* NOTICIAS TERCIARIAS (SOLO TEXTO) */
+    .text-only { grid-column: span 3; border-right: 1px solid var(--border); padding-right: 20px; }
+    .text-only:nth-child(4n) { border-right: none; } 
+    .text-only h2 { font-size: 1.2rem; }
+    .text-only img { display: none; }
+    
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+        .hero { grid-template-columns: 1fr; }
+        .hero img { order: 1; height: 300px; }
+        .hero-content { order: 2; }
+        .secondary { grid-column: span 6; }
+        .text-only { grid-column: span 6; border: none; }
+    }
+    @media (max-width: 600px) {
+        .brand { font-size: 3rem; }
+        .container { display: block; }
+        .hero, .secondary, .text-only { display: block; margin-bottom: 40px; }
+    }
     </style>
     </head>
     <body>
         <header>
-            <h1>Diario Inteligente</h1>
-            <div class="date">10 de February de 2026 - Actualizado a las 10:08</div>
+            <h1 class="brand">El Diario IA</h1>
+            <div class="meta-bar">
+                <span>📅 10 de February de 2026</span>
+                <span>Edición Global</span>
+                <span>Vol. 1 - N.º 041</span>
+            </div>
         </header>
-        <div class="grid">
+        
+        <div class="container">
     
-        <article class="card">
-            <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/09/17706613160416.jpg" class="card-img" onerror="this.src='https://via.placeholder.com/400x200'">
-            <div class="card-content">
-                <span class="tag Política">Política</span>
-                <h2>Sánchez ignora las críticas internas tras el desplome electoral en Aragón</h2>
-                <div class="body-text"><p>La dirección nacional del PSOE ha optado por el enroque tras la debacle electoral en Aragón, evitando cualquier atisbo de autocrítica. Mientras Ferraz responsabiliza a Alberto Núñez Feijóo de que Vox se multiplique "como los Gremlins", el malestar interno crece entre los barones y candidatos regionales, que ven con temor cómo la estrategia de agitar el miedo a la ultraderecha ha dejado de surtir efecto en las urnas.</p><p>Los datos son demoledores: el socialismo aragonés ha tocado su suelo histórico con 18 diputados, igualando los peores registros de 2015. Voces como las de Emiliano García-Page o el candidato en Castilla y León, Carlos Martínez, exigen una revisión urgente de la hoja de ruta para frenar la sangría de votos en territorios rurales. Incluso figuras veteranas como Odón Elorza advierten de que la debilidad del Ejecutivo es insostenible y sugieren un adelanto de las generales a 2026 para evitar un castigo mayor.</p><p>Con la vista puesta en la cita electoral de Castilla y León el próximo 15 de marzo, el partido se enfrenta a una crisis de identidad y estrategia. La negativa de la Ejecutiva Federal a asumir responsabilidades contrasta con el sentimiento de abandono en las provincias, donde cargos locales piden soluciones reales frente a la retórica ideológica. El futuro de la formación depende ahora de su capacidad para reconectar con un electorado que, por ahora, parece dar la espalda a las siglas de Sánchez.</p></div>
-                <a href="https://www.elmundo.es/espana/2026/02/10/698a1c98fc6c8366128b45a5.html" target="_blank" class="read-more">Leer fuente original →</a>
-            </div>
-        </article>
-        
-        <article class="card">
-            <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/09/17706401040449.jpg" class="card-img" onerror="this.src='https://via.placeholder.com/400x200'">
-            <div class="card-content">
-                <span class="tag Política">Política</span>
-                <h2>Vox exige a Azcón entrar en el Gobierno con responsabilidades y presupuestos</h2>
-                <div class="body-text"><p>Vox ha tardado apenas unas horas en fijar su precio para la investidura de Jorge Azcón en Aragón. Tras el ciclón electoral que ha reforzado su posición, la formación de Santiago Abascal exige entrar en el Ejecutivo autonómico con un peso proporcional a sus votos, rechazando cualquier apoyo externo que no implique una cuota de poder real y capacidad de gestión directa.</p><p>El portavoz nacional, José Antonio Fúster, ha condicionado el pacto a la obtención de consejerías con presupuesto propio para aplicar su agenda en materia de inmigración, educación y fiscalidad. El partido no descarta reclamar una vicepresidencia y advierte de que no aceptará carteras vacías de contenido, replicando la estrategia de máximos que ya mantiene bloqueada la negociación en Extremadura.</p><p>Con la mirada puesta en los próximos comicios de Castilla y León, Vox utiliza su fortaleza en las urnas para forzar al PP a mover ficha. La presión recae ahora sobre Azcón, quien deberá decidir si cede a las pretensiones de sus socios potenciales o se arriesga a un bloqueo institucional que desemboque en una repetición electoral.</p></div>
-                <a href="https://www.elmundo.es/espana/2026/02/09/6989c63ce9cf4a6e758b4595.html" target="_blank" class="read-more">Leer fuente original →</a>
-            </div>
-        </article>
-        
-        <article class="card">
-            <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/09/17706590664421.jpg" class="card-img" onerror="this.src='https://via.placeholder.com/400x200'">
-            <div class="card-content">
-                <span class="tag Política">Política</span>
-                <h2>PP y Vox blindan su alianza valenciana pese al escándalo de Alicante</h2>
-                <div class="body-text"><p>La alianza entre el PP y Vox en la Comunidad Valenciana resiste los embates políticos y la presión nacional. A pesar de la ruptura oficial dictada por Santiago Abascal en verano, la gestión de la dana y la necesidad de estabilidad han soldado un bloque que sobrevive incluso a la salida de Carlos Mazón. Esta entente regional se ha convertido en un oasis de entendimiento frente al choque frontal que ambos partidos mantienen en otros puntos de España.</p><p>El portavoz del Consell, Miguel Barrachina, defiende una relación basada en la "lealtad y confianza", clave para la aprobación de los presupuestos de 2025 y las rebajas fiscales. Sin embargo, la sintonía afronta su primer gran escollo con la adjudicación de viviendas protegidas en Alicante a cargos del PP. Vox ha roto la unidad de voto en este caso, sumándose a PSOE y Compromís para exigir una comisión de investigación y la dimisión del alcalde Luis Barcala.</p><p>Mientras en Aragón y Extremadura la tensión electoral escala, en Valencia los de Abascal descartan un adelanto de los comicios. El apoyo mutuo se mantiene firme en las instituciones nacionales, donde ambas formaciones cierran filas contra el relato del Gobierno central sobre la catástrofe de octubre. El horizonte de Pérez Llorca se despeja con unas cuentas en vigor, aunque la sombra de 2026 marcará el verdadero límite de esta supervivencia política.</p></div>
-                <a href="https://www.elmundo.es/comunidad-valenciana/2026/02/10/698a27ace85ecedc7b8b45ae.html" target="_blank" class="read-more">Leer fuente original →</a>
-            </div>
-        </article>
-        
-        <article class="card">
-            <img src="https://s2.abcstatics.com/abc/www/multimedia/espana/2026/02/10/audiencia-leon-ical-RXnj8shnpccHsO3hNGpHLdN-758x531@diario_abc.jpg" class="card-img" onerror="this.src='https://via.placeholder.com/400x200'">
-            <div class="card-content">
-                <span class="tag Sucesos">Sucesos</span>
-                <h2>Seis años de psiquiátrico para el agresor que actuó "poseído por un ente"</h2>
-                <div class="body-text"><p>La Audiencia Provincial de León ha decretado el internamiento psiquiátrico durante seis años para un hombre que dejó prácticamente ciego a un amigo tras una brutal agresión en Ponferrada. El tribunal ha considerado que el atacante, que provocó lesiones irreversibles a su acompañante, no es penalmente responsable debido a una grave alteración de sus facultades mentales en el momento de los hechos.</p><p>El suceso ocurrió a finales de 2023, cuando el agresor comenzó a golpear a la víctima sin mediar palabra hasta que fue reducido por la policía. Como consecuencia del ataque, el herido perdió la visión de un ojo, parte del otro y sufrió un traumatismo craneal que le obligó a permanecer ingresado en la UCI del Hospital del Bierzo. Durante la vista oral, el acusado justificó su violencia asegurando que se sentía «poseído por un ente».</p><p>La sentencia absuelve al hombre del delito de intento de homicidio al reconocer sus problemas psiquiátricos previos, aunque le impone el pago de una indemnización superior a los 300.000 euros. Este fallo judicial cierra un caso marcado por la extrema violencia y el impacto de las secuelas permanentes en la víctima, quien requiere cuidados constantes tras la agresión.</p></div>
-                <a href="https://www.abc.es/espana/castilla-leon/seis-anos-interno-psiquiatrico-hombre-poseido-ente-20260210104559-nt.html" target="_blank" class="read-more">Leer fuente original →</a>
-            </div>
-        </article>
-        
-        <article class="card">
-            <img src="https://s1.abcstatics.com/abc/www/multimedia/espana/2026/02/10/incendio-talavera-RS10iLBfkXIqxjOPyh6wf1I-758x531@diario_abc.jpg" class="card-img" onerror="this.src='https://via.placeholder.com/400x200'">
-            <div class="card-content">
-                <span class="tag Sucesos">Sucesos</span>
-                <h2>Rescate al límite en Madrigueras: Dos heridos tras incendiarse su garaje</h2>
-                <div class="body-text"><p>Una intervención heroica de la Guardia Civil ha evitado una tragedia en Madrigueras tras declararse un incendio de gran magnitud en el garaje de una vivienda. Los agentes se adentraron en un inmueble envuelto en llamas y humo tóxico para rescatar a dos personas que intentaban sofocar el fuego por sus propios medios antes de quedar atrapadas por el avance del incendio.</p><p>El siniestro, que generó una densa columna de humo visible a gran distancia, provocó explosiones internas debido a la presencia de bombonas de gas butano. El fuego calcinó por completo dos turismos, una motocicleta y un ciclomotor, además de proyectar fragmentos de un tejado de uralita altamente tóxicos. Los heridos fueron trasladados de urgencia al Hospital General Universitario de Albacete con signos graves de intoxicación por inhalación prolongada de humo.</p><p>En el operativo participaron bomberos del Sepei de Casas Ibáñez, equipos sanitarios y Protección Civil, quienes aseguraron el perímetro y desalojaron las viviendas colindantes para evitar daños mayores. Actualmente, las autoridades mantienen abierta una investigación para esclarecer las causas exactas que originaron las llamas en el anexo de la propiedad, que ha quedado totalmente destruido.</p></div>
-                <a href="https://www.abc.es/espana/castilla-la-mancha/rescatadas-dos-personas-tras-incendiarse-garaje-vivienda-20260210104522-nt.html" target="_blank" class="read-more">Leer fuente original →</a>
-            </div>
-        </article>
-        
-        <article class="card">
-            <img src="https://s1.abcstatics.com/abc/www/multimedia/espana/2026/02/10/sadeco-buena-limpieza-valerio-kS6G-U20628711820sQB-758x531@diario_abc.jpg" class="card-img" onerror="this.src='https://via.placeholder.com/400x200'">
-            <div class="card-content">
-                <span class="tag Córdoba">Córdoba</span>
-                <h2>Córdoba lanza un plan de choque gratuito para limpiar las zonas inundadas</h2>
-                <div class="body-text"><p>El Ayuntamiento de Córdoba ha movilizado un dispositivo de emergencia para asistir a los vecinos golpeados por el reciente temporal. En una alianza estratégica con Cruz Roja, el consistorio ofrece desde este martes un servicio gratuito de retirada de enseres y limpieza, priorizando a los colectivos más vulnerables para acelerar la vuelta a la normalidad en las viviendas dañadas.</p><p>Los afectados pueden solicitar la intervención llamando al 645 598 026. El operativo cuenta con un refuerzo de 30 operarios de Sadeco y maquinaria específica para recoger muebles y electrodomésticos inservibles en puntos críticos como la urbanización Las Cigüeñas. Además, se han habilitado puntos de acopio temporales y se ha autorizado el regreso de familias a otras 95 viviendas tras verificar su seguridad.</p><p>Mientras los Servicios Sociales centralizan las ayudas de emergencia en el Centro Cívico de Levante, el área de Parques y Jardines mantiene cerrados recintos como el Zoo y el Jardín Botánico por precaución. Toda la información y gestión de trámites se ha unificado en el portal oficial 'todosporcordoba.es' para facilitar el acceso a los recursos públicos durante esta fase crítica de recuperación.</p></div>
-                <a href="https://www.abc.es/espana/andalucia/cordoba/ayuntamiento-cordoba-activa-servicio-gratuito-retirada-enseres-20260210104436-nts.html" target="_blank" class="read-more">Leer fuente original →</a>
-            </div>
-        </article>
-        
-        <article class="card">
-            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop" class="card-img" onerror="this.src='https://via.placeholder.com/400x200'">
-            <div class="card-content">
-                <span class="tag Entretenimiento">Entretenimiento</span>
-                <h2>Benidorm Fest 2026: fechas, horarios y dónde ver las semifinales en directo</h2>
-                <div class="body-text"><p>El Benidorm Fest 2026 arranca motores esta semana con la celebración de sus esperadas semifinales. A pesar de que España no participará en Eurovisión este año, el certamen alicantino mantiene su esencia competitiva para coronar al mejor artista de la edición en el Palau d'Esports l'Illa de Benidorm.</p><p>Las citas musicales tendrán lugar el martes 10 y el jueves 12 de febrero a las 23:00 horas, justo después de 'La Revuelta'. Un total de 18 artistas, divididos en dos grupos de nueve, se jugarán el pase a la gran final del sábado 14. Entre los aspirantes destacan nombres como Luna Ki, Funambulista, Miranda! o Izan Llunas, quienes se someterán al veredicto combinado del jurado profesional y el voto del público.</p><p>La cobertura será total a través de La 1 de TVE y la plataforma RTVE Play, permitiendo el acceso gratuito desde televisores, dispositivos móviles y Smart TV. Quienes prefieran alternativas digitales podrán recurrir a servicios como Tivify o TDT Channels para no perderse ni un segundo de un festival que ya es una cita ineludible en el calendario musical nacional.</p></div>
-                <a href="https://www.xataka.com/basics/benidorm-fest-2026-fechas-hora-como-ver-online-semifinales-festival-musical-espana" target="_blank" class="read-more">Leer fuente original →</a>
-            </div>
-        </article>
-        
-        <article class="card">
-            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop" class="card-img" onerror="this.src='https://via.placeholder.com/400x200'">
-            <div class="card-content">
-                <span class="tag Tecnología">Tecnología</span>
-                <h2>Guía de regalos gaming para San Valentín: las mejores ofertas de última hora</h2>
-                <div class="body-text"><p>La cuenta atrás para San Valentín ha comenzado y el sector del videojuego se posiciona como el refugio ideal para quienes buscan el regalo perfecto. Con el auge de la cultura gamer, las principales tiendas especializadas han activado una batería de descuentos que permiten adquirir tecnología de primer nivel sin comprometer el presupuesto.</p><p>Entre las opciones más destacadas figura la nostálgica Game & Watch de The Legend of Zelda por 49,99 euros y el mando oficial de Xbox Series por 54,99 euros. Para los usuarios de Nintendo, el Switch Pro Controller baja hasta los 64,95 euros, mientras que los entusiastas de la simulación pueden hacerse con el volante Blade BR5 con pedales y palanca por menos de 90 euros.</p><p>Esta selección de ofertas en plataformas como PcComponentes y Xtralife no solo cubre hardware esencial, sino también títulos superventas como Animal Crossing: New Horizons o Gran Turismo 7. Es el momento clave para asegurar el stock de estos productos antes de que la demanda de última hora agote las unidades disponibles en los principales distribuidores.</p></div>
-                <a href="https://www.xataka.com/seleccion/acertar-este-san-valentin-facil-a-tu-pareja-le-gustan-videojuegos-estos-mandos-consolas-retro-volantes" target="_blank" class="read-more">Leer fuente original →</a>
-            </div>
-        </article>
-        
+            <article class="hero">
+                <div class="hero-content">
+                    <span class="tag">Nacional</span>
+                    <h2>Tensión en el PSOE: Ferraz evita la autocrítica tras Aragón</h2>
+                    <div class="bajada">La dirección nacional ignora las peticiones de cambio de estrategia mientras los barones territoriales advierten de un castigo electoral a Sánchez.</div>
+                    <div class="cuerpo"><p>La Ejecutiva Federal del PSOE, liderada por <strong>Pedro Sánchez</strong>, ha optado por eludir la autocrítica tras los resultados en Aragón, donde la formación igualó su <strong>suelo histórico de 18 diputados</strong>. En lugar de revisar la estrategia interna, Ferraz ha responsabilizado directamente a la dirección del Partido Popular por el ascenso de <strong>Vox</strong>, comparando el crecimiento de la formación de Santiago Abascal con la multiplicación de los "Gremlins". Esta postura oficial contrasta con la preocupación de diversos sectores del partido que ven con alarma la pérdida de influencia en territorios clave.</p><p>Voces críticas dentro del socialismo, como la federación de <strong>Castilla-La Mancha</strong> y el candidato en Castilla y León, <strong>Carlos Martínez</strong>, han solicitado una "revisión profunda" de la campaña basada en el miedo a la ultraderecha. Argumentan que este enfoque no ha logrado frenar el avance de opciones populistas y reclaman soluciones tangibles para el <strong>mundo rural</strong> y las carencias en infraestructuras. La portavoz Ana Isabel Abengózar ha subrayado la necesidad de reflexionar sobre los motivos que alejan a los votantes, mientras que figuras como <strong>Odón Elorza</strong> cuestionan abiertamente la fiabilidad de las encuestas del <strong>CIS</strong>.</p><p>Ante la próxima cita electoral en <strong>Castilla y León el 15 de marzo</strong>, el debate interno se traslada ahora a la conveniencia de adelantar las elecciones generales a <strong>octubre de 2026</strong>. El objetivo de esta propuesta, defendida por varios cuadros del partido, sería evitar que un posible "voto de castigo" contra el Gobierno central arrastre a los alcaldes y presidentes autonómicos en los comicios de <strong>mayo de 2027</strong>. La presión interna crece mientras el partido intenta descifrar cómo recuperar la confianza en un mapa político cada vez más polarizado.</p></div>
+                    <a href="https://www.elmundo.es/espana/2026/02/10/698a1c98fc6c8366128b45a5.html" target="_blank" class="read-more">Leer noticia completa →</a>
+                </div>
+                <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/09/17706613160416.jpg" onerror="this.src='https://via.placeholder.com/800x600'">
+            </article>
+            
+            <article class="secondary">
+                <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/09/17706401040449.jpg" onerror="this.src='https://via.placeholder.com/400x300'">
+                <span class="tag">Nacional</span>
+                <h2>Vox reclama entrar en el Gobierno de Aragón con presupuesto propio</h2>
+                <div class="bajada">La formación de Santiago Abascal condiciona la investidura de Jorge Azcón a una coalición con peso proporcional a sus resultados.</div>
+                <a href="https://www.elmundo.es/espana/2026/02/09/6989c63ce9cf4a6e758b4595.html" target="_blank" class="read-more">Continuar leyendo</a>
+            </article>
+            
+            <article class="secondary">
+                <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/09/17706590664421.jpg" onerror="this.src='https://via.placeholder.com/400x300'">
+                <span class="tag">Nacional</span>
+                <h2>PP y Vox blindan su alianza valenciana pese a las tensiones</h2>
+                <div class="bajada">La estabilidad del Consell resiste el impacto de la DANA y el reciente escándalo de las viviendas en Alicante.</div>
+                <a href="https://www.elmundo.es/comunidad-valenciana/2026/02/10/698a27ace85ecedc7b8b45ae.html" target="_blank" class="read-more">Continuar leyendo</a>
+            </article>
+            
+            <article class="secondary">
+                <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=1000&auto=format&fit=crop" onerror="this.src='https://via.placeholder.com/400x300'">
+                <span class="tag">Tecnología</span>
+                <h2>Alicante lidera la revolución del transporte marítimo autónomo global</h2>
+                <div class="bajada">La multinacional noruega Kongsberg consolida su hub tecnológico en España mientras prepara su salida a bolsa como líder en inteligencia naval.</div>
+                <a href="https://www.xataka.com/energia/tercio-buques-planeta-dependen-sola-empresa-noruega-han-elegido-alicante-para-su-expansion-global" target="_blank" class="read-more">Continuar leyendo</a>
+            </article>
+            
+            <article class="secondary">
+                <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=1000&auto=format&fit=crop" onerror="this.src='https://via.placeholder.com/400x300'">
+                <span class="tag">Tecnología</span>
+                <h2>El Benidorm Fest 2026 inicia sus semifinales sin rumbo a Eurovisión</h2>
+                <div class="bajada">La ciudad alicantina se convierte en el epicentro musical nacional con una edición que apuesta por la consolidación del formato televisivo.</div>
+                <a href="https://www.xataka.com/basics/benidorm-fest-2026-fechas-hora-como-ver-online-semifinales-festival-musical-espana" target="_blank" class="read-more">Continuar leyendo</a>
+            </article>
+            
+            <article class="text-only">
+                <span class="tag">Tecnología</span>
+                <h2>San Valentín: Encuentra el Regalo Gamer Perfecto con Estas Ofertas</h2>
+                <div class="cuerpo" style="font-size:0.85rem"><p>A pocos días de la celebración de San Valentín, la búsqueda del regalo ideal para los amantes de los videojuegos puede ser un desafío. Para facilit...</div>
+            </article>
+            
+            <article class="text-only">
+                <span class="tag">Internacional</span>
+                <h2>Epstein Sacude Europa: Macron se Distancia, Élites Bajo Foco</h2>
+                <div class="cuerpo" style="font-size:0.85rem"><p>El escándalo en torno a Jeffrey Epstein continúa expandiéndose por Europa, poniendo en jaque a figuras de poder en el <strong>Reino Unido</strong> ...</div>
+            </article>
+            
+            <article class="text-only">
+                <span class="tag">Internacional</span>
+                <h2>Japón Gira a la Derecha: Mano Dura con Migración y Turismo</h2>
+                <div class="cuerpo" style="font-size:0.85rem"><p>Tras la contundente victoria electoral de <strong>Sanae Takaichi</strong>, Japón ha iniciado un marcado giro hacia políticas más restrictivas en ma...</div>
+            </article>
+            
+            <article class="text-only">
+                <span class="tag">Internacional</span>
+                <h2>Jimmy Lai Condenado a 20 Años: Fin de la Libertad en Hong Kong</h2>
+                <div class="cuerpo" style="font-size:0.85rem"><p>El magnate de los medios y figura prodemocrática de Hong Kong, <strong>Jimmy Lai, de 78 años</strong>, ha sido condenado a <strong>20 años de prisi...</div>
+            </article>
+            
         </div>
-        <footer style="text-align:center; padding: 40px; color:#aaa; font-size:0.8em;">
-            Generado con Inteligencia Artificial • Editado automáticamente
+        <footer style="text-align:center; padding: 50px 0; border-top: 4px double black; margin-top: 50px; font-family: sans-serif; color: #666;">
+            <p>© 2026 El Diario IA. Generado automáticamente con tecnología Gemini.</p>
         </footer>
     </body></html>
     
