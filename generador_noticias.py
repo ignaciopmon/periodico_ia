@@ -17,9 +17,9 @@ genai.configure(api_key=API_KEY)
 # El script intentará usar el primero. Si da error 429 (cuota), saltará al segundo, etc.
 # AJUSTA LOS NOMBRES TÉCNICOS SI TU API TIENE OTROS
 MODELOS_PRIORIDAD = [
-    "gemini-pro-latest",  # Tu "Gemini 3 Flash" (usamos la 2.0 que es la latest actual)
-    "gemini-flash-latest",  # Tu "Gemini 2.5 Flash" (standard workhorse)
-    "gemini-2.5-flash",  # Tu "Gemini 2.5 Flash Lite" (versión optimizada/lite)
+    "gemini-flash-latest",  # Tu "Gemini 3 Flash" (usamos la 2.0 que es la latest actual)
+    "gemini-2.5-flash",  # Tu "Gemini 2.5 Flash" (standard workhorse)
+    "gemini-2.5-flash-lite",  # Tu "Gemini 2.5 Flash Lite" (versión optimizada/lite)
 ]
 
 generation_config = {
