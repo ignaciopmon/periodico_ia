@@ -17,7 +17,11 @@ API_KEY = os.environ.get("GEMINI_API_KEY")
 genai.configure(api_key=API_KEY)
 
 # --- CASCADA DE MODELOS ---
-MODELOS_PRIORIDAD = ["gemini-2.0-flash", "gemini-1.5-flash", "gemini-1.5-flash-8b"]
+MODELOS_PRIORIDAD = [
+    "gemini-3-flash-preview",
+    "gemini-2.5-flash",
+    "gemini-2.0-flash-lite",
+]
 
 generation_config = {
     "temperature": 0.3,
