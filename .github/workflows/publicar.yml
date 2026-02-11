@@ -2,8 +2,8 @@ name: Publicar Diario IA
 
 on:
   schedule:
-    - cron: '0 7,19 * * *' # Se ejecuta a las 7:00 y 19:00 UTC (8 y 20 en España aprox)
-  workflow_dispatch: # Botón para lanzar manual
+    - cron: '0 7,19 * * *' # 7:00 y 19:00 UTC
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -32,6 +32,7 @@ jobs:
         run: |
           git config --global user.name 'Periodista IA'
           git config --global user.email 'bot@noreply.github.com'
-          git add index.html
-          git commit -m "Nueva edición del periódico" || echo "No hay cambios"
+          # CAMBIO CLAVE: Usamos 'git add .' para añadir las carpetas nuevas (2026-02-XX)
+          git add .
+          git commit -m "Nueva edición: $(date +'%Y-%m-%d')" || echo "No hay cambios"
           git push
