@@ -16,9 +16,13 @@ genai.configure(api_key=API_KEY)
 
 # --- MODELOS ---
 MODELOS_PRIORIDAD = [
-    "gemini-2.0-flash",       
-    "gemini-1.5-flash",       
-    "gemini-1.5-flash-8b"     
+    "gemini-3-pro",
+    "gemini-3-flash",
+    "gemini-2.5-pro",
+    "gemini-2.5-flash",
+    "gemini-2.5-pro-exp",
+    "gemini-2.0-flash",
+    "gemini-2.0-flash-exp"
 ]
 
 generation_config = {
