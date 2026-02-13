@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ley multirreincidencia avanza en Congreso con amplio apoyo de PSOE, PP y Junts</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Nacional</span>
+            <h1>Ley multirreincidencia avanza en Congreso con amplio apoyo de PSOE, PP y Junts</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">La proposición de ley orgánica que endurece el castigo por la comisión reincidente de pequeños delitos ha superado su último trámite en el Congreso con un respaldo abrumador, pasando ahora al Senado.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17708920067281.jpg" class="article-img-full">
+        <div class="article-body"><h3>Consenso Inesperado en el Congreso</h3><p>La ley de multirreincidencia, una demanda clave de Junts, ha cogido un vuelo significativo en el Congreso de los Diputados, logrando un consenso inusual entre el PSOE, el PP y la formación independentista. La iniciativa, que busca endurecer el castigo por la comisión reincidente de pequeños delitos, ha pasado su último trámite con un apoyo abrumador de 302 votos a favor, 36 en contra y ocho abstenciones. Este respaldo masivo se ha gestado a pesar de la oposición frontal de Sumar y otros aliados de izquierda del Gobierno, marcando una alianza transversal que incluye a PP, Vox, UPN, Junts, PNV y CC.</p><h3>Claves de la Nueva Normativa</h3><p>La proposición de ley orgánica reforma varios artículos del Código Penal y de la Ley de Enjuiciamiento Criminal. Su objetivo principal es castigar con hasta tres años de prisión a quienes cometan un hurto de menos de 400 euros y hayan sido condenados al menos tres veces por delitos similares. La medida se extiende también a casos de estafas digitales con ánimo de lucro. Además, la norma contempla la posibilidad de prohibir al delincuente acudir a determinados lugares, barrios, poblaciones o provincias. Un punto destacado es la mención específica al robo de teléfonos móviles y dispositivos digitales, reconociendo que el perjuicio a la intimidad y seguridad personal trasciende el mero valor económico del objeto sustraído.</p><h3>Argumentos de los Promotores</h3><p>Junts ha defendido la ley como una respuesta directa a las demandas ciudadanas, afirmando que “procede de los territorios y los barrios, no de los despachos”. Su portavoz, Marta Madrenas, ha insistido en que la iniciativa busca “acabar con la impunidad” de quienes cometen pequeños delitos de forma reiterada y “protege a los más vulnerables”, como las personas mayores. Por su parte, el PSOE se ha aferrado a los datos de delincuencia en Cataluña y a las quejas de los alcaldes, intentando presentar la norma desde una óptica “progresista” y distanciándose de los planteamientos de la “ultraderecha”, a pesar de haber mantenido la propuesta congelada durante meses.</p><h3>El Respaldo de la Derecha</h3><p>El Partido Popular, a través de Cuca Gamarra, ha recordado el bloqueo inicial del PSOE a la ley y ha enfatizado que la multirreincidencia esconde “carreras profesionales” de quienes hacen del hurto y la estafa su oficio. “Se acabó”, ha sentenciado Gamarra, “a partir de ahora delinquir continuadamente no será gratis”. La portavoz popular ha hecho especial mención al “petaqueo” y ha criticado al PSOE por aprobar esta iniciativa “a rastras” mientras, en paralelo, impulsa una regularización masiva de inmigrantes que, según el PP, podría facilitar la entrada de delincuentes. Vox, aunque ha considerado la ley “insuficiente”, ha votado a favor, insistiendo en que las calles están “llenas de delincuentes habituales” y que es necesario fortalecer la “respuesta contundente del Estado” y la seguridad fronteriza.</p><h3>El Fuerte Rechazo de la Izquierda</h3><p>La izquierda se ha opuesto frontalmente a la iniciativa, acusándola de “alimentar relatos racistas y xenófobos” y de aplicar “mano dura a los robagallinas” mientras los “grandes delincuentes no se tocan”. Podemos, a través de Martina Velarde, ha calificado la ley de “criminalizar la pobreza” y “estigmatizar a las personas con pocos recursos”. Sumar, en la misma línea, ha hablado de “delitos de descuideros” y ha tildado la ley de “fruto de la ultraderecha más reaccionaria”, un “delirio populista” que da cancha al discurso de Vox. Enrique Santiago, portavoz de Sumar, ha reprochado al PSOE su apoyo a una iniciativa que considera “fascista”. EH Bildu también ha rechazado la propuesta como un ejemplo de “populismo penal” que “no sirve para nada” y que prevé un castigo “desproporcionado” para delitos leves, abogando por políticas sociales y más medios judiciales.</p><h3>PNV y la Percepción de Seguridad</h3><p>El PNV, por su parte, ha respaldado la ley, argumentando que la multirreincidencia “erosiona la percepción de seguridad de la ciudadanía y altera la convivencia vecinal”. Mikel Legarda ha señalado que la reforma del Código Penal de 2022 no dio los resultados esperados y que esta nueva proposición de ley contempla un “escalonamiento de condenas proporcional”. Los nacionalistas vascos han acogido con especial satisfacción la mención al robo de teléfonos móviles y de aparejos agrícolas o cosechas, reconociendo que el perjuicio de estos delitos va más allá del valor económico, afectando la privacidad y provocando graves consecuencias para las víctimas. ERC, aunque disconforme, optó por la abstención, consciente de que la ciudadanía percibe un problema con la multirreincidencia, pero defendiendo que los problemas “no se cambian a golpe de leyes punitivas”.</p></div>
+    </div>
+    </body></html>
+    

@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trump retira al ICE de Minnesota tras meses de polémica</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Internacional</span>
+            <h1>Trump retira al ICE de Minnesota tras meses de polémica</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">La administración Trump ha dado luz verde a la finalización del despliegue de agencias migratorias en Minnesota, una decisión que llega tras meses de controversia, muertes de manifestantes y cientos de denuncias por abuso de poder, en medio de una creciente desaprobación pública y una inminente crisis de financiación gubernamental.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17709083119919.jpg" class="article-img-full">
+        <div class="article-body"><h3>Fin a la polémica Operación Metro Surge</h3><p>El presidente de Estados Unidos, Donald Trump, ha dado su consentimiento esta semana para finalizar el controvertido despliegue del ICE, la Patrulla Fronteriza y otras agencias migratorias en el estado de Minnesota. La decisión, anunciada este jueves por el zar migratorio del Gobierno, Tom Homan, pone fin a meses de presencia de hasta 3.000 agentes federales en la región, una operación que ha generado un intenso debate nacional.</p><h3>Un despliegue marcado por la violencia y el abuso</h3><p>La retirada se produce tras un periodo tumultuoso marcado por la muerte de dos manifestantes, Renee Goods y Alex Pretti, y la herida de bala en un tercer hombre. Cientos de denuncias han documentado abusos de poder, uso excesivo de la fuerza, métodos inhumanos, violaciones de leyes y procedimientos, y amenazas a testigos, periodistas y vecinos que protestaban por la presencia y actuación de los agentes. Este clima de tensión se sumaba a la inminente amenaza de un nuevo cierre del Gobierno federal por la falta de acuerdo en el Congreso para prorrogar la financiación del Departamento de Seguridad Nacional.</p><h3>El "éxito" de la operación, según el zar migratorio</h3><p>“La Operación Metro Surge va a terminar”, declaró Homan en una conferencia de prensa, explicando que había propuesto la retirada gradual a la Casa Blanca y que el presidente había dado el visto bueno. Homan justificó la decisión apuntando al “éxito logrado en la detención de amenazas a la seguridad pública” y a los “niveles sin precedentes de coordinación” con funcionarios estatales y las fuerzas del orden locales. “Dejamos Minnesota mucho más segura”, insistió, a pesar del clima de terror instaurado en lugares como Mineápolis tras dos meses y medio de redadas, choques y paranoia generalizada.</p><h3>Retirada gradual y agenda inalterada</h3><p>El zar migratorio, conocido por su postura de mano dura y su apoyo a las deportaciones masivas, se ha convertido ahora en el rostro amable de la administración. Homan añadió que los agentes que se retiren de esta operación regresarán a sus puestos de trabajo o serán asignados a otras partes del país, dejando claro que la agenda del Ejecutivo en materia migratoria no ha cambiado. “Un pequeño grupo de personal permanecerá durante un tiempo para cerrar la operación y transferir el mando y control total a la oficina de campo, así como para garantizar que la actividad de agitación siga disminuyendo”, indicó.</p><h3>Desaprobación masiva y consecuencias políticas</h3><p>Las encuestas muestran una desaprobación masiva de las operaciones del ICE y los métodos del Gobierno, incluso entre quienes son partidarios de luchar con mano dura contra la inmigración ilegal. La popularidad del presidente sigue cayendo y los pronósticos de cara a las elecciones legislativas de noviembre son sombríos para los Republicanos. Homan, enviado de urgencia hace dos semanas por Trump para encauzar una situación fuera de control, había preparado ya el terreno en dos comparecencias previas, admitiendo errores y asegurando que la operación se volvería más “quirúrgica”. “Esta semana ya se ha iniciado una reducción significativa de personal y que continuará la próxima (...) Gracias a nuestros esfuerzos aquí, Minnesota ya no es tanto un estado santuario para los delincuentes”, afirmó.</p><h3>Cifras cuestionadas y el alivio de Mineápolis</h3><p>Desde finales de 2025, el Departamento de Seguridad Nacional asegura haber arrestado a más de 4.000 personas en Minnesota, pero no ha sido capaz de ofrecer datos precisos. Las intervenciones del presidente o su fiscal general han estado plagadas de datos falsos, e incluso de imágenes de supuestos delincuentes que no lo eran o llevaban mucho tiempo en prisión. Igualmente, han sido detenidos ciudadanos norteamericanos, inmigrantes con toda la documentación en regla, menores y niños nacidos en EEUU, y por tanto ciudadanos. “Esta operación ha sido catastrófica para nuestros vecinos y negocios, y ahora es el momento de una gran recuperación”, celebró el alcalde de Mineápolis, Jacob Frey. “Mostraremos el mismo compromiso con nuestros residentes inmigrantes y la misma perseverancia en esta reapertura, y espero que todo el país nos apoye en el futuro (...) Pensaron que podrían quebrarnos, pero el amor por nuestros vecinos y la determinación de perseverar pueden sobrevivir a una ocupación. Estos patriotas de Mineápolis están demostrando que no se trata solo de resistencia; apoyar a nuestros vecinos es profundamente estadounidense”, añadió.</p><h3>Clave en la negociación del presupuesto federal</h3><p>La retirada del ICE era una de las exigencias de los Demócratas para sentarse a negociar la financiación del Departamento de Seguridad Nacional. El 31 de enero vencía el plazo previsto para lograr un acuerdo en el Congreso sobre financiación de muchos servicios públicos. Todo parecía abocado a un nuevo cierre del Gobierno federal, como ocurrió entre octubre y noviembre de 2025. Al final se llegó a un acuerdo de mínimos, aprobando fondos para el resto de agencias pero no para Seguridad Nacional, que controla al ICE y la Patrulla Fronteriza. Para ellas se aprobó una prórroga de dos semanas, que vence ahora. Y estaba claro que no habría acuerdo. El final del despliegue en Minnesota quizás no sea suficiente, puesto que hay más exigencias sobre las operaciones en todo el país, pero era condición necesaria.</p></div>
+    </div>
+    </body></html>
+    

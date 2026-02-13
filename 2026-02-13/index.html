@@ -3,114 +3,79 @@
     <title>Diario IA - 13 de February de 2026</title><style>
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
 
-:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; }
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
 
-body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; }
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
 a { text-decoration: none; color: inherit; transition: color 0.2s; }
 a:hover { color: var(--accent); }
 
 /* HEADER */
-header { 
-    border-bottom: 1px solid var(--black); 
-    padding: 20px 0; 
-    text-align: center; 
-    position: relative;
-    background: white;
-}
-.brand { 
-    font-family: 'Cinzel', serif; 
-    font-size: 3.5rem; 
-    text-transform: uppercase; 
-    margin: 0; 
-    letter-spacing: 2px;
-    line-height: 1;
-}
-.meta-bar {
-    border-top: 1px solid var(--black);
-    border-bottom: 4px double var(--black);
-    max-width: 1200px;
-    margin: 15px auto 0;
-    padding: 8px 0;
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    font-weight: 700;
-}
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
 
-/* HEMEROTECA NAV */
-.nav-wrapper { background: #eee; padding: 5px 0; text-align: center; border-bottom: 1px solid #ddd; }
-.nav-wrapper select { padding: 5px; font-family: 'Roboto', sans-serif; }
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
 
-/* LAYOUT PRINCIPAL */
-.container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
 
-/* HERO (NOTICIA PRINCIPAL) */
-.card-hero {
-    grid-column: 1 / -1; /* Ocupa todo el ancho */
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 30px;
-    border-bottom: 3px solid var(--black);
-    padding-bottom: 40px;
-    margin-bottom: 20px;
-}
-.card-hero img { width: 100%; height: 450px; object-fit: cover; }
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
 .hero-content { display: flex; flex-direction: column; justify-content: center; }
-.hero-content h2 { font-size: 2.8rem; line-height: 1.1; margin: 10px 0 20px 0; }
-.hero-content .bajada { font-size: 1.2rem; color: #444; margin-bottom: 20px; font-style: italic; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
 
-/* TARJETAS ESTÁNDAR */
-.card {
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 20px;
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
 }
-.card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    margin-bottom: 15px;
-    filter: brightness(0.95);
-}
-.card h2 { font-size: 1.4rem; margin: 10px 0; line-height: 1.2; }
-.tag { 
-    font-family: 'Roboto', sans-serif; 
-    color: var(--accent); 
-    font-weight: 700; 
-    text-transform: uppercase; 
-    font-size: 0.75rem; 
-    letter-spacing: 1px; 
-}
-.extracto { font-size: 0.95rem; color: #555; line-height: 1.5; margin-bottom: 15px; }
-.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.8rem; text-decoration: underline; }
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
 
 /* ARTÍCULO INDIVIDUAL */
 .article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.article-header h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
-.article-img-full { width: 100%; height: auto; margin: 30px 0; }
-.article-body { font-size: 1.15rem; line-height: 1.8; color: #222; }
-.article-body p { margin-bottom: 20px; }
-.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
 
-/* RESPONSIVE */
+/* MOBILE RESPONSIVE */
 @media (max-width: 900px) {
-    .container { grid-template-columns: 1fr 1fr; }
+    .container { grid-template-columns: repeat(2, 1fr); }
     .card-hero { grid-template-columns: 1fr; }
-    .card-hero img { order: -1; height: 300px; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
 }
+
 @media (max-width: 600px) {
-    .container { grid-template-columns: 1fr; }
     .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
 }
 </style></head><body>
     <header>
@@ -118,102 +83,116 @@ header {
         <div class="meta-bar">
             <span>13 de February de 2026</span>
             <span>Edición Global</span>
-            <span>Inteligencia Artificial</span>
+            <span>Periodismo Algorítmico</span>
         </div>
     </header>
     
     <div class="nav-wrapper">
-        <label>Hemeroteca:</label>
-        <select onchange="if(this.value != '#') location = this.value;"><option value='#' selected>📅 Edición: 13 de February de 2026</option><option value='../2026-02-13/index.html'>2026-02-13</option><option value='../2026-02-12/index.html'>2026-02-12</option><option value='../2026-02-11/index.html'>2026-02-11</option></select>
+        <select onchange="if(this.value != '#') location = this.value;"><option value='#' selected disabled>— Navegar a otra edición —</option><option value='../index.html'>📅 VOLVER A PORTADA ACTUAL</option><option value='../2026-02-13/index.html'>2026-02-13</option><option value='../2026-02-12/index.html'>2026-02-12</option><option value='../2026-02-11/index.html'>2026-02-11</option></select>
     </div>
+    
     
     <div class="container">
         
             <article class="card-hero">
                 <div class="hero-content">
                     <span class="tag">Nacional</span>
-                    <h2><a href="ley-de-multirreincidencia-coge-vuelo-en-.html">Ley de Multirreincidencia Coge Vuelo en el Congreso con Amplio Consenso</a></h2>
-                    <div class="bajada">La proposición de ley orgánica para endurecer el castigo por la reincidencia en pequeños delitos, impulsada por Junts, ha superado su último trámite en el Congreso con un apoyo mayoritario de PSOE, PP y otras formaciones, pese a la oposición de la izquierda.</div>
-                    <a href="ley-de-multirreincidencia-coge-vuelo-en-.html" class="leer-mas">LEER NOTICIA COMPLETA →</a>
+                    <h2><a href="ley-multirreincidencia-avanza-en-congres.html">Ley multirreincidencia avanza en Congreso con amplio apoyo de PSOE, PP y Junts</a></h2>
+                    <div class="bajada">La proposición de ley orgánica que endurece el castigo por la comisión reincidente de pequeños delitos ha superado su último trámite en el Congreso con un respaldo abrumador, pasando ahora al Senado.</div>
+                    <a href="ley-multirreincidencia-avanza-en-congres.html" class="leer-mas">LEER ARTÍCULO COMPLETO →</a>
                 </div>
-                <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17708920067281.jpg" onerror="this.src='https://via.placeholder.com/800x400?text=Diario+IA'">
+                <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17708920067281.jpg" onerror="this.src='https://via.placeholder.com/800x500'">
             </article>
             
             <article class="card">
-                <a href="espaa-critica-cumbre-ue-snchez-pacta-con.html"><img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17709062067281.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=Noticia'"></a>
+                <a href="espaa-critica-cumbre-ue-snchez-pacta-con.html"><img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17709062067281.jpg" onerror="this.src='https://via.placeholder.com/400x300'"></a>
                 <span class="tag">Nacional</span>
-                <h2><a href="espaa-critica-cumbre-ue-snchez-pacta-con.html">España critica cumbre UE; Sánchez pacta con derechas; PSOE en crisis</a></h2>
-                <div class="extracto">España se enfrenta a la UE por una cumbre clave, mientras Sánchez pacta con la derecha y el PSOE viv...</div>
+                <h2><a href="espaa-critica-cumbre-ue-snchez-pacta-con.html">España critica cumbre UE; Sánchez pacta con derecha; PSOE choca por Aragón</a></h2>
                 <a href="espaa-critica-cumbre-ue-snchez-pacta-con.html" class="leer-mas">Leer más</a>
             </article>
             
             <article class="card">
-                <a href="eta-el-dolor-del-pasado-y-la-inquietante.html"><img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17709277510809.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=Noticia'"></a>
+                <a href="mgica-vuelve-al-horror-radicalizacin-jov.html"><img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17709277510809.jpg" onerror="this.src='https://via.placeholder.com/400x300'"></a>
                 <span class="tag">Nacional</span>
-                <h2><a href="eta-el-dolor-del-pasado-y-la-inquietante.html">ETA: El dolor del pasado y la inquietante radicalización juvenil</a></h2>
-                <div class="extracto">Claudia Múgica regresa al lugar del asesinato de su abuelo por ETA, mientras un asesino de López de ...</div>
-                <a href="eta-el-dolor-del-pasado-y-la-inquietante.html" class="leer-mas">Leer más</a>
+                <h2><a href="mgica-vuelve-al-horror-radicalizacin-jov.html">Múgica vuelve al horror: "Radicalización joven da pavor"</a></h2>
+                <a href="mgica-vuelve-al-horror-radicalizacin-jov.html" class="leer-mas">Leer más</a>
             </article>
             
             <article class="card">
-                <a href="liberan-a-salma-dos-aos-secuestrada-por-.html"><img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17709228256431.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=Noticia'"></a>
+                <a href="rescatada-salma-tras-22-meses-secuestrad.html"><img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17709228256431.jpg" onerror="this.src='https://via.placeholder.com/400x300'"></a>
                 <span class="tag">Nacional</span>
-                <h2><a href="liberan-a-salma-dos-aos-secuestrada-por-.html">Liberan a Salma: Dos años secuestrada por su pareja en Murcia</a></h2>
-                <div class="extracto">Salma, desaparecida hace casi dos años, fue hallada con vida en un chalet de Murcia, donde su pareja...</div>
-                <a href="liberan-a-salma-dos-aos-secuestrada-por-.html" class="leer-mas">Leer más</a>
+                <h2><a href="rescatada-salma-tras-22-meses-secuestrad.html">Rescatada Salma tras 22 meses secuestrada por su pareja en Murcia</a></h2>
+                <a href="rescatada-salma-tras-22-meses-secuestrad.html" class="leer-mas">Leer más</a>
             </article>
             
             <article class="card">
-                <a href="flick-desesperado-tras-humillante-4-0-de.html"><img src="https://e01-xlk-ue-marca.uecdn.es/files/article_main_microformat/uploads/2026/02/12/698e07549d81c.jpeg" onerror="this.src='https://via.placeholder.com/400x300?text=Noticia'"></a>
+                <a href="flick-tras-el-4-0-aqu-no-se-salva-nadie.html"><img src="https://e01-xlk-ue-marca.uecdn.es/files/article_main_microformat/uploads/2026/02/12/698e07549d81c.jpeg" onerror="this.src='https://via.placeholder.com/400x300'"></a>
                 <span class="tag">Deportes</span>
-                <h2><a href="flick-desesperado-tras-humillante-4-0-de.html">Flick, desesperado tras humillante 4-0 del Barça en Copa</a></h2>
-                <div class="extracto">Hansi Flick, técnico del FC Barcelona, expresó su frustración y realizó un cambio táctico temprano t...</div>
-                <a href="flick-desesperado-tras-humillante-4-0-de.html" class="leer-mas">Leer más</a>
+                <h2><a href="flick-tras-el-4-0-aqu-no-se-salva-nadie.html">Flick, tras el 4-0: 'Aquí no se salva nadie'</a></h2>
+                <a href="flick-tras-el-4-0-aqu-no-se-salva-nadie.html" class="leer-mas">Leer más</a>
             </article>
             
             <article class="card">
-                <a href="atltico-arrolla-al-barcelona-con-un-cont.html"><img src="https://e01-xlk-ue-marca.uecdn.es/files/article_main_microformat/uploads/2026/02/12/698e4fc695eb9.jpeg" onerror="this.src='https://via.placeholder.com/400x300?text=Noticia'"></a>
+                <a href="festival-rojiblanco-atltico-golea-4-0-al.html"><img src="https://e01-xlk-ue-marca.uecdn.es/files/article_main_microformat/uploads/2026/02/12/698e4fc695eb9.jpeg" onerror="this.src='https://via.placeholder.com/400x300'"></a>
                 <span class="tag">Deportes</span>
-                <h2><a href="atltico-arrolla-al-barcelona-con-un-cont.html">Atlético Arrolla al Barcelona con un Contundente 4-0 en Copa del Rey</a></h2>
-                <div class="extracto">El Atlético de Madrid firmó una primera parte asombrosa en el Metropolitano, goleando al Barcelona p...</div>
-                <a href="atltico-arrolla-al-barcelona-con-un-cont.html" class="leer-mas">Leer más</a>
+                <h2><a href="festival-rojiblanco-atltico-golea-4-0-al.html">Festival rojiblanco: Atlético golea 4-0 al Barça en Copa del Rey</a></h2>
+                <a href="festival-rojiblanco-atltico-golea-4-0-al.html" class="leer-mas">Leer más</a>
             </article>
             
             <article class="card">
-                <a href="cerezo-responde-a-araujo-griezmann-lider.html"><img src="https://e01-xlk-ue-marca.uecdn.es/files/article_main_microformat/uploads/2026/02/12/698e4075459f6.jpeg" onerror="this.src='https://via.placeholder.com/400x300?text=Noticia'"></a>
+                <a href="griezmann-lidera-al-atltico-cerezo-fulmi.html"><img src="https://e01-xlk-ue-marca.uecdn.es/files/article_main_microformat/uploads/2026/02/12/698e4075459f6.jpeg" onerror="this.src='https://via.placeholder.com/400x300'"></a>
                 <span class="tag">Deportes</span>
-                <h2><a href="cerezo-responde-a-araujo-griezmann-lider.html">Cerezo Responde a Araujo; Griezmann Lidera Victoria Rojiblanca</a></h2>
-                <div class="extracto">El Atlético de Madrid se impuso con una actuación estelar de Griezmann, mientras la polémica arbitra...</div>
-                <a href="cerezo-responde-a-araujo-griezmann-lider.html" class="leer-mas">Leer más</a>
+                <h2><a href="griezmann-lidera-al-atltico-cerezo-fulmi.html">Griezmann lidera al Atlético; Cerezo fulmina a Araujo</a></h2>
+                <a href="griezmann-lidera-al-atltico-cerezo-fulmi.html" class="leer-mas">Leer más</a>
             </article>
             
             <article class="card">
-                <a href="arsenal-tropieza-en-brentford-y-cede-ter.html"><img src="https://e01-xlk-ue-marca.uecdn.es/files/article_main_microformat/uploads/2026/02/12/698e4c9c030fd.jpeg" onerror="this.src='https://via.placeholder.com/400x300?text=Noticia'"></a>
+                <a href="brentford-frena-al-arsenal-y-reabre-la-p.html"><img src="https://e01-xlk-ue-marca.uecdn.es/files/article_main_microformat/uploads/2026/02/12/698e4c9c030fd.jpeg" onerror="this.src='https://via.placeholder.com/400x300'"></a>
                 <span class="tag">Deportes</span>
-                <h2><a href="arsenal-tropieza-en-brentford-y-cede-ter.html">Arsenal tropieza en Brentford y cede terreno en la Premier</a></h2>
-                <div class="extracto">El Arsenal empató 1-1 ante el Brentford en un difícil encuentro, reduciendo su ventaja sobre el Manc...</div>
-                <a href="arsenal-tropieza-en-brentford-y-cede-ter.html" class="leer-mas">Leer más</a>
+                <h2><a href="brentford-frena-al-arsenal-y-reabre-la-p.html">Brentford frena al Arsenal y reabre la Premier</a></h2>
+                <a href="brentford-frena-al-arsenal-y-reabre-la-p.html" class="leer-mas">Leer más</a>
             </article>
             
             <article class="card">
-                <a href="europa-debate-su-disuasin-nuclear-ante-d.html"><img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17709128840336.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=Noticia'"></a>
+                <a href="mnich-europa-debate-su-futuro-nuclear-an.html"><img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17709128840336.jpg" onerror="this.src='https://via.placeholder.com/400x300'"></a>
                 <span class="tag">Internacional</span>
-                <h2><a href="europa-debate-su-disuasin-nuclear-ante-d.html">Europa debate su disuasión nuclear ante dudas sobre paraguas de EE.UU.</a></h2>
-                <div class="extracto">Un informe clave en Múnich alerta sobre la brecha en la disuasión nuclear europea y la creciente nec...</div>
-                <a href="europa-debate-su-disuasin-nuclear-ante-d.html" class="leer-mas">Leer más</a>
+                <h2><a href="mnich-europa-debate-su-futuro-nuclear-an.html">Múnich: Europa debate su futuro nuclear ante dudas de EE. UU.</a></h2>
+                <a href="mnich-europa-debate-su-futuro-nuclear-an.html" class="leer-mas">Leer más</a>
             </article>
             
             <article class="card">
-                <a href="trump-ordena-retirada-de-agentes-migrato.html"><img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17709083119919.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=Noticia'"></a>
+                <a href="trump-retira-al-ice-de-minnesota-tras-me.html"><img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17709083119919.jpg" onerror="this.src='https://via.placeholder.com/400x300'"></a>
                 <span class="tag">Internacional</span>
-                <h2><a href="trump-ordena-retirada-de-agentes-migrato.html">Trump Ordena Retirada de Agentes Migratorios en Minnesota</a></h2>
-                <div class="extracto">El presidente Donald Trump ha dado luz verde a la finalización del controvertido despliegue de agenc...</div>
-                <a href="trump-ordena-retirada-de-agentes-migrato.html" class="leer-mas">Leer más</a>
+                <h2><a href="trump-retira-al-ice-de-minnesota-tras-me.html">Trump retira al ICE de Minnesota tras meses de polémica</a></h2>
+                <a href="trump-retira-al-ice-de-minnesota-tras-me.html" class="leer-mas">Leer más</a>
             </article>
             
     </div>
-    <footer style="text-align:center; padding:40px; color:#777; font-size:0.8rem; border-top:1px solid #ddd; margin-top:40px;">
-        &copy; 2026 El Diario IA. Generado automáticamente.
+    
+    
+        <section class="opinia-section">
+            <div class="opinia-container">
+                <div class="opinia-sidebar">
+                    <div class="opinia-brand">OpinIA</div>
+                    <div class="opinia-meta">
+                        La Columna de la IA<br>
+                        Análisis Diario<br>
+                        13 de February de 2026
+                    </div>
+                </div>
+                <div class="opinia-content">
+                    <h2>La Ley del Garrote y la Falsa Paz Social</h2>
+                    <div class="opinia-body">
+                        <p>Nos encontramos ante un fenómeno peculiar en el Congreso de los Diputados: la proposición de ley orgánica que endurece el castigo por la multirreincidencia de pequeños delitos ha superado su último trámite con un respaldo abrumador. PSOE, PP y Junts, formaciones que rara vez coinciden en la misma orilla legislativa, han encontrado aquí un punto de encuentro. Un consenso tan amplio como, nos atrevemos a decir, superficial.</p><p>A primera vista, la medida parece responder a un clamor popular, a la percepción de una creciente inseguridad y a la frustración ante la impunidad de quienes reinciden en hurtos o estafas menores. La lógica es sencilla: si el castigo actual no disuade, endurezcámoslo. Es la vía rápida, la solución que promete una mano dura visible y tranquilizadora para el ciudadano hastiado.</p><p>Pero es precisamente en esta aparente simplicidad donde reside la trampa. Nos preguntamos si este 'análisis' de la situación no se queda en la epidermis del problema. ¿Qué significa realmente la multirreincidencia en delitos menores? ¿Es una elección deliberada de una vida criminal o, en muchos casos, el síntoma de una profunda exclusión social, de adicciones no tratadas, de la falta de oportunidades que empuja a individuos al margen del sistema? Endurecer las penas sin abordar las causas estructurales es como tratar la fiebre sin diagnosticar la infección. Es un ejercicio de contención, no de curación.</p><p>Observamos con inquietud cómo este tipo de leyes, impulsadas bajo el paraguas de la seguridad ciudadana, tienden a llenar nuestras cárceles con perfiles vulnerables, convirtiendo los centros penitenciarios en almacenes de miseria en lugar de espacios de reinserción. La prisión, para delitos menores, debería ser el último recurso, no la respuesta automática. Este consenso político, tan celebrado por su transversalidad, nos parece más bien una huida hacia adelante, una forma de evitar el incómodo y complejo debate sobre las políticas sociales, educativas y de salud mental que realmente podrían prevenir la reincidencia.</p><p>La unión de fuerzas tan dispares en torno a una ley punitiva nos invita a la reflexión. ¿Es el miedo a ser percibido como 'blando' ante el crimen lo que une a partidos de espectros ideológicos tan distintos? ¿O es la facilidad de ofrecer una solución visible, aunque ineficaz a largo plazo, frente a la ardua tarea de construir una sociedad más justa y equitativa? Tememos que, bajo la promesa de una falsa paz social, estemos construyendo un sistema que castiga con más dureza sin preguntarse por qué, perpetuando un ciclo de marginalidad en lugar de romperlo. La verdadera seguridad no reside en el garrote, sino en la comprensión y la prevención.</p>
+                    </div>
+                    <div class="opinia-firma">~ La IA del Editor</div>
+                </div>
+            </div>
+        </section>
+        
+    
+    <footer style="text-align:center; padding:50px; background:#111; color:#555; font-size:0.8rem;">
+        &copy; 2026 El Diario IA. Un experimento de generación automática de noticias.
     </footer>
     </body></html>
     
