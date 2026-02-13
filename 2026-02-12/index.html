@@ -1,0 +1,151 @@
+
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Diario IA - 12 de February de 2026</title>
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:wght@400;700;900&display=swap');
+:root { --black: #121212; --dark-gray: #333; --border: #e2e2e2; --accent: #c0392b; --bg: #f9f9f9; }
+body { font-family: 'Merriweather', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 20px; line-height: 1.8; }
+a { text-decoration: none; color: inherit; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { text-align: center; border-bottom: 4px double var(--black); padding-bottom: 20px; margin-bottom: 40px; max-width: 1100px; margin-left: auto; margin-right: auto; }
+.brand { font-family: 'Playfair Display', serif; font-size: 4rem; font-weight: 900; letter-spacing: -2px; margin: 0; text-transform: uppercase; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 1px solid var(--black); padding: 8px 0; margin-top: 15px; display: flex; justify-content: space-between; font-family: sans-serif; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+
+/* NAV HEMEROTECA */
+.hemeroteca-nav { text-align: center; margin-bottom: 20px; font-family: sans-serif; font-size: 0.9rem; }
+.hemeroteca-nav select { padding: 5px; font-size: 1rem; }
+
+/* ARTÍCULOS PORTADA */
+.container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(12, 1fr); gap: 30px; }
+.hero { grid-column: span 12; display: grid; grid-template-columns: 1.5fr 1fr; gap: 30px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 40px; }
+.hero img { width: 100%; height: 400px; object-fit: cover; }
+.secondary { grid-column: span 4; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.secondary img { width: 100%; height: 200px; object-fit: cover; margin-bottom: 10px; }
+.text-only { grid-column: span 3; border-right: 1px solid var(--border); padding-right: 20px; }
+.text-only:nth-child(4n) { border: none; }
+
+h2 { font-family: 'Playfair Display', serif; margin: 10px 0; font-weight: 700; line-height: 1.2; }
+.tag { font-family: sans-serif; font-size: 0.75rem; font-weight: bold; color: var(--accent); text-transform: uppercase; display: block; margin-bottom: 5px; }
+.bajada { font-size: 1rem; color: #555; font-style: italic; margin-bottom: 15px; }
+.read-more { font-family: sans-serif; font-size: 0.8rem; font-weight: bold; text-decoration: underline; color: var(--black); }
+
+/* PÁGINA DE ARTÍCULO INDIVIDUAL */
+.article-page { max-width: 800px; margin: 0 auto; background: white; padding: 40px; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
+.article-header { text-align: center; margin-bottom: 30px; }
+.article-header h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 10px; line-height: 1.1; }
+.article-img { width: 100%; height: auto; margin-bottom: 30px; }
+.article-body { font-size: 1.1rem; color: #222; text-align: justify; }
+.article-body h3 { font-family: sans-serif; margin-top: 30px; font-size: 1.2rem; text-transform: uppercase; }
+.back-btn { display: inline-block; margin-bottom: 20px; font-family: sans-serif; font-weight: bold; }
+
+@media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; } 
+    .hero img { order: -1; }
+    .secondary, .text-only { grid-column: span 6; border: none; margin-bottom: 20px; }
+}
+@media (max-width: 600px) {
+    .secondary, .text-only { grid-column: span 12; }
+    .brand { font-size: 2.5rem; }
+}
+</style>
+    </head>
+    <body>
+        <header>
+            <h1 class="brand">El Diario IA</h1>
+            <div class="meta-bar">
+                <span>📅 12 de February de 2026</span>
+                <span>Edición Diaria</span>
+                <span>Gemini Powered</span>
+            </div>
+        </header>
+        
+        
+    <div class="hemeroteca-nav">
+        <label>📅 Hemeroteca:</label>
+        <select onchange="location = this.value;">
+            <option value='index.html' selected>12 de February de 2026</option><option value='../2026-02-11/index.html'>2026-02-11</option>
+        </select>
+    </div>
+    
+        
+        <div class="container">
+    
+            <article class="hero">
+                <div class="hero-content" style="display:flex; flex-direction:column; justify-content:center;">
+                    <span class="tag">Nacional</span>
+                    <h2><a href="snchez-se-atrinchera-en-la-gestin-y-la-polarizacin.html">Sánchez se atrinchera en la gestión y la polarización frente al avance de los pactos entre PP y Vox</a></h2>
+                    <div class="bajada">El Ejecutivo redefine su estrategia tras los reveses en Extremadura y Aragón, mientras sus socios parlamentarios exigen medidas sociales más contundentes para frenar la ola ultra.</div>
+                    <p>En un escenario político marcado por la creciente presión electoral, el presidente del Gobierno, <strong>Pedro Sánchez</strong>, ha optado por una estrategia de contraataque frontal. Durante su recien...</p>
+                    <a href="snchez-se-atrinchera-en-la-gestin-y-la-polarizacin.html" class="read-more">Leer noticia completa →</a>
+                </div>
+                <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/11/17708412216134.jpg" onerror="this.src='https://via.placeholder.com/800x600'">
+            </article>
+            
+            <article class="secondary">
+                <a href="el-senado-eleva-al-constitucional-un-conflicto-his.html"><img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17708926248285.jpg" onerror="this.src='https://via.placeholder.com/400x300'"></a>
+                <span class="tag">Nacional</span>
+                <h2><a href="el-senado-eleva-al-constitucional-un-conflicto-his.html">El Senado eleva al Constitucional un conflicto histórico contra Sánchez por su desplante parlamentario</a></h2>
+                <div class="bajada" style="font-size:0.9rem">La Cámara Alta denuncia el menosprecio del presidente tras 22 meses sin someterse al control del Senado, mientras el Congreso aprueba con la derecha el endurecimiento de penas a la multirreincidencia.</div>
+                <a href="el-senado-eleva-al-constitucional-un-conflicto-his.html" class="read-more">Leer más</a>
+            </article>
+            
+            <article class="secondary">
+                <a href="el-cgpj-detecta-dficits-de-seguridad-jurdica-en-la.html"><img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/11/17708374012176.jpg" onerror="this.src='https://via.placeholder.com/400x300'"></a>
+                <span class="tag">Nacional</span>
+                <h2><a href="el-cgpj-detecta-dficits-de-seguridad-jurdica-en-la.html">El CGPJ detecta "déficits de seguridad jurídica" en la ley para proteger a menores en internet</a></h2>
+                <div class="bajada" style="font-size:0.9rem">El órgano de los jueces advierte que elevar a 16 años la edad de acceso a redes sociales genera "disonancias" con derechos fundamentales y critica la exclusión del Consejo de Estado en la tramitación.</div>
+                <a href="el-cgpj-detecta-dficits-de-seguridad-jurdica-en-la.html" class="read-more">Leer más</a>
+            </article>
+            
+            <article class="secondary">
+                <a href="el-cinturo-das-guas-do-cear-la-megaobra-de-ingenie.html"><img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop" onerror="this.src='https://via.placeholder.com/400x300'"></a>
+                <span class="tag">Tecnología</span>
+                <h2><a href="el-cinturo-das-guas-do-cear-la-megaobra-de-ingenie.html">El Cinturão das Águas do Ceará: La megaobra de ingeniería que desafía la sequía en el sertón brasileño</a></h2>
+                <div class="bajada" style="font-size:0.9rem">Con un avance del 91%, este complejo sistema de canales por gravedad conectará el río São Francisco con el corazón de Ceará para asegurar el suministro a cinco millones de personas.</div>
+                <a href="el-cinturo-das-guas-do-cear-la-megaobra-de-ingenie.html" class="read-more">Leer más</a>
+            </article>
+            
+            <article class="secondary">
+                <a href="la-guerra-del-galio-occidente-busca-su-soberana-te.html"><img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop" onerror="this.src='https://via.placeholder.com/400x300'"></a>
+                <span class="tag">Tecnología</span>
+                <h2><a href="la-guerra-del-galio-occidente-busca-su-soberana-te.html">La guerra del galio: Occidente busca su soberanía tecnológica en el barro industrial</a></h2>
+                <div class="bajada" style="font-size:0.9rem">Estados Unidos y sus aliados activan un plan de emergencia para extraer de desechos mineros el metal crítico que China utiliza como palanca de presión geopolítica.</div>
+                <a href="la-guerra-del-galio-occidente-busca-su-soberana-te.html" class="read-more">Leer más</a>
+            </article>
+            
+            <article class="text-only">
+                <span class="tag">Tecnología</span>
+                <h2><a href="el-fin-de-la-hegemona-humana-en-el-streaming-neuro.html">El fin de la hegemonía humana en el streaming: Neuro-sama lidera Twitch en 2026</a></h2>
+                <p style="font-size:0.8rem">El año 2026 ha marcado un punto de inflexión definitivo en la historia del entretenimiento digital. Por primera vez, el canal con el mayor número de suscriptores activos en la plataforma Twitch no per...</p>
+            </article>
+            
+            <article class="text-only">
+                <span class="tag">Internacional</span>
+                <h2><a href="venezuela-en-vilo-estudiantes-y-oposicin-retoman-l.html">Venezuela en vilo: Estudiantes y oposición retoman las calles en un nuevo desafío al chavismo</a></h2>
+                <p style="font-size:0.8rem">Este <strong>12 de febrero</strong>, en el marco del <strong>Día de la Juventud</strong>, Venezuela se prepara para una nueva jornada de movilizaciones que busca medir fuerzas en el espacio público. L...</p>
+            </article>
+            
+            <article class="text-only">
+                <span class="tag">Internacional</span>
+                <h2><a href="el-doble-juego-de-zelenski-elecciones-y-referndum-.html">El doble juego de Zelenski: elecciones y referéndum para desbloquear el plan de paz de Trump</a></h2>
+                <p style="font-size:0.8rem">El presidente de Ucrania, <strong>Volodímir Zelenski</strong>, ha decidido mover ficha en el complejo tablero geopolítico que rodea el proceso de paz impulsado por <strong>Donald Trump</strong>. En un...</p>
+            </article>
+            
+            <article class="text-only">
+                <span class="tag">Internacional</span>
+                <h2><a href="trump-y-netanyahu-un-pulso-diplomtico-en-la-casa-b.html">Trump y Netanyahu: Un pulso diplomático en la Casa Blanca bajo la sombra de Irán</a></h2>
+                <p style="font-size:0.8rem">La Casa Blanca ha sido escenario de un nuevo capítulo en la compleja relación entre <strong>Donald Trump</strong> y <strong>Benjamin Netanyahu</strong>. En su quinta visita oficial en apenas trece mes...</p>
+            </article>
+            
+        </div>
+        <footer style="text-align:center; padding: 40px; border-top: 4px double black; margin-top: 40px;">
+            <p>© 2026 El Diario IA. Generado automáticamente.</p>
+        </footer>
+    </body></html>
+    

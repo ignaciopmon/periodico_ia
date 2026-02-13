@@ -1,0 +1,151 @@
+
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Diario IA - 11 de February de 2026</title>
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:wght@400;700;900&display=swap');
+:root { --black: #121212; --dark-gray: #333; --border: #e2e2e2; --accent: #c0392b; --bg: #f9f9f9; }
+body { font-family: 'Merriweather', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 20px; line-height: 1.8; }
+a { text-decoration: none; color: inherit; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { text-align: center; border-bottom: 4px double var(--black); padding-bottom: 20px; margin-bottom: 40px; max-width: 1100px; margin-left: auto; margin-right: auto; }
+.brand { font-family: 'Playfair Display', serif; font-size: 4rem; font-weight: 900; letter-spacing: -2px; margin: 0; text-transform: uppercase; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 1px solid var(--black); padding: 8px 0; margin-top: 15px; display: flex; justify-content: space-between; font-family: sans-serif; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+
+/* NAV HEMEROTECA */
+.hemeroteca-nav { text-align: center; margin-bottom: 20px; font-family: sans-serif; font-size: 0.9rem; }
+.hemeroteca-nav select { padding: 5px; font-size: 1rem; }
+
+/* ARTÍCULOS PORTADA */
+.container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(12, 1fr); gap: 30px; }
+.hero { grid-column: span 12; display: grid; grid-template-columns: 1.5fr 1fr; gap: 30px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 40px; }
+.hero img { width: 100%; height: 400px; object-fit: cover; }
+.secondary { grid-column: span 4; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.secondary img { width: 100%; height: 200px; object-fit: cover; margin-bottom: 10px; }
+.text-only { grid-column: span 3; border-right: 1px solid var(--border); padding-right: 20px; }
+.text-only:nth-child(4n) { border: none; }
+
+h2 { font-family: 'Playfair Display', serif; margin: 10px 0; font-weight: 700; line-height: 1.2; }
+.tag { font-family: sans-serif; font-size: 0.75rem; font-weight: bold; color: var(--accent); text-transform: uppercase; display: block; margin-bottom: 5px; }
+.bajada { font-size: 1rem; color: #555; font-style: italic; margin-bottom: 15px; }
+.read-more { font-family: sans-serif; font-size: 0.8rem; font-weight: bold; text-decoration: underline; color: var(--black); }
+
+/* PÁGINA DE ARTÍCULO INDIVIDUAL */
+.article-page { max-width: 800px; margin: 0 auto; background: white; padding: 40px; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
+.article-header { text-align: center; margin-bottom: 30px; }
+.article-header h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 10px; line-height: 1.1; }
+.article-img { width: 100%; height: auto; margin-bottom: 30px; }
+.article-body { font-size: 1.1rem; color: #222; text-align: justify; }
+.article-body h3 { font-family: sans-serif; margin-top: 30px; font-size: 1.2rem; text-transform: uppercase; }
+.back-btn { display: inline-block; margin-bottom: 20px; font-family: sans-serif; font-weight: bold; }
+
+@media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; } 
+    .hero img { order: -1; }
+    .secondary, .text-only { grid-column: span 6; border: none; margin-bottom: 20px; }
+}
+@media (max-width: 600px) {
+    .secondary, .text-only { grid-column: span 12; }
+    .brand { font-size: 2.5rem; }
+}
+</style>
+    </head>
+    <body>
+        <header>
+            <h1 class="brand">El Diario IA</h1>
+            <div class="meta-bar">
+                <span>📅 11 de February de 2026</span>
+                <span>Edición Diaria</span>
+                <span>Gemini Powered</span>
+            </div>
+        </header>
+        
+        
+    <div class="hemeroteca-nav">
+        <label>📅 Hemeroteca:</label>
+        <select onchange="location = this.value;">
+            <option value='index.html' selected>11 de February de 2026</option>
+        </select>
+    </div>
+    
+        
+        <div class="container">
+    
+            <article class="hero">
+                <div class="hero-content" style="display:flex; flex-direction:column; justify-content:center;">
+                    <span class="tag">Nacional</span>
+                    <h2><a href="el-nexo-entre-el-rescate-de-plus-ultra-y-el-entorn.html">El nexo entre el rescate de Plus Ultra y el entorno de Zapatero: pagos a una consultora sin experiencia</a></h2>
+                    <div class="bajada">La aerolínea contrató a Análisis Relevante SL en plena crisis financiera, una empresa que destinaba el 45% de sus ingresos al expresidente del Gobierno.</div>
+                    <p>En el año 2020, mientras la aerolínea <strong>Plus Ultra</strong> se encontraba en una situación financiera calificada como dramática, la compañía tomó una decisión que hoy centra el foco mediático: l...</p>
+                    <a href="el-nexo-entre-el-rescate-de-plus-ultra-y-el-entorn.html" class="read-more">Leer noticia completa →</a>
+                </div>
+                <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/10/17707548764421.jpg" onerror="this.src='https://via.placeholder.com/800x600'">
+            </article>
+            
+            <article class="secondary">
+                <a href="incertidumbre-en-la-izquierda-yolanda-daz-evita-co.html"><img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/11/17708018334441.jpg" onerror="this.src='https://via.placeholder.com/400x300'"></a>
+                <span class="tag">Nacional</span>
+                <h2><a href="incertidumbre-en-la-izquierda-yolanda-daz-evita-co.html">Incertidumbre en la izquierda: Yolanda Díaz evita confirmar su liderazgo ante la nueva alianza electoral</a></h2>
+                <div class="bajada" style="font-size:0.9rem">La vicepresidenta segunda posterga la decisión sobre su candidatura mientras IU reclama renovación y Gabriel Rufián emerge con una propuesta de frente amplio.</div>
+                <a href="incertidumbre-en-la-izquierda-yolanda-daz-evita-co.html" class="read-more">Leer más</a>
+            </article>
+            
+            <article class="secondary">
+                <a href="giro-en-el-caso-puigdemont-fiscala-y-abogaca-del-e.html"><img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/11/17708069737406.jpg" onerror="this.src='https://via.placeholder.com/400x300'"></a>
+                <span class="tag">Nacional</span>
+                <h2><a href="giro-en-el-caso-puigdemont-fiscala-y-abogaca-del-e.html">Giro en el caso Puigdemont: Fiscalía y Abogacía del Estado se alinean contra el Supremo ante el Tribunal Constitucional</a></h2>
+                <div class="bajada" style="font-size:0.9rem">Ambas instituciones solicitan amparar al líder de Junts frente a la negativa de amnistiar el delito de malversación, mientras el Constitucional mantiene vigente su orden de detención.</div>
+                <a href="giro-en-el-caso-puigdemont-fiscala-y-abogaca-del-e.html" class="read-more">Leer más</a>
+            </article>
+            
+            <article class="secondary">
+                <a href="macron-contra-el-sol-espaol-la-batalla-geopoltica-.html"><img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop" onerror="this.src='https://via.placeholder.com/400x300'"></a>
+                <span class="tag">Tecnología</span>
+                <h2><a href="macron-contra-el-sol-espaol-la-batalla-geopoltica-.html">Macron contra el sol español: la batalla geopolítica que bloquea la red eléctrica europea</a></h2>
+                <div class="bajada" style="font-size:0.9rem">El presidente francés califica de 'falso' el debate sobre las interconexiones mientras protege su industria nuclear frente al auge de las renovables en la Península Ibérica.</div>
+                <a href="macron-contra-el-sol-espaol-la-batalla-geopoltica-.html" class="read-more">Leer más</a>
+            </article>
+            
+            <article class="secondary">
+                <a href="el-misterio-del-estruendo-en-alcal-de-henares-prue.html"><img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop" onerror="this.src='https://via.placeholder.com/400x300'"></a>
+                <span class="tag">Tecnología</span>
+                <h2><a href="el-misterio-del-estruendo-en-alcal-de-henares-prue.html">El misterio del estruendo en Alcalá de Henares: pruebas de biocombustible en los Eurofighter de Torrejón</a></h2>
+                <div class="bajada" style="font-size:0.9rem">El Ejército del Aire confirma que los ruidos nocturnos se deben a ensayos técnicos con combustible SAF para evaluar la reducción de la firma infrarroja en sus motores.</div>
+                <a href="el-misterio-del-estruendo-en-alcal-de-henares-prue.html" class="read-more">Leer más</a>
+            </article>
+            
+            <article class="text-only">
+                <span class="tag">Tecnología</span>
+                <h2><a href="el-colapso-del-fcas-el-sueo-de-la-soberana-area-eu.html">El colapso del FCAS: El sueño de la soberanía aérea europea se estrella contra el muro industrial</a></h2>
+                <p style="font-size:0.8rem">Desde el fin de la Guerra Fría, el Viejo Continente ha perseguido el anhelo de una autonomía estratégica que le permita mirar de tú a tú a las potencias globales. Sin embargo, la historia de la indust...</p>
+            </article>
+            
+            <article class="text-only">
+                <span class="tag">Internacional</span>
+                <h2><a href="ucrania-bajo-el-gran-fro-la-estrategia-del-kremlin.html">Ucrania bajo el 'Gran Frío': La estrategia del Kremlin para devolver al país a la Edad Media</a></h2>
+                <p style="font-size:0.8rem">Olga y Tetiana nacieron en Kiev en un momento de transición brutal, cuando la ciudad pasaba de la ocupación nazi a la soviética. Sin embargo, en sus largas vidas, nunca habían experimentado una precar...</p>
+            </article>
+            
+            <article class="text-only">
+                <span class="tag">Internacional</span>
+                <h2><a href="irn-conmemora-su-revolucin-entre-el-desafo-militar.html">Irán conmemora su Revolución entre el desafío militar a EE.UU. y una profunda fractura interna</a></h2>
+                <p style="font-size:0.8rem">La conmemoración del <strong>47.º aniversario de la Revolución Islámica</strong> en Irán se ha transformado este año en un complejo escenario de propaganda militar y fragilidad política. En un context...</p>
+            </article>
+            
+            <article class="text-only">
+                <span class="tag">Internacional</span>
+                <h2><a href="el-cerco-de-bukele-cruza-el-atlntico-la-odisea-del.html">El cerco de Bukele cruza el Atlántico: la odisea del periodista Diego Rosales en España</a></h2>
+                <p style="font-size:0.8rem">El pasado 2 de enero, lo que debía ser el primer paso hacia la seguridad jurídica se convirtió en una pesadilla burocrática y policial para <strong>Diego Rosales</strong>. El periodista salvadoreño de...</p>
+            </article>
+            
+        </div>
+        <footer style="text-align:center; padding: 40px; border-top: 4px double black; margin-top: 40px;">
+            <p>© 2026 El Diario IA. Generado automáticamente.</p>
+        </footer>
+    </body></html>
+    
