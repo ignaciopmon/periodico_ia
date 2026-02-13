@@ -1,151 +1,219 @@
 
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Diario IA - 13 de February de 2026</title>
-        <style>
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:wght@400;700;900&display=swap');
-:root { --black: #121212; --dark-gray: #333; --border: #e2e2e2; --accent: #c0392b; --bg: #f9f9f9; }
-body { font-family: 'Merriweather', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 20px; line-height: 1.8; }
-a { text-decoration: none; color: inherit; }
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diario IA - 13 de February de 2026</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
 a:hover { color: var(--accent); }
 
 /* HEADER */
-header { text-align: center; border-bottom: 4px double var(--black); padding-bottom: 20px; margin-bottom: 40px; max-width: 1100px; margin-left: auto; margin-right: auto; }
-.brand { font-family: 'Playfair Display', serif; font-size: 4rem; font-weight: 900; letter-spacing: -2px; margin: 0; text-transform: uppercase; line-height: 1; }
-.meta-bar { border-top: 1px solid var(--black); border-bottom: 1px solid var(--black); padding: 8px 0; margin-top: 15px; display: flex; justify-content: space-between; font-family: sans-serif; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+header { 
+    border-bottom: 1px solid var(--black); 
+    padding: 20px 0; 
+    text-align: center; 
+    position: relative;
+    background: white;
+}
+.brand { 
+    font-family: 'Cinzel', serif; 
+    font-size: 3.5rem; 
+    text-transform: uppercase; 
+    margin: 0; 
+    letter-spacing: 2px;
+    line-height: 1;
+}
+.meta-bar {
+    border-top: 1px solid var(--black);
+    border-bottom: 4px double var(--black);
+    max-width: 1200px;
+    margin: 15px auto 0;
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 
-/* NAV HEMEROTECA */
-.hemeroteca-nav { text-align: center; margin-bottom: 20px; font-family: sans-serif; font-size: 0.9rem; }
-.hemeroteca-nav select { padding: 5px; font-size: 1rem; }
+/* HEMEROTECA NAV */
+.nav-wrapper { background: #eee; padding: 5px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 5px; font-family: 'Roboto', sans-serif; }
 
-/* ARTÍCULOS PORTADA */
-.container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(12, 1fr); gap: 30px; }
-.hero { grid-column: span 12; display: grid; grid-template-columns: 1.5fr 1fr; gap: 30px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 40px; }
-.hero img { width: 100%; height: 400px; object-fit: cover; }
-.secondary { grid-column: span 4; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
-.secondary img { width: 100%; height: 200px; object-fit: cover; margin-bottom: 10px; }
-.text-only { grid-column: span 3; border-right: 1px solid var(--border); padding-right: 20px; }
-.text-only:nth-child(4n) { border: none; }
+/* LAYOUT PRINCIPAL */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
 
-h2 { font-family: 'Playfair Display', serif; margin: 10px 0; font-weight: 700; line-height: 1.2; }
-.tag { font-family: sans-serif; font-size: 0.75rem; font-weight: bold; color: var(--accent); text-transform: uppercase; display: block; margin-bottom: 5px; }
-.bajada { font-size: 1rem; color: #555; font-style: italic; margin-bottom: 15px; }
-.read-more { font-family: sans-serif; font-size: 0.8rem; font-weight: bold; text-decoration: underline; color: var(--black); }
+/* HERO (NOTICIA PRINCIPAL) */
+.card-hero {
+    grid-column: 1 / -1; /* Ocupa todo el ancho */
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+    border-bottom: 3px solid var(--black);
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+.card-hero img { width: 100%; height: 450px; object-fit: cover; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 2.8rem; line-height: 1.1; margin: 10px 0 20px 0; }
+.hero-content .bajada { font-size: 1.2rem; color: #444; margin-bottom: 20px; font-style: italic; }
 
-/* PÁGINA DE ARTÍCULO INDIVIDUAL */
-.article-page { max-width: 800px; margin: 0 auto; background: white; padding: 40px; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
-.article-header { text-align: center; margin-bottom: 30px; }
-.article-header h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 10px; line-height: 1.1; }
-.article-img { width: 100%; height: auto; margin-bottom: 30px; }
-.article-body { font-size: 1.1rem; color: #222; text-align: justify; }
-.article-body h3 { font-family: sans-serif; margin-top: 30px; font-size: 1.2rem; text-transform: uppercase; }
-.back-btn { display: inline-block; margin-bottom: 20px; font-family: sans-serif; font-weight: bold; }
+/* TARJETAS ESTÁNDAR */
+.card {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+}
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    filter: brightness(0.95);
+}
+.card h2 { font-size: 1.4rem; margin: 10px 0; line-height: 1.2; }
+.tag { 
+    font-family: 'Roboto', sans-serif; 
+    color: var(--accent); 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    font-size: 0.75rem; 
+    letter-spacing: 1px; 
+}
+.extracto { font-size: 0.95rem; color: #555; line-height: 1.5; margin-bottom: 15px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.8rem; text-decoration: underline; }
 
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; }
+.article-body { font-size: 1.15rem; line-height: 1.8; color: #222; }
+.article-body p { margin-bottom: 20px; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; }
+
+/* RESPONSIVE */
 @media (max-width: 900px) {
-    .hero { grid-template-columns: 1fr; } 
-    .hero img { order: -1; }
-    .secondary, .text-only { grid-column: span 6; border: none; margin-bottom: 20px; }
+    .container { grid-template-columns: 1fr 1fr; }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 300px; }
 }
 @media (max-width: 600px) {
-    .secondary, .text-only { grid-column: span 12; }
+    .container { grid-template-columns: 1fr; }
     .brand { font-size: 2.5rem; }
 }
-</style>
-    </head>
-    <body>
-        <header>
-            <h1 class="brand">El Diario IA</h1>
-            <div class="meta-bar">
-                <span>📅 13 de February de 2026</span>
-                <span>Edición Diaria</span>
-                <span>Gemini Powered</span>
-            </div>
-        </header>
-        
-        
-    <div class="hemeroteca-nav">
-        <label>📅 Hemeroteca:</label>
-        <select onchange="location = this.value;">
-            <option value='index.html' selected>13 de February de 2026</option><option value='../2026-02-12/index.html'>2026-02-12</option><option value='../2026-02-11/index.html'>2026-02-11</option>
-        </select>
+</style></head><body>
+    <header>
+        <h1 class="brand">El Diario IA</h1>
+        <div class="meta-bar">
+            <span>13 de February de 2026</span>
+            <span>Edición Global</span>
+            <span>Inteligencia Artificial</span>
+        </div>
+    </header>
+    
+    <div class="nav-wrapper">
+        <label>Hemeroteca:</label>
+        <select onchange="if(this.value != '#') location = this.value;"><option value='#' selected>📅 Edición: 13 de February de 2026</option><option value='../2026-02-13/index.html'>2026-02-13</option><option value='../2026-02-12/index.html'>2026-02-12</option><option value='../2026-02-11/index.html'>2026-02-11</option></select>
     </div>
     
+    <div class="container">
         
-        <div class="container">
-    
-            <article class="hero">
-                <div class="hero-content" style="display:flex; flex-direction:column; justify-content:center;">
+            <article class="card-hero">
+                <div class="hero-content">
                     <span class="tag">Nacional</span>
-                    <h2><a href="el-congreso-aprueba-la-ley-contra-la-multirreincid.html">El Congreso aprueba la ley contra la multirreincidencia con un insólito consenso entre PSOE, PP y Junts</a></h2>
-                    <div class="bajada">La reforma del Código Penal endurece las penas para hurtos menores y estafas digitales, logrando 302 votos a favor pese al rechazo frontal de Sumar y los aliados de izquierda del Gobierno.</div>
-                    <p>El Congreso de los Diputados ha dado luz verde a una de las reformas legislativas más significativas de la legislatura en materia de seguridad ciudadana. Con un respaldo abrumador de <strong>302 votos...</p>
-                    <a href="el-congreso-aprueba-la-ley-contra-la-multirreincid.html" class="read-more">Leer noticia completa →</a>
+                    <h2><a href="ley-de-multirreincidencia-coge-vuelo-en-.html">Ley de Multirreincidencia Coge Vuelo en el Congreso con Amplio Consenso</a></h2>
+                    <div class="bajada">La proposición de ley orgánica para endurecer el castigo por la reincidencia en pequeños delitos, impulsada por Junts, ha superado su último trámite en el Congreso con un apoyo mayoritario de PSOE, PP y otras formaciones, pese a la oposición de la izquierda.</div>
+                    <a href="ley-de-multirreincidencia-coge-vuelo-en-.html" class="leer-mas">LEER NOTICIA COMPLETA →</a>
                 </div>
-                <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17708920067281.jpg" onerror="this.src='https://via.placeholder.com/800x600'">
+                <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17708920067281.jpg" onerror="this.src='https://via.placeholder.com/800x400?text=Diario+IA'">
             </article>
             
-            <article class="secondary">
-                <a href="snchez-navega-entre-la-exclusin-diplomtica-en-euro.html"><img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17709062067281.jpg" onerror="this.src='https://via.placeholder.com/400x300'"></a>
+            <article class="card">
+                <a href="espaa-critica-cumbre-ue-snchez-pacta-con.html"><img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17709062067281.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=Noticia'"></a>
                 <span class="tag">Nacional</span>
-                <h2><a href="snchez-navega-entre-la-exclusin-diplomtica-en-euro.html">Sánchez navega entre la exclusión diplomática en Europa y la fractura interna del socialismo en Aragón</a></h2>
-                <div class="bajada" style="font-size:0.9rem">El Gobierno critica su ausencia en cumbres clave de la UE mientras el PSOE se divide por los resultados electorales y pacta con la derecha el endurecimiento de penas.</div>
-                <a href="snchez-navega-entre-la-exclusin-diplomtica-en-euro.html" class="read-more">Leer más</a>
+                <h2><a href="espaa-critica-cumbre-ue-snchez-pacta-con.html">España critica cumbre UE; Sánchez pacta con derechas; PSOE en crisis</a></h2>
+                <div class="extracto">España se enfrenta a la UE por una cumbre clave, mientras Sánchez pacta con la derecha y el PSOE viv...</div>
+                <a href="espaa-critica-cumbre-ue-snchez-pacta-con.html" class="leer-mas">Leer más</a>
             </article>
             
-            <article class="secondary">
-                <a href="memoria-y-justicia-el-persistente-rastro-del-terro.html"><img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17709277510809.jpg" onerror="this.src='https://via.placeholder.com/400x300'"></a>
+            <article class="card">
+                <a href="eta-el-dolor-del-pasado-y-la-inquietante.html"><img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17709277510809.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=Noticia'"></a>
                 <span class="tag">Nacional</span>
-                <h2><a href="memoria-y-justicia-el-persistente-rastro-del-terro.html">Memoria y Justicia: El persistente rastro del terror de ETA en la sociedad española</a></h2>
-                <div class="bajada" style="font-size:0.9rem">Treinta años después de los crímenes que marcaron la democracia, las víctimas denuncian la radicalización juvenil mientras el Gobierno vasco facilita beneficios penitenciarios a condenados por asesinato.</div>
-                <a href="memoria-y-justicia-el-persistente-rastro-del-terro.html" class="read-more">Leer más</a>
+                <h2><a href="eta-el-dolor-del-pasado-y-la-inquietante.html">ETA: El dolor del pasado y la inquietante radicalización juvenil</a></h2>
+                <div class="extracto">Claudia Múgica regresa al lugar del asesinato de su abuelo por ETA, mientras un asesino de López de ...</div>
+                <a href="eta-el-dolor-del-pasado-y-la-inquietante.html" class="leer-mas">Leer más</a>
             </article>
             
-            <article class="secondary">
-                <a href="mxico-define-su-estrategia-frente-a-los-minerales-.html"><img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop" onerror="this.src='https://via.placeholder.com/400x300'"></a>
-                <span class="tag">Tecnología</span>
-                <h2><a href="mxico-define-su-estrategia-frente-a-los-minerales-.html">México define su estrategia frente a los minerales críticos: un mapa de dependencias y alianzas estratégicas</a></h2>
-                <div class="bajada" style="font-size:0.9rem">El Servicio Geológico Mexicano identifica 13 materiales escasos mientras el Gobierno negocia con Estados Unidos un marco de comercio preferencial para blindar la industria nacional.</div>
-                <a href="mxico-define-su-estrategia-frente-a-los-minerales-.html" class="read-more">Leer más</a>
+            <article class="card">
+                <a href="liberan-a-salma-dos-aos-secuestrada-por-.html"><img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17709228256431.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=Noticia'"></a>
+                <span class="tag">Nacional</span>
+                <h2><a href="liberan-a-salma-dos-aos-secuestrada-por-.html">Liberan a Salma: Dos años secuestrada por su pareja en Murcia</a></h2>
+                <div class="extracto">Salma, desaparecida hace casi dos años, fue hallada con vida en un chalet de Murcia, donde su pareja...</div>
+                <a href="liberan-a-salma-dos-aos-secuestrada-por-.html" class="leer-mas">Leer más</a>
             </article>
             
-            <article class="secondary">
-                <a href="europa-recupera-su-soberana-espacial-el-ariane-64-.html"><img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop" onerror="this.src='https://via.placeholder.com/400x300'"></a>
-                <span class="tag">Tecnología</span>
-                <h2><a href="europa-recupera-su-soberana-espacial-el-ariane-64-.html">Europa recupera su soberanía espacial: El Ariane 64 debuta con éxito en su primera misión operativa</a></h2>
-                <div class="bajada" style="font-size:0.9rem">El nuevo lanzador pesado de ArianeGroup despliega 32 satélites de la constelación de Amazon, marcando un hito estratégico para la industria aeroespacial europea.</div>
-                <a href="europa-recupera-su-soberana-espacial-el-ariane-64-.html" class="read-more">Leer más</a>
+            <article class="card">
+                <a href="flick-desesperado-tras-humillante-4-0-de.html"><img src="https://e01-xlk-ue-marca.uecdn.es/files/article_main_microformat/uploads/2026/02/12/698e07549d81c.jpeg" onerror="this.src='https://via.placeholder.com/400x300?text=Noticia'"></a>
+                <span class="tag">Deportes</span>
+                <h2><a href="flick-desesperado-tras-humillante-4-0-de.html">Flick, desesperado tras humillante 4-0 del Barça en Copa</a></h2>
+                <div class="extracto">Hansi Flick, técnico del FC Barcelona, expresó su frustración y realizó un cambio táctico temprano t...</div>
+                <a href="flick-desesperado-tras-humillante-4-0-de.html" class="leer-mas">Leer más</a>
             </article>
             
-            <article class="text-only">
-                <span class="tag">Tecnología</span>
-                <h2><a href="brasil-desafa-la-sequa-el-cinturo-das-guas-do-cear.html">Brasil desafía la sequía: El Cinturão das Águas do Ceará encara su fase final para abastecer a millones</a></h2>
-                <p style="font-size:0.8rem">En el corazón de la ingeniería moderna, la lucha contra la escasez hídrica ha dado lugar a una de las infraestructuras más ambiciosas de Sudamérica. El <strong>Cinturão das Águas do Ceará (CAC)</stron...</p>
+            <article class="card">
+                <a href="atltico-arrolla-al-barcelona-con-un-cont.html"><img src="https://e01-xlk-ue-marca.uecdn.es/files/article_main_microformat/uploads/2026/02/12/698e4fc695eb9.jpeg" onerror="this.src='https://via.placeholder.com/400x300?text=Noticia'"></a>
+                <span class="tag">Deportes</span>
+                <h2><a href="atltico-arrolla-al-barcelona-con-un-cont.html">Atlético Arrolla al Barcelona con un Contundente 4-0 en Copa del Rey</a></h2>
+                <div class="extracto">El Atlético de Madrid firmó una primera parte asombrosa en el Metropolitano, goleando al Barcelona p...</div>
+                <a href="atltico-arrolla-al-barcelona-con-un-cont.html" class="leer-mas">Leer más</a>
             </article>
             
-            <article class="text-only">
+            <article class="card">
+                <a href="cerezo-responde-a-araujo-griezmann-lider.html"><img src="https://e01-xlk-ue-marca.uecdn.es/files/article_main_microformat/uploads/2026/02/12/698e4075459f6.jpeg" onerror="this.src='https://via.placeholder.com/400x300?text=Noticia'"></a>
+                <span class="tag">Deportes</span>
+                <h2><a href="cerezo-responde-a-araujo-griezmann-lider.html">Cerezo Responde a Araujo; Griezmann Lidera Victoria Rojiblanca</a></h2>
+                <div class="extracto">El Atlético de Madrid se impuso con una actuación estelar de Griezmann, mientras la polémica arbitra...</div>
+                <a href="cerezo-responde-a-araujo-griezmann-lider.html" class="leer-mas">Leer más</a>
+            </article>
+            
+            <article class="card">
+                <a href="arsenal-tropieza-en-brentford-y-cede-ter.html"><img src="https://e01-xlk-ue-marca.uecdn.es/files/article_main_microformat/uploads/2026/02/12/698e4c9c030fd.jpeg" onerror="this.src='https://via.placeholder.com/400x300?text=Noticia'"></a>
+                <span class="tag">Deportes</span>
+                <h2><a href="arsenal-tropieza-en-brentford-y-cede-ter.html">Arsenal tropieza en Brentford y cede terreno en la Premier</a></h2>
+                <div class="extracto">El Arsenal empató 1-1 ante el Brentford en un difícil encuentro, reduciendo su ventaja sobre el Manc...</div>
+                <a href="arsenal-tropieza-en-brentford-y-cede-ter.html" class="leer-mas">Leer más</a>
+            </article>
+            
+            <article class="card">
+                <a href="europa-debate-su-disuasin-nuclear-ante-d.html"><img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17709128840336.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=Noticia'"></a>
                 <span class="tag">Internacional</span>
-                <h2><a href="el-dilema-atmico-de-europa-la-brecha-de-disuasin-m.html">El dilema atómico de Europa: La brecha de disuasión marca la Conferencia de Seguridad de Múnich</a></h2>
-                <p style="font-size:0.8rem">La Conferencia de Seguridad de Múnich ha arrancado este año bajo la sombra de una de las cuestiones más sensibles para la arquitectura de defensa continental: la <strong>disuasión nuclear</strong>. Un...</p>
+                <h2><a href="europa-debate-su-disuasin-nuclear-ante-d.html">Europa debate su disuasión nuclear ante dudas sobre paraguas de EE.UU.</a></h2>
+                <div class="extracto">Un informe clave en Múnich alerta sobre la brecha en la disuasión nuclear europea y la creciente nec...</div>
+                <a href="europa-debate-su-disuasin-nuclear-ante-d.html" class="leer-mas">Leer más</a>
             </article>
             
-            <article class="text-only">
+            <article class="card">
+                <a href="trump-ordena-retirada-de-agentes-migrato.html"><img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17709083119919.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=Noticia'"></a>
                 <span class="tag">Internacional</span>
-                <h2><a href="trump-ordena-la-retirada-de-las-agencias-migratori.html">Trump ordena la retirada de las agencias migratorias en Minnesota tras meses de violencia y presión política</a></h2>
-                <p style="font-size:0.8rem">El presidente de Estados Unidos, <strong>Donald Trump</strong>, ha dado luz verde esta semana para finalizar el despliegue del ICE, la Patrulla Fronteriza y otras agencias migratorias en el estado de ...</p>
+                <h2><a href="trump-ordena-retirada-de-agentes-migrato.html">Trump Ordena Retirada de Agentes Migratorios en Minnesota</a></h2>
+                <div class="extracto">El presidente Donald Trump ha dado luz verde a la finalización del controvertido despliegue de agenc...</div>
+                <a href="trump-ordena-retirada-de-agentes-migrato.html" class="leer-mas">Leer más</a>
             </article>
             
-            <article class="text-only">
-                <span class="tag">Internacional</span>
-                <h2><a href="el-despertar-de-las-calles-en-venezuela-los-estudi.html">El despertar de las calles en Venezuela: Los estudiantes desafían el muro de terror del chavismo</a></h2>
-                <p style="font-size:0.8rem">Bajo la consigna “¿Qué es lo que se ve? ¡Son los estudiantes en la calle otra vez!”, miles de jóvenes y activistas venezolanos rompieron este jueves un silencio de <strong>13 meses</strong> sin protes...</p>
-            </article>
-            
-        </div>
-        <footer style="text-align:center; padding: 40px; border-top: 4px double black; margin-top: 40px;">
-            <p>© 2026 El Diario IA. Generado automáticamente.</p>
-        </footer>
+    </div>
+    <footer style="text-align:center; padding:40px; color:#777; font-size:0.8rem; border-top:1px solid #ddd; margin-top:40px;">
+        &copy; 2026 El Diario IA. Generado automáticamente.
+    </footer>
     </body></html>
     

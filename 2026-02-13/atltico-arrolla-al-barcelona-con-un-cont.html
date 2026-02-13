@@ -1,0 +1,127 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlético Arrolla al Barcelona con un Contundente 4-0 en Copa del Rey</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { 
+    border-bottom: 1px solid var(--black); 
+    padding: 20px 0; 
+    text-align: center; 
+    position: relative;
+    background: white;
+}
+.brand { 
+    font-family: 'Cinzel', serif; 
+    font-size: 3.5rem; 
+    text-transform: uppercase; 
+    margin: 0; 
+    letter-spacing: 2px;
+    line-height: 1;
+}
+.meta-bar {
+    border-top: 1px solid var(--black);
+    border-bottom: 4px double var(--black);
+    max-width: 1200px;
+    margin: 15px auto 0;
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* HEMEROTECA NAV */
+.nav-wrapper { background: #eee; padding: 5px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 5px; font-family: 'Roboto', sans-serif; }
+
+/* LAYOUT PRINCIPAL */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* HERO (NOTICIA PRINCIPAL) */
+.card-hero {
+    grid-column: 1 / -1; /* Ocupa todo el ancho */
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+    border-bottom: 3px solid var(--black);
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+.card-hero img { width: 100%; height: 450px; object-fit: cover; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 2.8rem; line-height: 1.1; margin: 10px 0 20px 0; }
+.hero-content .bajada { font-size: 1.2rem; color: #444; margin-bottom: 20px; font-style: italic; }
+
+/* TARJETAS ESTÁNDAR */
+.card {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+}
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    filter: brightness(0.95);
+}
+.card h2 { font-size: 1.4rem; margin: 10px 0; line-height: 1.2; }
+.tag { 
+    font-family: 'Roboto', sans-serif; 
+    color: var(--accent); 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    font-size: 0.75rem; 
+    letter-spacing: 1px; 
+}
+.extracto { font-size: 0.95rem; color: #555; line-height: 1.5; margin-bottom: 15px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.8rem; text-decoration: underline; }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; }
+.article-body { font-size: 1.15rem; line-height: 1.8; color: #222; }
+.article-body p { margin-bottom: 20px; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: 1fr 1fr; }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 300px; }
+}
+@media (max-width: 600px) {
+    .container { grid-template-columns: 1fr; }
+    .brand { font-size: 2.5rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← VOLVER A PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Deportes</span>
+            <h1>Atlético Arrolla al Barcelona con un Contundente 4-0 en Copa del Rey</h1>
+            <p style="text-align:center; font-style:italic; color:#666;">El Atlético de Madrid firmó una primera parte asombrosa en el Metropolitano, goleando al Barcelona por 4-0 y dejando encarrilada su eliminatoria de Copa del Rey.</p>
+        </header>
+        <img src="https://e01-xlk-ue-marca.uecdn.es/files/article_main_microformat/uploads/2026/02/12/698e4fc695eb9.jpeg" class="article-img-full">
+        <div class="article-body"><p>El Metropolitano fue testigo de una exhibición de furia y efectividad por parte del Atlético de Madrid, que se lanzó a la yugular del Barcelona desde el pitido inicial de Juan Martínez. Con una intensidad asombrosa, los rojiblancos dibujaron un primer acto memorable en el que cayeron cuatro goles, algunos de ellos con un toque de fortuna y otros de pura maestría. El ambiente se convirtió en un frenopático, achicando a un Barça que no encontraba respuestas.</p><h3>Un Inicio Devastador</h3><p>El primer tanto llegó de una jugada rocambolesca: una cesión de Eric García que el meta Joan García no pudo controlar, rebasando la línea de gol en un "suicidio" que el árbitro no vio, pero que la continuación de la jugada acabó en la red. Poco después, Antoine Griezmann, omnipresente y con su zurda mágica, firmó el segundo tras una rápida transición que nació de un saque de esquina visitante. El Atlético no se conformó y siguió presionando, aprovechando la línea adelantada del Barça para generar contragolpe tras contragolpe, con Griezmann y Julián rozando el gol en varias ocasiones.</p><h3>Flick Mueve Ficha, pero el Atlético no Cede</h3><p>Ante la avalancha, y con el tercer gol rubricado por Lookman tras una jugada colectiva, el técnico Flick se vio obligado a reaccionar, prescindiendo de su pivote para dar entrada a Lewandowski y dejar el timón a De Jong. Aunque por momentos el Barça pareció encontrar algo de aire, con Musso teniendo que intervenir ante Fermín, el Atlético no perdonó. En el segundo minuto de prolongación, "La Araña" sentenció el 4-0 al descanso, asistido por Lookman, dejando a todos frotándose los ojos.</p><h3>VAR y la Polémica del Segundo Tiempo</h3><p>La reanudación trajo consigo un intento de reacción azulgrana, con Fermín topándose de nuevo con Musso. Una falta lateral mal defendida por el Atlético derivó en un gol de Cubarsí que, sin embargo, fue anulado tras una interminable revisión del VAR por un fuera de juego. Esta interrupción, que detuvo el juego por más de cinco minutos, rompió por completo el ritmo del partido, afectando especialmente al Barcelona, que perdió cualquier inercia que pudiera haber ganado.</p><h3>Expulsión y Camino a La Cartuja</h3><p>Con el tiempo agotándose y el Atlético gestionando su ventaja, la situación empeoró para el Barcelona con la expulsión de Eric García por derribar a Giuliano, una decisión que el VAR elevó de amarilla a roja. A pesar de los diez minutos de prolongación, el marcador no se movió. El Atlético de Madrid enfila con paso firme hacia La Cartuja, dejando una eliminatoria prácticamente sentenciada y una actuación para el recuerdo en la Copa del Rey. Un 4-0 que pocos habrían apostado, pero que demuestra la capacidad de creer de este equipo.</p></div>
+    </div>
+    </body></html>
+    
