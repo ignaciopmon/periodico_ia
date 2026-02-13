@@ -1,0 +1,127 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerezo Responde a Araujo; Griezmann Lidera Victoria Rojiblanca</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { 
+    border-bottom: 1px solid var(--black); 
+    padding: 20px 0; 
+    text-align: center; 
+    position: relative;
+    background: white;
+}
+.brand { 
+    font-family: 'Cinzel', serif; 
+    font-size: 3.5rem; 
+    text-transform: uppercase; 
+    margin: 0; 
+    letter-spacing: 2px;
+    line-height: 1;
+}
+.meta-bar {
+    border-top: 1px solid var(--black);
+    border-bottom: 4px double var(--black);
+    max-width: 1200px;
+    margin: 15px auto 0;
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* HEMEROTECA NAV */
+.nav-wrapper { background: #eee; padding: 5px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 5px; font-family: 'Roboto', sans-serif; }
+
+/* LAYOUT PRINCIPAL */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* HERO (NOTICIA PRINCIPAL) */
+.card-hero {
+    grid-column: 1 / -1; /* Ocupa todo el ancho */
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+    border-bottom: 3px solid var(--black);
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+.card-hero img { width: 100%; height: 450px; object-fit: cover; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 2.8rem; line-height: 1.1; margin: 10px 0 20px 0; }
+.hero-content .bajada { font-size: 1.2rem; color: #444; margin-bottom: 20px; font-style: italic; }
+
+/* TARJETAS ESTÁNDAR */
+.card {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+}
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    filter: brightness(0.95);
+}
+.card h2 { font-size: 1.4rem; margin: 10px 0; line-height: 1.2; }
+.tag { 
+    font-family: 'Roboto', sans-serif; 
+    color: var(--accent); 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    font-size: 0.75rem; 
+    letter-spacing: 1px; 
+}
+.extracto { font-size: 0.95rem; color: #555; line-height: 1.5; margin-bottom: 15px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.8rem; text-decoration: underline; }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; }
+.article-body { font-size: 1.15rem; line-height: 1.8; color: #222; }
+.article-body p { margin-bottom: 20px; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: 1fr 1fr; }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 300px; }
+}
+@media (max-width: 600px) {
+    .container { grid-template-columns: 1fr; }
+    .brand { font-size: 2.5rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← VOLVER A PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Deportes</span>
+            <h1>Cerezo Responde a Araujo; Griezmann Lidera Victoria Rojiblanca</h1>
+            <p style="text-align:center; font-style:italic; color:#666;">El Atlético de Madrid se impuso con una actuación estelar de Griezmann, mientras la polémica arbitral y las declaraciones de Cerezo a Araujo marcaron la jornada.</p>
+        </header>
+        <img src="https://e01-xlk-ue-marca.uecdn.es/files/article_main_microformat/uploads/2026/02/12/698e4075459f6.jpeg" class="article-img-full">
+        <div class="article-body"><p>La jornada futbolística estuvo cargada de emociones y declaraciones contundentes, con el Atlético de Madrid como protagonista. Desde la respuesta tajante del presidente Enrique Cerezo a Ronald Araujo, afirmando que "no es nadie en el Atlético", hasta una actuación memorable de Antoine Griezmann, el partido dejó múltiples titulares.</p><h3>Griezmann, el director de orquesta incombustible</h3><p>A sus 34 años, Antoine Griezmann demostró una vez más su inmensa calidad y liderazgo. El francés se vistió de mediocentro, supliendo con maestría las bajas de Baena y Barrios, en una apuesta arriesgada de Simeone que resultó ser un éxito rotundo. El '7' rojiblanco ofreció un recital espectacular: marcó, asistió, inició jugadas con su visión y presionó con una intensidad que no se le veía en años, eclipsando incluso a jóvenes promesas como Lamine.</p><h3>La polémica arbitral y la dureza en el campo</h3><p>El encuentro también estuvo marcado por la controversia. Una dura entrada de Marc Casadó a Giuliano, que muchos consideraron merecedora de tarjeta roja, generó un gran revuelo en el banquillo rojiblanco. Casadó, quien estuvo en el radar del Atlético en el mercado invernal, fue sustituido en el minuto 37, reflejando el mal desempeño y la tensión del momento.</p><p>Además, la gestión del VAR volvió a ser objeto de críticas. La revisión de un posible gol, que habría significado el 4-1, se extendió por surrealistas seis minutos, obligando a los jugadores a calentar para no perder la temperatura. Este incidente subraya, una vez más, la necesidad de revisar los protocolos arbitrales en el fútbol español.</p><h3>Errores inesperados y rachas rotas</h3><p>Ni los mejores están exentos de fallos. Joan García, considerado uno de los mejores porteros de Europa, protagonizó un monumental error en el 1-0 al dejar pasar un balón por debajo, un fallo que pasará a la historia de la Copa. Sin embargo, el fútbol también dio alegrías, como el gol de Julián que rompió una sequía de más de dos meses. Su abrazo con Musso y compañeros al descanso fue la imagen de la liberación tras un periodo de rumores y presión.</p><h3>El impacto de los nuevos talentos</h3><p>Finalmente, la irrupción de Lookman fue otro de los puntos álgidos. El nigeriano se mostró imparable, creando, desbordando y marcando, superando con creces a un defensor de la talla de Koundé. Su llegada en enero ha supuesto un auténtico soplo de aire fresco y un impacto inmediato para el equipo rojiblanco, que necesitaba con urgencia su dinamismo y capacidad goleadora.</p></div>
+    </div>
+    </body></html>
+    

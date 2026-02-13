@@ -1,0 +1,127 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Europa debate su disuasión nuclear ante dudas sobre paraguas de EE.UU.</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { 
+    border-bottom: 1px solid var(--black); 
+    padding: 20px 0; 
+    text-align: center; 
+    position: relative;
+    background: white;
+}
+.brand { 
+    font-family: 'Cinzel', serif; 
+    font-size: 3.5rem; 
+    text-transform: uppercase; 
+    margin: 0; 
+    letter-spacing: 2px;
+    line-height: 1;
+}
+.meta-bar {
+    border-top: 1px solid var(--black);
+    border-bottom: 4px double var(--black);
+    max-width: 1200px;
+    margin: 15px auto 0;
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* HEMEROTECA NAV */
+.nav-wrapper { background: #eee; padding: 5px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 5px; font-family: 'Roboto', sans-serif; }
+
+/* LAYOUT PRINCIPAL */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* HERO (NOTICIA PRINCIPAL) */
+.card-hero {
+    grid-column: 1 / -1; /* Ocupa todo el ancho */
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+    border-bottom: 3px solid var(--black);
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+.card-hero img { width: 100%; height: 450px; object-fit: cover; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 2.8rem; line-height: 1.1; margin: 10px 0 20px 0; }
+.hero-content .bajada { font-size: 1.2rem; color: #444; margin-bottom: 20px; font-style: italic; }
+
+/* TARJETAS ESTÁNDAR */
+.card {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+}
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    filter: brightness(0.95);
+}
+.card h2 { font-size: 1.4rem; margin: 10px 0; line-height: 1.2; }
+.tag { 
+    font-family: 'Roboto', sans-serif; 
+    color: var(--accent); 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    font-size: 0.75rem; 
+    letter-spacing: 1px; 
+}
+.extracto { font-size: 0.95rem; color: #555; line-height: 1.5; margin-bottom: 15px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.8rem; text-decoration: underline; }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; }
+.article-body { font-size: 1.15rem; line-height: 1.8; color: #222; }
+.article-body p { margin-bottom: 20px; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: 1fr 1fr; }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 300px; }
+}
+@media (max-width: 600px) {
+    .container { grid-template-columns: 1fr; }
+    .brand { font-size: 2.5rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← VOLVER A PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Internacional</span>
+            <h1>Europa debate su disuasión nuclear ante dudas sobre paraguas de EE.UU.</h1>
+            <p style="text-align:center; font-style:italic; color:#666;">Un informe clave en Múnich alerta sobre la brecha en la disuasión nuclear europea y la creciente necesidad de autonomía estratégica frente a la dependencia de Washington.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17709128840336.jpg" class="article-img-full">
+        <div class="article-body"><p>La Conferencia de Seguridad de Múnich, que arranca hoy, se ve marcada por un intenso debate sobre la cuestión nuclear, impulsado por la presentación de un informe que pone de manifiesto la vulnerabilidad de la disuasión nuclear europea. Este estudio, que llega en un momento crucial, analiza las opciones del continente para reducir su dependencia de Estados Unidos, una preocupación reavivada por el posible retorno de Donald Trump a la Casa Blanca y las insistentes voces de líderes como Emmanuel Macron y Kaja Kallas.</p><p>El informe, elaborado por el European Nuclear Study Group (ENSG), es uno de los documentos más sensibles de la conferencia. Su tesis central es clara: Europa ya no puede “externalizar” su pensamiento estratégico nuclear a Washington y debe confrontar directamente el papel de las armas nucleares en su propia defensa. La realidad, sin embargo, es que, a pesar de los ofrecimientos franceses y el respaldo británico, Europa carece de una alternativa creíble al paraguas nuclear estadounidense, un vacío que se agrava tras la suspensión de facto del tratado New START entre Washington y Moscú.</p><h3>El Paraguas Nuclear Estadounidense: La Opción Actual</h3><p>El primer escenario que aborda el ENSG es mantener y reforzar el paraguas nuclear estadounidense dentro de la OTAN, la única arquitectura plenamente operativa hoy. Estados Unidos posee más de 3.000 cabezas nucleares activas y una tríada completa que ningún Estado europeo puede replicar. En Europa, el componente táctico estadounidense se articula a través del sistema de “nuclear sharing”, con bombas B61 desplegadas en bases aliadas en Alemania, Bélgica, Países Bajos, Italia y Turquía, sumando alrededor de un centenar de armas. Alemania, por ejemplo, ha adquirido cazas F-35 para mantener su capacidad de doble uso en este esquema.</p><h3>Opciones Europeas: Francia, Reino Unido y el Rol Alemán</h3><p>Frente a la magnitud del arsenal estadounidense, las capacidades europeas son limitadas. Francia dispone de unas 290 cabezas nucleares y el Reino Unido un máximo declarado de 260, ambos concebidos como instrumentos nacionales. El informe explora la vía de reforzar el papel franco-británico, con Macron reiterando la “dimensión europea” de la disuasión francesa. Sin embargo, esta capacidad sigue siendo nacional, lo que limita su transformación en un auténtico paraguas alternativo. Las advertencias de Kaja Kallas refuerzan la inquietud sobre la fiabilidad de la garantía nuclear estadounidense, pero ampliar el papel europeo exigiría inversiones sustanciales y redefiniciones doctrinales hoy inexistentes.</p><p>En este contexto, el papel de Alemania es determinante. Berlín ha respaldado el debate, pero mantiene una posición prudente y firmemente anclada en el marco atlántico. Como anfitrión clave del despliegue nuclear estadounidense y participante en la planificación de la OTAN, Alemania conserva influencia y protección sin asumir la responsabilidad última de la garantía nuclear. Sustituir el paraguas estadounidense por una fórmula exclusivamente europea alteraría el equilibrio actual, exigiría compromisos financieros masivos y abriría debates jurídicos sensibles en relación con el Tratado de No Proliferación.</p><h3>Escenarios Futuros y Desafíos de la Autonomía</h3><p>El informe también examina opciones más complejas, como la creación de un sistema europeo con autoridad de lanzamiento compartida, que exigiría un grado de integración política federal hoy inexistente. La proliferación nacional, con países como Alemania o Polonia desarrollando arsenales propios, chocaría con compromisos jurídicos internacionales y tendría costes diplomáticos, financieros y estratégicos enormes. Finalmente, la renuncia a la disuasión nuclear y el refuerzo del ejército convencional requeriría inversiones masivas que difícilmente sustituirían la dimensión nuclear frente a una potencia como Rusia.</p><p>El estudio del ENSG no dramatiza, sino que ordena escenarios, mide capacidades y compara cifras. La conclusión es clara: Europa sigue dependiendo, en última instancia, de una garantía externa. A esta brecha técnica se suma otra política: la Unión Europea carece hoy del consenso y la arquitectura necesarios para asumir una disuasión nuclear plenamente autónoma, dejando el debate abierto y la incertidumbre en el aire.</p></div>
+    </div>
+    </body></html>
+    

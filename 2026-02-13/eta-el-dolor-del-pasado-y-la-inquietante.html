@@ -1,0 +1,127 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETA: El dolor del pasado y la inquietante radicalización juvenil</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { 
+    border-bottom: 1px solid var(--black); 
+    padding: 20px 0; 
+    text-align: center; 
+    position: relative;
+    background: white;
+}
+.brand { 
+    font-family: 'Cinzel', serif; 
+    font-size: 3.5rem; 
+    text-transform: uppercase; 
+    margin: 0; 
+    letter-spacing: 2px;
+    line-height: 1;
+}
+.meta-bar {
+    border-top: 1px solid var(--black);
+    border-bottom: 4px double var(--black);
+    max-width: 1200px;
+    margin: 15px auto 0;
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* HEMEROTECA NAV */
+.nav-wrapper { background: #eee; padding: 5px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 5px; font-family: 'Roboto', sans-serif; }
+
+/* LAYOUT PRINCIPAL */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* HERO (NOTICIA PRINCIPAL) */
+.card-hero {
+    grid-column: 1 / -1; /* Ocupa todo el ancho */
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+    border-bottom: 3px solid var(--black);
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+.card-hero img { width: 100%; height: 450px; object-fit: cover; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 2.8rem; line-height: 1.1; margin: 10px 0 20px 0; }
+.hero-content .bajada { font-size: 1.2rem; color: #444; margin-bottom: 20px; font-style: italic; }
+
+/* TARJETAS ESTÁNDAR */
+.card {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+}
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    filter: brightness(0.95);
+}
+.card h2 { font-size: 1.4rem; margin: 10px 0; line-height: 1.2; }
+.tag { 
+    font-family: 'Roboto', sans-serif; 
+    color: var(--accent); 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    font-size: 0.75rem; 
+    letter-spacing: 1px; 
+}
+.extracto { font-size: 0.95rem; color: #555; line-height: 1.5; margin-bottom: 15px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.8rem; text-decoration: underline; }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; }
+.article-body { font-size: 1.15rem; line-height: 1.8; color: #222; }
+.article-body p { margin-bottom: 20px; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: 1fr 1fr; }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 300px; }
+}
+@media (max-width: 600px) {
+    .container { grid-template-columns: 1fr; }
+    .brand { font-size: 2.5rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← VOLVER A PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Nacional</span>
+            <h1>ETA: El dolor del pasado y la inquietante radicalización juvenil</h1>
+            <p style="text-align:center; font-style:italic; color:#666;">Claudia Múgica regresa al lugar del asesinato de su abuelo por ETA, mientras un asesino de López de Lacalle cumple condena en casa, y un catedrático reflexiona sobre la memoria y la radicalización juvenil.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17709277510809.jpg" class="article-img-full">
+        <div class="article-body"><p>Treinta años después de que ETA segara la vida de su abuelo, Claudia Múgica ha regresado al lugar de los hechos, un acto cargado de simbolismo y dolor. Su vuelta, sin embargo, se produce en un contexto de profunda preocupación por la memoria del terrorismo y la radicalización de las nuevas generaciones, un temor que ella misma ha expresado con contundencia.</p><h3>El Regreso al Escenario del Dolor</h3><p>Múgica ha vuelto al sitio donde la banda terrorista cometió el brutal asesinato, un viaje al pasado que no solo reabre heridas, sino que también la confronta con el presente. "La radicalización de los jóvenes vascos da pavor", ha declarado, señalando una inquietud creciente sobre cómo las nuevas generaciones perciben y entienden el legado de ETA y la violencia política.</p><h3>Controversia Judicial y Memoria Histórica</h3><p>Este emotivo regreso contrasta con una reciente decisión política que ha reavivado el debate sobre la justicia y la memoria. El Gobierno vasco ha permitido a uno de los asesinos de Juan Carlos López de Lacalle cumplir el resto de su condena de 30 años en su domicilio, una medida que ha generado indignación y críticas por parte de víctimas y sectores de la sociedad que ven en ella una relativización de la gravedad de los crímenes terroristas.</p><h3>La Voz de la Academia: No Olvidar</h3><p>En este escenario complejo, la voz de la academia resuena con un llamado a la memoria. Lorenzo Cotino, catedrático de Derecho Constitucional y presidente de la Agencia Española de Protección de Datos, ha recordado el "seísmo" que supuso el asesinato de Tomás y Valiente en 1996, y años antes, el de Manuel Broseta. Para Cotino, ETA no solo arrebató vidas, sino que "golpeó directamente a la institución encargada de velar por nuestros derechos fundamentales y por los principios democráticos", culminando una estrategia de terror contra intelectuales y maestros.</p><p>Cotino, quien en 1996 salió a la calle contra ETA, ha enfatizado la importancia de trasladar un mensaje claro a los jóvenes universitarios de hoy. "Deben saber que ETA asesinó a algunos de quienes habrían sido sus mejores profesores y referentes académicos", ha afirmado. Subraya que, aunque para ellos sea inconcebible una España donde la violencia silenciara el pensamiento, es crucial no olvidar lo sucedido. La memoria de quienes defendieron la libertad desde el conocimiento y las instituciones es un "recordatorio permanente del valor de la convivencia democrática que hoy disfrutamos".</p></div>
+    </div>
+    </body></html>
+    

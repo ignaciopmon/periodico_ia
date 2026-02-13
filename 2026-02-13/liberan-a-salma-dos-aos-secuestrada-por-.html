@@ -1,0 +1,127 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liberan a Salma: Dos años secuestrada por su pareja en Murcia</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { 
+    border-bottom: 1px solid var(--black); 
+    padding: 20px 0; 
+    text-align: center; 
+    position: relative;
+    background: white;
+}
+.brand { 
+    font-family: 'Cinzel', serif; 
+    font-size: 3.5rem; 
+    text-transform: uppercase; 
+    margin: 0; 
+    letter-spacing: 2px;
+    line-height: 1;
+}
+.meta-bar {
+    border-top: 1px solid var(--black);
+    border-bottom: 4px double var(--black);
+    max-width: 1200px;
+    margin: 15px auto 0;
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* HEMEROTECA NAV */
+.nav-wrapper { background: #eee; padding: 5px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 5px; font-family: 'Roboto', sans-serif; }
+
+/* LAYOUT PRINCIPAL */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* HERO (NOTICIA PRINCIPAL) */
+.card-hero {
+    grid-column: 1 / -1; /* Ocupa todo el ancho */
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+    border-bottom: 3px solid var(--black);
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+.card-hero img { width: 100%; height: 450px; object-fit: cover; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 2.8rem; line-height: 1.1; margin: 10px 0 20px 0; }
+.hero-content .bajada { font-size: 1.2rem; color: #444; margin-bottom: 20px; font-style: italic; }
+
+/* TARJETAS ESTÁNDAR */
+.card {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+}
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    filter: brightness(0.95);
+}
+.card h2 { font-size: 1.4rem; margin: 10px 0; line-height: 1.2; }
+.tag { 
+    font-family: 'Roboto', sans-serif; 
+    color: var(--accent); 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    font-size: 0.75rem; 
+    letter-spacing: 1px; 
+}
+.extracto { font-size: 0.95rem; color: #555; line-height: 1.5; margin-bottom: 15px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.8rem; text-decoration: underline; }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; }
+.article-body { font-size: 1.15rem; line-height: 1.8; color: #222; }
+.article-body p { margin-bottom: 20px; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: 1fr 1fr; }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 300px; }
+}
+@media (max-width: 600px) {
+    .container { grid-template-columns: 1fr; }
+    .brand { font-size: 2.5rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← VOLVER A PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Nacional</span>
+            <h1>Liberan a Salma: Dos años secuestrada por su pareja en Murcia</h1>
+            <p style="text-align:center; font-style:italic; color:#666;">Salma, desaparecida hace casi dos años, fue hallada con vida en un chalet de Murcia, donde su pareja la mantenía secuestrada y sometida a vejaciones, siendo rescatada tras su huida y la detención de cuatro implicados.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17709228256431.jpg" class="article-img-full">
+        <div class="article-body"><p>Hace casi dos años, en abril de 2024, Salma, una joven marroquí que hoy tiene 38 años, desapareció sin dejar rastro, sumiendo a su familia en la incertidumbre y llevando a la activación de la alerta de SOS Desaparecidos. La falta de pistas claras y el paso del tiempo hicieron que se barajara la hipótesis de una fuga voluntaria, una teoría que, sin embargo, distaba mucho de la cruel realidad que la joven estaba viviendo.</p><h3>Rescate tras 22 meses de cautiverio</h3><p>La verdad salió a la luz tras 22 largos meses de infierno: Salma no había huido, sino que había sido secuestrada y aislada por su propia pareja en un chalet de la pedanía murciana de San José de la Vega. La Policía Nacional ha logrado detener en Murcia al hombre responsable, un ciudadano español de 50 años, acusado de presuntos delitos de violencia de género y detención ilegal. El individuo la mantuvo retenida contra su voluntad, sometiéndola a todo tipo de vejaciones.</p><p>La operación policial, que tuvo lugar el pasado miércoles, no solo se saldó con la detención del principal sospechoso. Tres personas más, vecinos de la zona, fueron arrestadas como presuntos autores de un delito de encubrimiento. Según los investigadores, eran conocedores de la situación y, a pesar de ello, nunca denunciaron el secuestro a las autoridades, facilitando así que el cautiverio se prolongara en una discreta casa de campo con jardín y piscina.</p><h3>La huida y el horror revelado</h3><p>La liberación de Salma fue posible gracias a un momento de descuido de su captor. Aprovechando que su pareja dormía, la joven logró escapar del chalet utilizando una escalera para saltar la valla del recinto. Una vez en libertad, su primer acto fue buscar ayuda en un centro de salud cercano, donde los sanitarios certificaron la multitud de lesiones y magulladuras que presentaba en todo su cuerpo.</p><p>El relato de Salma es desgarrador. Durante los casi dos años de encierro, el maltrato fue constante y brutal. La joven llegó a perder varios dientes y la visión de un ojo como consecuencia de las palizas. Además, su novio la maniataba con frecuencia, la golpeaba con palos e incluso la violó en repetidas ocasiones, amenazándola para que no intentara escapar. En el registro de la vivienda, autorizado por el Juzgado de Guardia de Murcia, se hallaron diversas armas blancas y de fuego, estupefacientes y cuerdas utilizadas para atar y amordazar a la víctima.</p><h3>Antecedentes y proceso judicial</h3><p>Según informó La Opinión de Murcia, el detenido contaba con antecedentes por violencia de género, habiendo sido denunciado por su exmujer en 2025 por una agresión. Este historial ya lo tenía fichado por la Policía. El delegado del Gobierno, Francisco Lucas, confirmó que la investigación sigue abierta. Se espera que los cuatro detenidos pasen este viernes a disposición del Juzgado de Violencia sobre la Mujer número 1 de Murcia. La ficha de búsqueda de Salma fue desactivada oficialmente el pasado miércoles y, tras ser atendida, la joven se recupera en un hogar de acogida.</p></div>
+    </div>
+    </body></html>
+    

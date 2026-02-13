@@ -1,0 +1,140 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>España critica cumbre UE; Sánchez pacta con derechas; PSOE en crisis</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { 
+    border-bottom: 1px solid var(--black); 
+    padding: 20px 0; 
+    text-align: center; 
+    position: relative;
+    background: white;
+}
+.brand { 
+    font-family: 'Cinzel', serif; 
+    font-size: 3.5rem; 
+    text-transform: uppercase; 
+    margin: 0; 
+    letter-spacing: 2px;
+    line-height: 1;
+}
+.meta-bar {
+    border-top: 1px solid var(--black);
+    border-bottom: 4px double var(--black);
+    max-width: 1200px;
+    margin: 15px auto 0;
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* HEMEROTECA NAV */
+.nav-wrapper { background: #eee; padding: 5px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 5px; font-family: 'Roboto', sans-serif; }
+
+/* LAYOUT PRINCIPAL */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* HERO (NOTICIA PRINCIPAL) */
+.card-hero {
+    grid-column: 1 / -1; /* Ocupa todo el ancho */
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+    border-bottom: 3px solid var(--black);
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+.card-hero img { width: 100%; height: 450px; object-fit: cover; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 2.8rem; line-height: 1.1; margin: 10px 0 20px 0; }
+.hero-content .bajada { font-size: 1.2rem; color: #444; margin-bottom: 20px; font-style: italic; }
+
+/* TARJETAS ESTÁNDAR */
+.card {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+}
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    filter: brightness(0.95);
+}
+.card h2 { font-size: 1.4rem; margin: 10px 0; line-height: 1.2; }
+.tag { 
+    font-family: 'Roboto', sans-serif; 
+    color: var(--accent); 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    font-size: 0.75rem; 
+    letter-spacing: 1px; 
+}
+.extracto { font-size: 0.95rem; color: #555; line-height: 1.5; margin-bottom: 15px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.8rem; text-decoration: underline; }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; }
+.article-body { font-size: 1.15rem; line-height: 1.8; color: #222; }
+.article-body p { margin-bottom: 20px; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: 1fr 1fr; }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 300px; }
+}
+@media (max-width: 600px) {
+    .container { grid-template-columns: 1fr; }
+    .brand { font-size: 2.5rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← VOLVER A PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Nacional</span>
+            <h1>España critica cumbre UE; Sánchez pacta con derechas; PSOE en crisis</h1>
+            <p style="text-align:center; font-style:italic; color:#666;">España se enfrenta a la UE por una cumbre clave, mientras Sánchez pacta con la derecha y el PSOE vive una profunda crisis interna por los resultados electorales en Aragón.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/12/17709062067281.jpg" class="article-img-full">
+        <div class="article-body"><p>La agenda política española se ha visto sacudida por una triple convulsión que abarca desde las altas esferas europeas hasta las profundidades de la política interna del Partido Socialista Obrero Español (PSOE). España ha elevado su voz crítica contra una cumbre clave de líderes europeos, mientras el Gobierno de Pedro Sánchez ha optado por una sorprendente alianza legislativa y el PSOE se sumerge en una agria disputa interna por los resultados electorales en Aragón.</p>
+
+<h3>Choque en Bruselas: España y la Cumbre Europea</h3>
+<p>La Unión Europea ha sido escenario de un notable desencuentro. España ha manifestado su profundo malestar y crítica hacia una cumbre de líderes europeos a la que no fue invitada antes de la reunión formal de los 27. Esta exclusión, según fuentes del Gobierno español, socava los valores fundamentales de la UE y genera un precedente preocupante en la toma de decisiones comunitarias.</p>
+
+<h3>Sánchez y la Ley de Multirreincidencia: Un Giro Inesperado</h3>
+<p>En el ámbito legislativo nacional, el presidente Pedro Sánchez ha protagonizado un movimiento que ha desairado a sus socios habituales. La ley de Junts, que endurece el castigo a la multirreincidencia, ha sido aprobada con el respaldo de todas las derechas, marcando un punto de inflexión en la estrategia parlamentaria del PSOE y generando interrogantes sobre futuras alianzas en el Congreso de los Diputados.</p>
+
+<h3>La Batalla Interna del PSOE: Aragón en el Centro</h3>
+<p>Paralelamente, el PSOE se encuentra inmerso en una significativa disputa interna, desencadenada por los resultados electorales en Aragón. Las declaraciones del ministro Óscar López, señalando a un sector del socialismo aragonés, encabezado por el fallecido Javier Lambán, por "hacer otra cosa" en lugar de oposición al popular Jorge Azcón, han encendido la mecha de la controversia. López sugirió que esta postura, a menudo con "argumentos que eran de la derecha", pudo haber influido negativamente en el desempeño del partido.</p>
+
+<p>La respuesta no se hizo esperar. Pilar Alegría, candidata en los comicios aragoneses y ex portavoz del Gobierno, replicó públicamente a López a través de sus redes sociales. Alegría calificó de "error" señalar a responsables de los resultados y afirmó que "no nos conduce en la buena dirección", defendiendo el legado de Lambán y los presidentes socialistas de Aragón, a pesar de su conocido distanciamiento con el expresidente. Reconoció, no obstante, que el resultado "no fue bueno" y que el partido debe "mejorar para recuperar la confianza de los aragoneses".</p>
+
+<p>Las palabras de López también provocaron la reacción del líder del Partido Popular, Alberto Núñez Feijóo, quien criticó duramente al ministro por "culpar al expresidente socialista Lambán, fallecido, de sus derrotas electorales". Feijóo arremetió directamente contra López, afirmando que "el nivel de decencia de este ministro solo es comparable con el de la persona que le nombró", calificando el episodio como "de las cosas más lamentables que he visto en política".</p></div>
+    </div>
+    </body></html>
+    
