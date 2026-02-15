@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alcalde de La Algaba Denunciado por Acoso Sexual a Menor</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Nacional</span>
+            <h1>Alcalde de La Algaba Denunciado por Acoso Sexual a Menor</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">El alcalde socialista de La Algaba, Diego Manuel Agüera, enfrenta una grave denuncia por acoso sexual a un aprendiz de torero menor de edad, mientras su partido investiga y él se defiende usando recursos municipales.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/14/17710839741475.jpg" class="article-img-full">
+        <div class="article-body"><h3>Grave Denuncia Sacude La Algaba</h3>El alcalde de La Algaba, el socialista Diego Manuel Agüera, se encuentra en el ojo del huracán tras ser denunciado por "hostigamiento sexual" a un menor de edad, alumno de la Escuela Municipal de Tauromaquia. La denuncia, tramitada internamente por el PSOE, ha desatado un escándalo que pone en jaque la trayectoria política del regidor, quien además es secretario local del partido. Los hechos, calificados de "especial gravedad" por el órgano interno del PSOE, incluyen insinuaciones sexuales y proposiciones de encuentro a través de redes sociales.<br><br><h3>Agüera se Blinda con el Ayuntamiento</h3>Frente a estas acusaciones, Agüera no solo ha negado rotundamente la veracidad de los hechos, sino que ha utilizado la institución que preside para blindar su imagen. Un comunicado oficial del gobierno local defiende su inocencia y cuestiona la denuncia, vinculándola a una presunta venganza por el cierre de la escuela de tauromaquia. El escrito municipal asegura que las acusaciones carecen de "ningún fundamento" y lamenta el "daño" que la situación está provocando al regidor y a su familia, presentándolos como víctimas de un "señalamiento público basado en una denuncia anónima".<br><br><h3>El PSOE Advierte de la Gravedad</h3>A pesar de la defensa institucional del alcalde, el Partido Socialista ha tomado la denuncia con seriedad. El órgano encargado de la tramitación de denuncias de acoso dentro del partido ha señalado la "especial gravedad" de los hechos y ha anunciado que los pondrá en conocimiento de la Fiscalía o los juzgados si el denunciante no lo hace. Esta investigación interna, que el comunicado municipal omite, contrasta con la postura del equipo de Agüera, que amenaza con "emprender acciones legales" para "frenar cualquier intento de difamación".<br><br><h3>Mensajes Explícitos y Proposición de Encuentro</h3>Según la denuncia, a la que ha tenido acceso EL MUNDO, Agüera habría enviado mensajes explícitos al menor a través de Instagram, incluyendo la frase "Ayyy si tuvieras los 18!!!", que evidencia un deseo sexual condicionado por la edad del joven. Se menciona también una pregunta sobre el rol sexual del menor en relaciones homosexuales ("activo o pasivo"), que fue borrada posteriormente por el alcalde. La denuncia también apunta a una proposición de encuentro personal, "verse un día de fiesta", lo que se enmarca en el tipo penal de proposición de encuentro con fines lúbricos.<br><br><h3>Posición de Superioridad y Reacción Política</h3>La denuncia subraya que Agüera actuó desde una "posición de superioridad" como alcalde y máximo responsable de la Escuela de Tauromaquia, generando una "situación de sumisión y vulnerabilidad" en el menor. Este comportamiento es definido como "child grooming". La situación ha provocado la reacción del Partido Popular, que ha solicitado una reunión urgente de la junta de portavoces para obtener información. El PP califica las acusaciones de "gravísimas", critica el uso de recursos institucionales para la defensa del alcalde y se reserva "todas las acciones de carácter legal" y de exigencia de responsabilidades políticas. Cabe recordar que Agüera ya sobrevivió a un caso de corrupción anterior, añadiendo una capa más de complejidad a su historial.</div>
+    </div>
+    </body></html>
+    

@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All-Star: Lillard héroe, mates al olvido y nuevo formato global</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Deportes</span>
+            <h1>All-Star: Lillard héroe, mates al olvido y nuevo formato global</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">La NBA reinventa su All-Star con un formato Estados Unidos contra el Mundo tras años de declive, mientras Lillard brilla con un Aquiles roto y el concurso de mates decepciona.</p>
+        </header>
+        <img src="https://e01-xlk-ue-marca.uecdn.es/files/article_main_microformat/uploads/2026/02/14/6990627e2800c.jpeg" class="article-img-full">
+        <div class="article-body"><h3>El All-Star: De la gloria al olvido</h3><p>A Maurice Podoloff, que hoy da nombre al trofeo del campeón de la temporada regular, se le ocurrió a finales de 1950 la idea de un partido de exhibición con los mejores jugadores de la NBA. Nació el All Star Game, cuya trayectoria, especialmente a raíz de añadirse los concursos a finales de los 70 y en la 'era Jordan', dejó algunos de los momentos más memorables de la historia de la liga. Sin embargo, desde aquel partido de 1951 en el Boston Garden y después de los momentos cumbre de los 90, el All Star Game fue degenerando poco a poco hasta convertirse en un “engendro” que Jaylen Brown (Celtics) definió como “una rueda de calentamiento disfrazada con canastas espectaculares”. Tras ediciones con récords de mates (73 en 2017) o intentos de triples (167 en 2019), y una definitiva con solo 42 minutos de tiempo efectivo en 2025, la NBA ha decidido frenar la hemorragia de popularidad.</p><h3>Nace un nuevo All-Star: Estados Unidos contra el Mundo</h3><p>Hoy, en el 75 aniversario, nace un nuevo All Star: Estados Unidos contra el resto del mundo, al estilo de la majestuosa Ryder Cup de golf. El Intuit Dome de Inglewood en L.A., el modernísimo pabellón de los Clippers, verá este nuevo formato que responde a la necesidad de la NBA de elevar la tensión del partido, fomentar la competitividad y devolver el interés a un duelo que en 1993 vieron 22,6 millones de personas solo en Estados Unidos, pero que en la última edición no pasó de cinco. Es el quinto formato distinto, y se dividirá ahora en cuatro partidos de 12 minutos. Tres combinados de ocho jugadores, uno de estrellas jóvenes, otro de astros consagrados y, la novedad, otro con los mejores del firmamento internacional, se medirán en tres mini partidos. Los dos mejores jugarán la final en el último cuarto.</p><h3>El dominio global desafía a la cuna del baloncesto</h3><p>Nada motiva más a los americanos que decirles a la cara que ya no son los mejores en baloncesto. Desde 2018 el MVP de la NBA no es estadounidense: Antetokounmpo (Grecia), Jokic (Serbia), Embiid (Camerún) y Shai (Canadá) se han repartido el trofeo al más valioso. La afrenta es grande y sintomática de la globalización. El ‘unicornio’ galo Victor Wembanyama no está para bromas: “El All Star no ha sido competitivo, pero esto se acabó. Yo no salto a una cancha para que no me importe perder. Nunca empiezo un juego, ni uno de mesa en casa, pensando que voy a perder”. El Team World, con un Luka Doncic recuperado, quiere seguir marcando el paso del devenir de la competición. A pesar de las bajas de dos MVP como Anteto y Shai, al genio esloveno le acompañarán Jokic (Serbia), Wembanyama (Francia), Sengun (Turquía), Anthony-Towns (Rep. Dominicana), Jamal Murray (Canadá), Avdija (Israel) y Siakam (Camerún).</p><h3>LeBron y la batalla por la supremacía</h3><p>LeBron James, en su presencia número 22 (récord), tendrá algo que decir al respecto de quién tiene la supremacía. Ha visto, y participado, de la pérdida de pujanza del partido en este siglo XXI. El temor a lesionarse, con la consiguiente mengua económica para jugadores con contratos extraordinarios que cobran por partido jugado, y la ausencia de malos rollos entre los jugadores, ahora que se llevan bien todos a diferencia de los 90, fue mermando el deseo y ardor de los protagonistas del encuentro hasta convertirlo en un simulacro de partido de baloncesto. Ahora, en otro contexto, con 135 jugadores internacionales de 43 países distintos, el domingo de recreo y fiesta se acabó. Sin nada en juego, el triunfo tiene mucho simbolismo. Se dirime no solo el estatus de unos y otros en la NBA: es una batalla por gobernar el mundo.</p><h3>Contrastes en los concursos: Lillard héroe, mates al olvido</h3><p>Mientras la NBA busca reinventar su evento estrella, los concursos previos dejaron sensaciones encontradas. El concurso de mates, una vez el plato fuerte del fin de semana, se convirtió en “un concurso de mates para el olvido”, incapaz de generar la emoción de antaño y dejando un sabor agridulce entre los aficionados. En contraste, la “heroicidad de Lillard” acaparó los titulares. El base, con un tendón de Aquiles roto, desafió el dolor para ganar el concurso de triples, demostrando una resiliencia que encarna el espíritu competitivo que la liga busca recuperar en su All-Star y ofreciendo un destello de la magia que el evento necesita revitalizar.</p></div>
+    </div>
+    </body></html>
+    
