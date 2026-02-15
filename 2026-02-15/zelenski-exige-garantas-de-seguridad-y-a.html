@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zelenski exige garantías de seguridad y advierte contra concesiones territoriales en Múnich</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Internacional</span>
+            <h1>Zelenski exige garantías de seguridad y advierte contra concesiones territoriales en Múnich</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">El presidente ucraniano, Volodimir Zelenski, urgió a Estados Unidos y Europa a formalizar garantías de seguridad antes de cualquier acuerdo de paz, advirtiendo contra concesiones territoriales y destacando el rol de Ucrania en la seguridad europea.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/14/17710734783902.jpg" class="article-img-full">
+        <div class="article-body"><h3>Zelenski Demanda Garantías de Seguridad Firmes Antes de un Acuerdo de Paz</h3>El presidente ucraniano, Volodimir Zelenski, ha pedido este sábado al presidente Donald Trump y al Congreso de Estados Unidos que formalicen cuanto antes las garantías de seguridad negociadas con Kiev, y ha advertido que cualquier acuerdo para poner fin a la guerra deberá basarse en compromisos firmes que garanticen la estabilidad futura de Ucrania. Durante su intervención en la Conferencia de Seguridad de Múnich, Zelenski afirmó: "Tenemos sólidos acuerdos preparados para ser firmados con Estados Unidos y con Europa. Pensamos que el acuerdo sobre garantías de seguridad debe venir antes de cualquier acuerdo para poner fin a la guerra". En un llamamiento directo a Washington, añadió: "Esperamos que el presidente Trump nos escuche. Esperamos que el Congreso y el pueblo estadounidense nos escuchen".<h3>Críticas a las Negociaciones y Advertencia Contra Concesiones Territoriales</h3>Zelenski ha dejado claro que Ucrania está dispuesta a participar en el proceso diplomático impulsado por Estados Unidos, aunque advirtió de que hasta ahora las negociaciones han estado marcadas por la falta de claridad y por exigencias dirigidas principalmente a Kiev. Señaló que Rusia invoca con frecuencia el llamado "espíritu de Anchorage", pero añadió: "Solo podemos adivinar qué significa eso". También criticó que Europa no esté plenamente presente en estas conversaciones, una afirmación que fue recibida con aplausos. Al mismo tiempo, advirtió de que cualquier intento de resolver el conflicto mediante concesiones territoriales a Rusia no traerá una paz duradera, comparándolo con el sacrificio de Checoslovaquia.<h3>Impacto de la Guerra y el Rol Estratégico de Ucrania en Europa</h3>Al comienzo de su intervención, Zelenski proyectó imágenes de ciudades destruidas y la magnitud de los ataques rusos, detallando el lanzamiento de miles de drones, misiles y bombas planeadoras. También mostró cifras sobre las pérdidas rusas, afirmando que Ucrania mató a "35.000 ocupantes rusos" en diciembre de 2025 y a otros "30.000 soldados rusos" en enero de este año. Utilizó estos datos para acusar a Vladimir Putin de ser un "esclavo de la guerra", desconectado de la realidad. Zelenski insistió en que Ucrania se ha convertido en un elemento central de la seguridad europea, afirmando que tiene "el ejército más fuerte de Europa" y defendiendo su plena integración en la arquitectura de seguridad occidental, incluyendo la OTAN.<h3>Agenda Diplomática y Desafíos Electorales en Tiempos de Guerra</h3>El presidente ucraniano también se refirió al papel de Irán en el conflicto, denunciando el suministro de drones a Rusia. Insistió en que Kiev está dispuesta a explorar una solución diplomática, pero con garantías de seguridad sólidas. Sobre la posibilidad de elecciones, Zelenski se mostró sorprendido por un informe del Financial Times y subrayó las enormes dificultades logísticas y de seguridad, afirmando: "Nadie quiere elecciones en medio de una guerra". Concluyó su intervención con un llamamiento directo a los aliados internacionales: "Por favor, sigan prestando atención a Ucrania". En paralelo, Zelenski desarrolló una intensa agenda diplomática en los márgenes de la conferencia, reuniéndose con Marco Rubio, Friedrich Merz, congresistas estadounidenses y el líder opositor iraní Reza Pahlavi.<h3>El Respaldo Europeo y la Reafirmación del Papel Estratégico del Continente</h3>El discurso de Zelenski fue recibido con aplausos por un auditorio que incluía a la presidenta de la Comisión Europea, Ursula von der Leyen, el secretario general de la OTAN y Hillary Clinton. El respaldo europeo a Kiev fue reiterado de forma constante durante la conferencia, con líderes como Emmanuel Macron y Keir Starmer subrayando la necesidad de fortalecer la capacidad militar europea. El ministro de Asuntos Exteriores chino, Wang Yi, también abogó por el respeto a la soberanía y la integridad territorial. Este apoyo sostenido, que incluye una considerable ayuda financiera, militar y logística, responde a un contexto estratégico más amplio donde Estados Unidos insta a Europa a asumir una mayor responsabilidad en su propia defensa, consolidando el papel de Ucrania como eje de la seguridad continental.</div>
+    </div>
+    </body></html>
+    

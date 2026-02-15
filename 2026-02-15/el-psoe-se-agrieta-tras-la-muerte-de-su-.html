@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El PSOE se agrieta tras la muerte de su estratega Miguel Barroso</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Nacional</span>
+            <h1>El PSOE se agrieta tras la muerte de su estratega Miguel Barroso</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">Desde la inesperada muerte de Miguel Barroso, estratega clave del PSOE, el partido y el Gobierno de Pedro Sánchez han encadenado una serie de infortunios y tensiones internas que evidencian un vacío irreparable.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/14/17710935571064.png" class="article-img-full">
+        <div class="article-body"><h3>El vacío irreparable de un estratega silencioso</h3>El pasado mes de enero se cumplieron dos años de la muerte de un hombre brillante y culto, pensador, periodista, escritor, publicista, creativo, asesor, guionista de la política real, y líder intelectual de un grupo de personas poderosas que mandaron y siguen mandando en el PSOE. Un hombre sin cuya labor callada y en la eficiente umbría del poder no se puede explicar la historia del PSOE y de la izquierda española de las últimas décadas. Era una rara avis. No quería ser famoso, ni salir en los medios, ni ser reconocido por la calle y elogiado en los papeles, ni gustaba de presumir de su gran poder. Le bastaba con ejercerlo. Miguel Barroso era la clave del abanico que mantenía unido a un grupo en el que había un líder político, José Luis Rodríguez Zapatero; directivos mediáticos, como José Manuel Contreras; altos ejecutivos de grandes empresas, responsables de instituciones culturales, intelectuales del socialismo como José María Maravall, y hasta algún dirigente del PP. El poder de Barroso no necesitaba la exposición pública para tener capacidad decisoria en los centros de mando del país. Era un poder a base de creatividad y seducción. El 13 de enero de 2024, en el tanatorio donde tanta gente se reconocía devastada por una muerte inesperada de tanta vitalidad, uno de esos poderosos amigos del primer círculo del universo Barroso comentó con las lágrimas asomando a los ojos: «Esta muerte es una gran tragedia para sus amigos, pero también es una pérdida irreparable para el proyecto del Gobierno progresista de este país».<h3>La racha de infortunios tras la desaparición del "artífice del milagro"</h3>Pedro Sánchez perdió ese día más que a una persona cercana, perdió al artífice del milagro de las elecciones generales del 23-J de 2023. Y, casualidades de la vida, el karma o lo que sea, a partir del entierro de Miguel Barroso, el presidente Sánchez empezó a coleccionar infortunios, uno tras otro. Un mes después, detuvieron a Koldo García. Más tarde imputaron por corrupción a José Luis Ábalos. Luego detuvieron a Santos Cerdán. Atravesó la crisis de los cinco días de abril. Perdió las elecciones gallegas, extremeñas y aragonesas. Perdió la mayoría de la investidura. El universo Barroso también sufrió. Se perdió el control del influyente Grupo Prisa. Y empezaron los disparos contra la reputación moral del ex presidente Zapatero. No hay ningún alto cargo socialista que no haya comentado, con asombro alguna vez estos dos años, cómo ha ido todo a peor desde la muerte de Miguel Barroso. Todos los líderes políticos desearían tener a alguien que escriba discursos como él, dice alguien muy cercano. Sus consejos de asesor provocaban adicción en los asesorados. A pesar de ello, y esto es algo que no abunda en la actualidad, nunca regalaba los oídos a los jefes de partido, era muy exigente, y a veces demoledor en sus críticas. A la cara. Muchos socialistas importantes pueden dar fe de esto.<h3>El arquitecto del 23-J y la resiliencia de Sánchez</h3>Barroso fue asesor de Felipe González, amigo de José Luis Rodríguez Zapatero; fracasó junto a Carme Chacón, su mujer entonces, en la aventura de optar al liderazgo del PSOE, y meses antes de que le fulminara un ataque al corazón, fue el artífice de la inverosímil, inesperada y carambolesca derrota-victoria electoral que le dio la posibilidad al partido de una investidura compleja que le llevó a Moncloa, donde tiene pensado seguir hasta las elecciones del 27. La noche del 28 de mayo de 2023, la debacle electoral del PSOE en las autonómicas y municipales hundió por completo el ánimo de Sánchez. No sabía qué hacer, ni qué decir, ni qué cara poner al día siguiente. Barroso ya era su primer asesor. Había gestionado con él la crisis de Gobierno del verano de 2021 en la que el presidente prescindió de su jefe de Gabinete, Iván Redondo, y del núcleo duro del partido, con la salida de Ábalos y Carmen Calvo. Barroso fue, después de hablar con él, la primera persona que conoció la decisión del presidente de convocar elecciones generales a la mañana siguiente de la derrota de los candidatos socialistas en autonomías y ayuntamientos. Y juntos elaboraron el discurso de las elecciones anticipadas tras el veredicto negativo de las urnas contra el Gobierno. Barroso fue, también, el artífice principal de la campaña electoral de Pedro Sánchez. Y por supuesto, de la participación decisiva del ex presidente Zapatero, que disfrutó en los mítines más incluso que en sus propias campañas. Barroso conoció e intimó con Sánchez mucho después de que fuera elegido líder del PSOE. Pero puso a su disposición todos los recursos y las personas influyentes que siempre le acompañaron, que eran muchas.<h3>La tensión interna y la inquebrantable hoja de ruta de Sánchez</h3>Desde aquel fallecimiento inesperado, no ha habido día en que sus amigos, ante las dificultades, no se hayan preguntado: «Qué habría hecho Miguel». De aquel milagro del verano del 23 y de la correspondiente investidura de finales de aquel año es de lo que se alimenta Pedro Sánchez cuando ve a su ex secretario de Organización Ábalos sentado en el banquillo, y cuando ve a su otro secretario de Organización Cerdán acusado de graves delitos, cuando la mayoría de la Cámara le da la espalda, cuando el PSOE sufre la derrota de la candidata que él mismo designó para Aragón, cuando Felipe González le critica, cuando huye de la autocrítica por las derrotas, cuando se dispone a completar una legislatura sin un sólo presupuesto, cuando la oposición le insulta, cuando el PNV le pide que vaya pensando en las elecciones, cuando los jueces persiguen a su mujer y a su hermano, cuando ya parece que nada peor puede pasarle. 2027 es su fecha. Antes de eso, ya puede hundirse el mundo, que él no va a adelantar las elecciones. Llegarán más derrotas autonómicas y Sánchez no se dará por aludido, como no lo ha hecho después de Extremadura y Aragón. Tiene en la cabeza los consejos del que ha sido el mejor asesor político de la izquierda española. Aquí sólo hay dos palabras: progresismo o reacción, desde Washington a Buenos Aires o a Zaragoza. Miguel Barroso era precisamente de Zaragoza y la líder del PSOE aragonés, Pilar Alegría, una de sus apuestas políticas. Cabe preguntarse qué pensaría Miguel de haber asistido al espectáculo de la semana posterior a las elecciones aragonesas.<h3>La sombra de Barroso en las decisiones actuales del PSOE</h3>Los protagonistas están unidos por un hilo invisible al asesor fallecido. González contó con él en su última legislatura -el segundo debate con Aznar, que ganó, lo preparó el ex presidente con Barroso y Contreras-, y el martes en los Desayunos del Ateneo se despachó contra Sánchez. Nada nuevo, pero percutió gravemente sobre la debilidad electoral del PSOE. Y la reacción de los ministros de Sánchez, algunos de los cuales han enseñado la puerta de salida al tótem de la historia del PSOE, indica que la censura de González hizo daño. No está nada claro que Miguel hubiese aconsejado a Óscar López, nombrado director de Gabinete en sustitución de Iván Redondo en la citada crisis de Gobierno, echarle la culpa de la derrota en Aragón al fallecido Javier Lambán. Todos estos episodios, que evidencian una tensión interna tan creciente como muda dentro del PSOE, son archivados a beneficio de inventario por el presidente del Gobierno. Su argumento para convocar las elecciones generales después de las municipales y autonómicas del 27 consiste en recordar el 23-J, cuando nadie -pero nadie, ni siquiera él- esperaba que siguiera como presidente. El PSOE se estrelló en las autonómicas, pero subió en las generales hasta poder formar Gobierno. Sánchez se ha quedado a vivir en la epopeya de julio del 23. Aunque el fallecimiento de su talismán ha dejado un hueco que nadie puede rellenar. Miguel Barroso falleció el 13 de enero de 2024 a los 70 años. Periodista, publicista, ejecutivo, escritor y asesor político, licenciado en Historia y en Derecho. Fue 'dircom' de Educación en los gobiernos de Felipe González, secretario de Estado de Comunicación con Zapatero y consejero de Sánchez. Impulsó a su mujer, Carme Chacón, al liderazgo del PSOE, sin éxito.</div>
+    </div>
+    </body></html>
+    
