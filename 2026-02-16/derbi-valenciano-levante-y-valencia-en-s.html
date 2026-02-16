@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derbi valenciano: Levante y Valencia, en su peor momento histórico</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Deportes</span>
+            <h1>Derbi valenciano: Levante y Valencia, en su peor momento histórico</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">El derbi de la capital valenciana entre Levante y Valencia se disputa hoy en el Ciutat de València con ambos equipos en posiciones críticas, marcando un hito negativo en su historia.</p>
+        </header>
+        <img src="https://e01-xlk-ue-marca.uecdn.es/files/article_main_microformat/uploads/2026/02/15/69917325d194c.jpeg" class="article-img-full">
+        <div class="article-body"><h3>Un Derbi Histórico por lo Bajo</h3><p>El derbi de la capital valenciana entre Levante y Valencia alcanza hoy un punto de inflexión sin precedentes en su historia. La temporada 2025-26 ha llevado a ambos equipos a una situación tan crítica que nunca antes se había disputado un partido con tal nivel de urgencia desde que el enfrentamiento comenzó a jugarse en Primera División a mediados de los años 60. Lo que se vivirá en el estadio Ciutat de València es, sin duda, inusual y preocupante para ambas aficiones.</p><h3>En el Abismo de la Clasificación</h3><p>Actualmente, el Valencia ocupa la 17ª posición del campeonato, mientras que el Levante se encuentra en la 19ª. Este derbi local se juega en lo más profundo de la tabla, con los dos equipos hundidos en la clasificación, una circunstancia que no tiene parangón en las 18 temporadas en las que han coincidido en la máxima categoría del fútbol español. El precedente más cercano, aunque aún lejano, se remonta a 63 años atrás, cuando el Valencia era último (16º) y el Levante 13º en una liga de 16 equipos.</p><h3>Un Historial de Desequilibrio</h3><p>A lo largo de los 35 partidos disputados entre ambos en Primera, el Valencia ha llegado casi siempre por delante de los granotas en la clasificación, concretamente en 26 ocasiones. El Levante, por su parte, solo lo ha hecho en siete. La temporada 2020-21 es una excepción, al coincidir ambos en la primera jornada de Liga y empezar empatados a todo. Sin embargo, la campaña actual 2025-26 es un suplicio que se repite: en el partido de Mestalla, el Valencia era 17º y el Levante 19º, posiciones que se mantienen para el derbi de hoy en el Ciutat de València.</p><h3>Contrastes Históricos: Del Éxito al Abismo</h3><p>La percepción de este derbi ha variado drásticamente desde su primera vez en la temporada 1963-64. El mayor contraste en la tabla se vivió en la campaña 2007-08, con el Valencia 7º y el Levante 20º. Por otro lado, el 'mejor derbi' en términos de clasificación se produjo en la temporada 2011-12, cuando el Levante, en su mejor campaña en Primera, era 3º y el Valencia 4º en la jornada 12, un escenario de éxito que hoy parece una quimera.</p><h3>Las Peores Clasificaciones</h3><p>El Levante ha disputado este derbi en puestos de descenso en 11 ocasiones, mientras que el Valencia lo había hecho solo una vez antes de esta temporada, en la campaña 1963-64. Las dos peores clasificaciones del equipo blanquinegro coinciden con la actual campaña: 17º en el derbi de Mestalla y la misma plaza para el encuentro de esta tarde. El Levante ha llegado por delante en campo granota en cuatro ocasiones (1963-64, 2011-12, 2017-18, 2018-19), pero la tónica general es que el Valencia haya estado mejor posicionado. La situación actual, con ambos en la zona baja, es un reflejo de una crisis profunda que trasciende lo deportivo.</p></div>
+    </div>
+    </body></html>
+    

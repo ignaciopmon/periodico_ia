@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mujeres redefinen el poder en Conferencia de Seguridad de Múnich</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Internacional</span>
+            <h1>Mujeres redefinen el poder en Conferencia de Seguridad de Múnich</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">En un foro dominado por figuras masculinas, mujeres periodistas y diplomáticas ejercieron una autoridad crucial moderando debates clave y moldeando el discurso internacional.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/15/17711710856770.jpg" class="article-img-full">
+        <div class="article-body"><p>Durante tres días, la Conferencia de Seguridad de Múnich se convirtió en el epicentro del poder mundial, con presidentes y ministros debatiendo sobre Ucrania, Oriente Próximo y el futuro orden internacional. Sin embargo, más allá de los discursos desde el atril, una dinámica sutil pero poderosa emergió, redefiniendo el marco de la conversación.</p><h3>El cuadrilátero bávaro y el poder femenino</h3><p>No como figuras simbólicas, sino como moderadoras con autoridad propia, profesionales acostumbradas a tratar con responsables políticos y diplomáticos, han sido mujeres quienes han articulado el foro. Su papel no fue decorativo, sino parte integrante de la estructura que permite el escrutinio público de las posiciones estatales. Este patrón fue evidente en paneles cruciales. Mary Louise Kelly, de NPR, moderó el debate sobre Venezuela, describiendo el ambiente como un intento de 'resolver un nuevo orden mundial en tiempo real'. Mina Al-Oraibi, redactora jefe de The National, condujo la discusión sobre Siria, mientras que Lindsey Hilsum, de Channel 4 News, lideró el panel sobre Sudán, aportando su vasta experiencia como corresponsal de guerra. Christiane Amanpour, corresponsal internacional jefe de CNN, también ejerció su autoridad en múltiples sesiones, interrogando el ejercicio del poder con décadas de experiencia.</p><h3>Autoridad institucional y geopolítica</h3><p>En el ámbito institucional, figuras como Helga Maria Schmid, ex secretaria general de la OSCE, moderó el panel de Oriente Próximo, aportando una comprensión directa de los equilibrios internacionales. Kateryna Pisarska, vicepresidenta de la Conferencia, dirigió el debate sobre defensa europea. Asimismo, Roula Khalaf del Financial Times, Gwendolyn Sasse experta en el espacio postsoviético, y Ambika Vishwanath en geopolítica del agua, demostraron la amplitud de la influencia femenina en ejes geopolíticos centrales.</p><p>Estas no son moderadoras circunstanciales, sino profesionales con trayectorias consolidadas, acostumbradas a analizar, negociar y cuestionar decisiones políticas. Han entrevistado a presidentes, cubierto guerras y dirigido instituciones, interviniendo activamente en la configuración pública del debate. Este contraste se hizo visible frente a las intervenciones individuales de grandes potencias, donde la moderación recayó en figuras tradicionales como Wolfgang Ischinger, ex presidente de la Conferencia.</p><h3>El papel de Hillary Clinton</h3><p>La culminación de esta tendencia se observó con la participación de Hillary Clinton, ex secretaria de Estado de EE. UU., quien moderó un panel el sábado por la noche. Su presencia en este rol, inusual para una figura de su calibre, no fue un gesto protocolario, sino una señal del propio rango de la Conferencia. Clinton ejerció una autoridad distinta, estableciendo las condiciones en las que las intervenciones adquirían forma pública, escuchando y dando la palabra.</p><p>La calidad de los debates estuvo directamente vinculada a esta experiencia. Lejos de un papel protocolario, las moderadoras formularon preguntas precisas, sostuvieron el ritmo de los intercambios y evitaron la mera reiteración de posiciones oficiales. En Múnich, el ejercicio del poder no solo perteneció a quienes hablaron, sino también, y de manera crucial, a las mujeres que establecieron el marco en el que esa palabra se produjo, redefiniendo la lógica del foro en un momento de tensión internacional.</p></div>
+    </div>
+    </body></html>
+    
