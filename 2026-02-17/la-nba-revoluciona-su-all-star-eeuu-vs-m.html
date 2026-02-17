@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La NBA revoluciona su All-Star: ¡EE.UU. vs. Mundo!</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Deportes</span>
+            <h1>La NBA revoluciona su All-Star: ¡EE.UU. vs. Mundo!</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">La NBA busca revivir el All-Star con un formato 'Estados Unidos contra el Resto del Mundo' tras años de declive, mientras Lillard brilla con un Aquiles roto y el concurso de mates decepciona.</p>
+        </header>
+        <img src="https://e01-xlk-ue-marca.uecdn.es/files/article_main_microformat/uploads/2026/02/14/6990627e2800c.jpeg" class="article-img-full">
+        <div class="article-body"><h3>El declive de una leyenda: del Boston Garden al show sin alma</h3><p>Desde su concepción por Maurice Podoloff a finales de los 50, el All-Star Game de la NBA fue diseñado para promocionar un campeonato joven y desviar la atención de los escándalos de apuestas. A lo largo de los años, especialmente con la adición de los concursos y la 'era Jordan', dejó momentos memorables. Sin embargo, desde aquel partido de 1951 en el Boston Garden, el evento fue degenerando. Jaylen Brown (Celtics) lo definió en 2023 como “una rueda de calentamiento disfrazada con canastas espectaculares”. Tras ediciones con 73 mates (2017), 167 intentos de triples (2019) y un show de tres horas con solo 42 minutos de tiempo efectivo (2025), la NBA ha decidido frenar la hemorragia de popularidad.</p><h3>Nace un nuevo All-Star: Estados Unidos contra el mundo</h3><p>En su 75 aniversario, la NBA presenta un nuevo All-Star Game en el modernísimo Intuit Dome de Inglewood, L.A., el pabellón de los Clippers. Este quinto formato distinto busca elevar la tensión, fomentar la competitividad y devolver el interés a un duelo que pasó de 22,6 millones de espectadores en EE.UU. en 1993 a menos de cinco millones en su última edición. El nuevo formato, inspirado en la Ryder Cup de golf, dividirá el evento en cuatro partidos de 12 minutos. Tres combinados de ocho jugadores —estrellas jóvenes, astros consagrados y, la gran novedad, los mejores del firmamento internacional— se medirán en tres mini partidos, y los dos mejores jugarán la final en el último cuarto. Nada motiva más a los americanos que decirles que ya no son los mejores en baloncesto.</p><h3>El dominio internacional: "No salto a una cancha para que no me importe perder"</h3><p>La afrenta para los que se consideran propietarios del juego es grande: desde 2018, el MVP de la NBA no es estadounidense, con Antetokounmpo (Grecia), Jokic (Serbia), Embiid (Camerún) y Shai (Canadá) repartiéndose el trofeo. Esta tendencia sintomática de la globalización se refuerza con la irrupción de talentos como Doncic (Eslovenia) y Wembanyama (Francia). El 'unicornio' galo, Victor Wembanyama, ha sido tajante: “El All Star no ha sido competitivo, pero esto se acabó. Yo no salto a una cancha para que no me importe perder”. El Team World, con un Doncic recuperado tras perderse partidos con los Lakers, quiere seguir marcando el paso. A pesar de las bajas de Anteto y Shai, el equipo contará con Jokic, Wembanyama, Sengun (Turquía), Anthony-Towns (Rep. Dominicana), Jamal Murray (Canadá), Avdija (Israel) y Siakam (Camerún).</p><h3>LeBron James y el fin del "domingo de recreo"</h3><p>LeBron James, en su presencia número 22 (récord), tendrá mucho que decir sobre la supremacía. Ha sido testigo y partícipe de la pérdida de pujanza del partido en este siglo XXI. El temor a lesionarse, con la consiguiente mengua económica para jugadores con contratos extraordinarios, y la ausencia de malos rollos entre los protagonistas (ahora todos se llevan bien, a diferencia de los 90), mermaron el deseo y ardor competitivo. Ahora, en un nuevo contexto con 135 jugadores internacionales de 43 países distintos, el “domingo de recreo y fiesta” se acabó. Sin nada en juego, el triunfo tiene un simbolismo inmenso. Se dirime no solo el estatus de unos y otros en la NBA, sino que es una batalla por gobernar el mundo del baloncesto.</p><h3>Luces y sombras en los concursos: Lillard, héroe con Aquiles roto; mates para el olvido</h3><p>Mientras la NBA busca reinventar su evento estelar, los concursos previos al partido principal ofrecieron contrastes dramáticos. Damian Lillard protagonizó una heroicidad al ganar el concurso de triples, una hazaña aún más impresionante considerando que lo hizo con el tendón de Aquiles roto, demostrando una resiliencia y puntería extraordinarias. Sin embargo, el concurso de mates fue, lamentablemente, para el olvido. Una sucesión de intentos fallidos y falta de creatividad dejó a los aficionados con un sabor agridulce, evidenciando que, si bien hay destellos de brillantez individual, la necesidad de revitalizar el espectáculo es más apremiante que nunca.</p></div>
+    </div>
+    </body></html>
+    

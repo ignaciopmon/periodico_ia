@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perú: La 'trituradora de presidentes' acecha a José Jerí</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Internacional</span>
+            <h1>Perú: La 'trituradora de presidentes' acecha a José Jerí</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">El presidente interino de Perú, José Jerí, enfrenta un pleno extraordinario con siete peticiones de censura parlamentaria por acusaciones de corrupción y tráfico de influencias, apenas cuatro meses después de asumir el cargo.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/16/17712822252974.jpg" class="article-img-full">
+        <div class="article-body"><h3>La "Trituradora de Presidentes" Vuelve a Actuarse en Perú</h3><p>La inestabilidad política en Perú alcanza un nuevo clímax. El mandatario interino, José Jerí, se encuentra al borde de la destitución, enfrentando este martes un pleno extraordinario con siete peticiones de censura parlamentaria. Apenas cuatro meses después de asumir la presidencia, tras reemplazar a Dina Boluarte –destituida de forma exprés al igual que su antecesor, Pedro Castillo–, Jerí se ve inmerso en la implacable dinámica que ha caracterizado la política peruana reciente, donde los presidentes rara vez completan sus mandatos.</p><h3>Acusaciones de Inconducta y Tráfico de Influencias</h3><p>Un bloque de partidos, que abarca todo el espectro ideológico, busca forzar la salida del inquilino de la Casa de Pizarro. Las acusaciones se centran en "inconducta funcional y falta de idoneidad", tras la revelación de detalles sobre dos investigaciones por tráfico de influencias que la Fiscalía sigue contra el dirigente limeño del partido centrista Somos Perú. Estas investigaciones cobran especial relevancia a solo dos meses de la primera vuelta de las elecciones presidenciales, transformando el proceso de destitución en un ejercicio de estrategia electoral que ha dejado al mandatario casi en solitario, con el aparente apoyo únicamente de la bancada fujimorista de Fuerza Popular.</p><h3>La Defensa de Jerí y el Escándalo del "Chifagate"</h3><p>Frente a la embestida, Jerí se defendió en Panamericana TV: "No me considero muerto. Existen intereses de ciertos sectores para golpear la credibilidad del trabajo que venía realizando. Enfrentar la inseguridad y entrar a los penales tiene consecuencias". El presidente insiste en que, de ser el caso, se le debería aplicar el proceso de vacancia –una especie de impeachment a la peruana– y no la censura por el escándalo conocido como el "chifagate". Este caso involucra reuniones secretas con el empresario chino Zhihua Yang, cercano a la Embajada de China en Lima y facilitador de intereses asiáticos en Perú, llevadas a cabo en un 'chifa' (restaurante chino) con la privatización de la estatal PetroPerú de por medio.</p><h3>Otras Controversias y la Cuestión de la Idoneidad Moral</h3><p>La situación de Jerí se complica aún más con otro escándalo que lo vincula a nueve mujeres, presuntamente contratadas tras reunirse con ellas en su despacho presidencial en horarios nocturnos y días festivos. Para forzar su cese, basta una mayoría simple en el parlamento. Pese a las acusaciones, Jerí reiteró en la entrevista dominical: "No he cometido ningún delito, tengo plena suficiencia moral para ejercer la presidencia de la República", en referencia a la reunión con el empresario chino, a la que acudió cubriéndose el rostro con una capucha.</p><h3>El Fantasma de Barbadillo: Un Recordatorio Constante</h3><p>El destino de Jerí se cierne bajo la sombra del penal limeño de Barbadillo, un recordatorio constante de la fragilidad del poder en Perú. En sus celdas permanecen ex presidentes como Pedro Castillo, condenado por su fallido autogolpe; Alejandro Toledo, extraditado desde EEUU por el caso Odebrecht; Ollanta Humala, sentenciado por recibir fondos para su campaña de la polémica constructora brasileña y de Hugo Chávez; y Martín Vizcarra, condenado por corrupción. Este sombrío panorama subraya la profunda crisis institucional que Perú no logra superar, donde la silla presidencial parece ser un paso previo a la bancada de los acusados.</p></div>
+    </div>
+    </body></html>
+    
