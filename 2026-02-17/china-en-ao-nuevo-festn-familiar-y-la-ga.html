@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>China en Año Nuevo: Festín Familiar y la Gala de los Mil Millones</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Internacional</span>
+            <h1>China en Año Nuevo: Festín Familiar y la Gala de los Mil Millones</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">Desde los opulentos banquetes familiares en Longkou hasta la superproducción televisiva de la Gala del Festival de Primavera, China celebra su Año Nuevo Lunar con una mezcla única de arraigadas tradiciones y deslumbrante avance tecnológico, uniendo a mil millones de personas en un ritual colectivo.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/16/17712592487433.jpg" class="article-img-full">
+        <div class="article-body"><h3>Un Festín para los Sentidos en la Víspera del Año Nuevo</h3>En Longkou, una pequeña ciudad costera de China, la Nochevieja del Año Nuevo Chino se celebra con una opulencia gastronómica que desafía la moderación. En casa de los Yuan, la mesa del comedor se transforma bajo 32 generosos platos para nueve comensales, una explosión de sabores que incluye desde bolas de tofu fritas y codillo, hasta ensalada de algas, sangre de cerdo en cubos y pescado con salsa de ostras. A las 19:00 en punto, los palillos vuelan sin pausa, solo interrumpidos por brindis, en un festín que es el preámbulo de otro gran ritual: la Gala del Festival de Primavera, conocida como Chunwan.<br><br><h3>Chunwan: La Gala que Sincroniza a Mil Millones</h3>Una hora después del banquete, la familia Yuan se acomoda para asistir a la Chunwan, el programa más visto del planeta con una audiencia que supera los 1.000 millones de espectadores. Esta superproducción en directo, emitida por la cadena estatal CCTV, deslumbra con un nivel visual comparable a los espectáculos de medio tiempo de la Super Bowl. En esta edición, los robots humanoides acapararon el protagonismo, no como mero atrezo, sino batiéndose en duelos de espadas, ejecutando danzas tradicionales y actuando en monólogos. Su presencia, símbolo del avance tecnológico chino, creando un contraste hipnótico al interpretar coreografías centenarias, subraya la mezcla de tradición y modernidad que define la celebración. El espectáculo arrancó con un baile multitudinario y sincronizado desde varias ciudades, donde humanoides se mezclaban con bailarines vestidos de rojo y dorado, los colores de la prosperidad.<br><br><h3>Un Mosaico de Cultura y Narrativa Oficial</h3>La Chunwan es un crisol de géneros: canciones patrióticas de estrellas consagradas, danzas que evocan minorías étnicas, acrobacias, magia, ópera tradicional y los célebres xiangsheng, monólogos que combinan juegos de palabras y sátira ligera. Estos sketches, cuidadosamente calibrados, funcionan como válvula de escape para abordar temas como el precio de la vivienda o la presión laboral, en un país donde el humor político frontal es raro en la televisión nacional. Más allá del entretenimiento, la gala es un escaparate de la narrativa oficial, ensalzando la unidad, prosperidad y armonía de la nación, y destacando logros en robótica, inteligencia artificial y músculo militar. La realización alterna planos del público con escenas de familias en todo el país, construyendo un mapa emocional de una nación sincronizada, incluso con una versión de "We Are The World" interpretada por Lionel Richie y Jackie Chan, y una fusión de flamenco con bailes étnicos chinos. La división internacional CGTN también produce su propia gala, con un tono más ideológico y mensajes de figuras internacionales.<br><br><h3>Rituales de Medianoche: Dumplings, Ancestros y Buena Suerte</h3>A medida que la medianoche se acerca, la televisión se convierte en un ruido de fondo mientras en casa de los Yuan se preparan cuatro enormes bandejas de dumplings (jiaozi) caseros, de cerdo con repollo y ternera con cebollino, que se consumirán justo a las 00:00, emulando la tradición española de las uvas. La familia aparta tres platos para los espíritus de los ancestros, un reflejo de las supersticiones milenarias que aún abrazan. Otra costumbre es introducir monedas dentro de algunos dumplings; a quien le toque, le espera un buen año, una lotería doméstica donde la suerte se mide en pequeños augurios. Con la cuenta atrás de los presentadores, el reloj marca la medianoche y en la pantalla aparece el carácter de "fortuna" invertido, símbolo de buena suerte. Un largo brindis en el salón de los Yuan precede a la explosión de petardos y fuegos artificiales en el exterior, una tormenta de ruido destinada a espantar a Nián, el demonio que, según la leyenda, teme el estruendo. Los mayores reparten hongbao, sobres rojos con billetes de cifras pares, un signo de auspicio que se remonta a la dinastía Han.<br><br><h3>El Año del Caballo de Fuego y la Eterna Presencia de la Gala</h3>El martes marca el primer día del Año del Caballo de Fuego, un ciclo que, en el calendario chino, avanza en círculos de doce animales y cinco elementos. Este día se estrena ropa nueva y se visitan amigos y familiares en una procesión de buenos deseos y té caliente, con invitados que llegan cargados de frutas y leche. Muchas familias también acuden al cementerio para quemar incienso, limpiar lápidas y dejar ofrendas de comida en señal de gratitud y respeto a los ancestros. Durante todas las vacaciones, la gala de Año Nuevo se emite en bucle, convirtiéndose en un ruido familiar de fondo que, aunque desatendido, mantiene viva la ilusión de sincronía nacional. Cuando, días después, el televisor finalmente se apaga, el silencio resultante se siente extraño, casi incómodo, como si con la desaparición de ese eco festivo, también se disipara la conexión que ha mantenido a un país entero unido frente a la pantalla.</div>
+    </div>
+    </body></html>
+    

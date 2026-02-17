@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podemos se desmarca de la unidad de la izquierda y critica a Sumar</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Nacional</span>
+            <h1>Podemos se desmarca de la unidad de la izquierda y critica a Sumar</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">Podemos se distancia de los encuentros clave para la reorganización del espacio a la izquierda del PSOE, descalificando las iniciativas y criticando el proyecto de Yolanda Díaz.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/16/17712449072587.jpg" class="article-img-full">
+        <div class="article-body"><h3>Podemos se aparta de la "coreografía de la unidad"</h3>Podemos ha decidido no participar en los encuentros clave para la reorganización del espacio a la izquierda del PSOE, marcando una clara distancia con los intentos de unidad. Mientras el resto de formaciones ensayan fórmulas para recomponerse, los morados han confirmado su ausencia tanto en la Sala Galileo, donde Gabriel Rufián y Emilio Delgado convocaron un encuentro, como en el Círculo de Bellas Artes, escenario elegido por Movimiento Sumar, Comunes, IU y Más Madrid para sellar su alianza de cara a las generales.<br><br><h3>Críticas a la "charla" de Rufián y al proyecto Sumar</h3>El portavoz de Podemos, Pablo Fernández, confirmó la no asistencia de su partido y fue más allá al reducir la convocatoria de Rufián a una simple "charla", restándole cualquier dimensión política. "Hay charlas de cine, de música, de ciencia...", ironizó Fernández, quien precisó que ese día estaría en Castilla y León en una movilización por la sanidad pública. Tampoco ha respaldado la escenificación del sábado, aunque asegura que su partido está dispuesto a "seguir hablando". Sin embargo, ha dejado claro que el diálogo tiene un límite y pasa por no integrarse en un proyecto que, a su juicio, actúe "subordinado al PSOE", apuntando directamente a la formación de Yolanda Díaz y criticando la idea de un "Sumar 2.0".<br><br><h3>Desmarques y ausencias notables</h3>En esta cadena de desmarques también se sitúa Izquierda Unida respecto al acto de Rufián, alegando que no les "consta" invitación formal, aunque sí acudirá con una "amplia representación" al encuentro del sábado con su coordinador federal, Antonio Maíllo. Por su parte, el presidente de ERC, Oriol Junqueras, ha explicado que Gabriel Rufián tampoco le ha invitado al acto y ha reiterado el rechazo de la dirección republicana a integrarse en una coalición de ámbito estatal, subrayando que "Esquerra no dirá a una formación política de otro país cómo debe presentarse". Bildu, BNG, Més y la Chunta también han optado por mantener su propia hoja de ruta.<br><br><h3>Los que sí se suman a la alianza</h3>A la convocatoria del miércoles en la Sala Galileo únicamente acudirán representantes de Movimiento Sumar, Más Madrid y los Comunes, además de Iniciativa -socio minoritario de Compromís-. La coordinadora de los Comunes, Candela López, ha confirmado su asistencia para "escuchar todas las propuestas", vinculando esta cita con la del sábado. La portavoz de los Comunes y dirigente de Sumar, Aina Vidal, incluso ha invitado a Rufián a integrarse en el nuevo proyecto político que Comunes, Movimiento Sumar, Más Madrid e IU presentarán el día 21, afirmando: "Si se quiere venir a casa, que se venga". El sábado, el acto tendrá un perfil más institucional, con la presencia de Pablo Bustinduy y previsiblemente Ernest Urtasun y Mónica García.<br><br><h3>Rufián reafirma su propia visión</h3>En medio del revuelo, Gabriel Rufián ha decidido finalmente no acudir este sábado al acto de reedición de Sumar, según ha trasladado Europa Press, citando problemas de agenda. Tras la invitación pública de Comunes, fuentes de su entorno han confirmado que él "ya tiene casa política" en referencia a ERC, y que su planteamiento para las generales pasa por una alianza de "fuerzas de izquierdas soberanistas, independentistas y autonomistas". Su círculo añade que mantiene buena relación con las formaciones que se reunirán el sábado y no criticará los movimientos en favor de la unidad, pero subraya que su propuesta aspira a articular algo "realmente nuevo" y con liderazgo propio.</div>
+    </div>
+    </body></html>
+    

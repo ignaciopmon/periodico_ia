@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIS: PSOE amplía ventaja a 10,7 puntos; Vox roza 19%</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Nacional</span>
+            <h1>CIS: PSOE amplía ventaja a 10,7 puntos; Vox roza 19%</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">El barómetro de febrero del CIS de Tezanos consolida la distancia del PSOE sobre el PP, mientras Vox experimenta una notable subida, acercándose a los populares.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/16/17712420933164.jpg" class="article-img-full">
+        <div class="article-body"><h3>El PSOE consolida su liderazgo, Vox al alza</h3><p>El Centro de Investigaciones Sociológicas (CIS), dirigido por José Félix Tezanos, ha vuelto a situar al PSOE en una posición dominante, ampliando su ventaja sobre el Partido Popular hasta los 10,7 puntos, dos más que en el sondeo de enero. Según el barómetro de febrero, los socialistas alcanzarían un 32,6% de la intención de voto, nueve décimas más que el mes anterior. Por su parte, el PP vería reducida su estimación al 22,9%, una décima menos. La sorpresa la protagoniza Vox, que experimenta una fuerte subida de 1,2 puntos, situándose en un 18,9%, pisándole los talones al PP a solo cuatro puntos de distancia.</p><h3>Movimientos en el tablero político y el auge de SALF</h3><p>El sondeo también revela movimientos significativos en el resto del arco parlamentario. La formación de ultraderecha Se Acabó la Fiesta (SALF) irrumpe con un 2,4% de intención de voto, seis décimas más que en enero. En cuanto a las coaliciones, el tándem PP-Vox sumaría un 41,8% de los sufragios, mientras que la actual pareja de Gobierno, PSOE y Sumar, se quedaría en un 39,6%. Sumar, liderada por Yolanda Díaz, desciende dos décimas hasta el 7%, mientras que Podemos repunta cuatro décimas, alcanzando el 3,9%. Entre los partidos catalanes, ERC baja una décima al 2,5%, y Junts sube dos hasta el 1,2%. Las formaciones vascas también registran caídas: EH Bildu pierde medio punto (1%) y el PNV dos décimas (0,8%).</p><h3>La vivienda, principal preocupación; la inmigración escala</h3><p>El barómetro subraya una vez más la vivienda como el principal problema del país, señalada por un 42,8% de los encuestados a nivel nacional y un 27,6% a nivel personal. La inmigración escala posiciones hasta el segundo puesto en el ranking de preocupaciones, seguida de la crisis económica y el descontento con el Gobierno y los partidos políticos. Este sondeo se realizó tras eventos de gran impacto como el grave accidente ferroviario de Adamuz (Córdoba), las inundaciones en Andalucía y el anuncio de la regularización de medio millón de inmigrantes, factores que podrían haber influido en el ánimo ciudadano. El trabajo de campo, realizado durante la campaña aragonesa, no recoge el impacto del resultado electoral en dicha comunidad.</p><h3>Sánchez, favorito para La Moncloa; la Constitución a debate</h3><p>En la valoración de líderes, Pedro Sánchez se mantiene como el favorito para encabezar el Gobierno, con un 39,7% de apoyo. Le sigue Santiago Abascal (Vox) con un 16%, superando a Alberto Núñez Feijóo (PP), que se sitúa en tercer lugar con un 15,6%. Gabriel Rufián (ERC) obtiene un 6,6% y Isabel Díaz Ayuso (PP) un 5,3%. El sondeo de febrero también indaga en la opinión sobre la Constitución de 1978, que en marzo se convertirá en la más longeva de la historia de España. Un 43,4% de los españoles afirma que su valoración ha empeorado en los últimos diez años, y un 58,1% tiene poca o ninguna confianza en su capacidad para resolver los problemas actuales.</p><h3>Amplio consenso sobre la necesidad de reformar la Carta Magna</h3><p>A pesar de las críticas, tres de cada cuatro encuestados creen que la Carta Magna ha contribuido a la prosperidad económica del país, un porcentaje que se reduce ligeramente (71,6%) al hablar de su impacto en los derechos sociales. No obstante, un abultado 84,3% considera que la Constitución necesita reformas, principalmente en los artículos relacionados con los derechos sociales, económicos y laborales, y en menor medida en aquellos que abordan el modelo de Estado. Este dato refleja un sentir generalizado sobre la necesidad de adaptar el texto fundamental a los desafíos y realidades del siglo XXI.</p></div>
+    </div>
+    </body></html>
+    

@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiante linchado en Lyon: Abren investigación por homicidio</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Internacional</span>
+            <h1>Estudiante linchado en Lyon: Abren investigación por homicidio</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">La fiscalía de Lyon investiga la muerte de Quentin Deranque, un estudiante de 23 años, presuntamente linchado por activistas de extrema izquierda tras una protesta.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/16/17712573031264.jpg" class="article-img-full">
+        <div class="article-body"><h3>Investigación por "homicidio voluntario con violencia agravada"</h3><p>El fiscal de Lyon, Thierry Dran, ha confirmado la apertura de una investigación por "homicidio voluntario con violencia agravada" tras la trágica muerte de Quentin Deranque, un estudiante de 23 años. Deranque, militante del colectivo de identidad Némesis (próximo a la extrema derecha), falleció el 14 de febrero después de ser brutalmente linchado en plena calle, supuestamente por activistas de "extrema izquierda". El incidente ocurrió tras la participación de Quentin en una protesta contra la conferencia de la eurodiputada de La Francia Insumisa, Rima Hassan, en el Instituto de Estudios Políticos (IEP).</p><h3>Detalles del brutal ataque y el fallecimiento</h3><p>El fiscal Thierry Dran relató cómo los jóvenes encargados de la seguridad en la protesta de Némesis "fueron violentamente atacados por una veintena de individuos encapuchados y enmascarados" el pasado jueves. "Estos tres jóvenes, entre ellos Quentin, fueron arrojados al suelo y golpeados repetidamente", prosiguió su relato, añadiendo que "al menos seis personas golpearon a Quentin". Un amigo lo encontró todavía consciente y capaz de hablar, aunque había olvidado la secuencia de los hechos. Mientras lo llevaban a casa, su situación se deterioró rápidamente, lo que llevó a una llamada a urgencias. Quentin entró en coma y falleció en el hospital. La autopsia determinó que sufrió un traumatismo craneoencefálico grave.</p><h3>Sospechas sobre grupos de extrema izquierda y prohibición de acceso a la Asamblea Nacional</h3><p>Todas las sospechas apuntan al grupo de extrema izquierda Guardia Joven, creado por el diputado de La Francia Insumisa, Raphaël Arnault. Varios testigos identificaron entre los supuestos agresores al asistente parlamentario de Arnault, Jacques-Elle Favrot, cuyo acceso a la Asamblea Nacional ha sido prohibido el lunes mientras dure la investigación. El fiscal Dran confirmó que más de 15 testigos habían prestado declaración y que se están analizando vídeos "para identificar a los autores materiales del crimen, basándose no en rumores, sino en las pruebas recabadas durante las pesquisas policiales".</p><h3>Reacciones políticas y acusaciones cruzadas</h3><p>La muerte de Quentin Deranque ha desatado un torbellino de acusaciones contra La Francia Insumisa (LFI), calificada por el presidente Emmanuel Macron como "extrema izquierda" horas después del suceso. El líder de LFI, Jean-Luc Mélenchon, se defendió alegando que "todos los relatos en las horas siguientes (a la muerte de Quentin) no tienen relación con la realidad". Sin embargo, figuras como el ministro de Justicia, Gérald Darmanin, y Bruno Retailleau, exministro de Interior y líder de Los Republicanos, apuntaron directamente a la extrema izquierda como responsable. La líder de Agrupación Nacional, Marine Le Pen, instó al Gobierno a "salir de su inacción contra las milicias de extrema izquierda" y a incluir al movimiento "antifa" en la lista de organizaciones terroristas, una petición a la que se sumó Alice Weidel, líder de Alternativa para Alemania.</p><h3>Llamada a la calma y suspensión de campañas electorales</h3><p>En medio de la creciente tensión, la CFDT, principal organización sindical en Francia, hizo un llamamiento para evitar "la ultrapolarización de las posiciones políticas" y la creación de "un clima de guerra" en el debate público, en plena campaña para las elecciones municipales del 15 de marzo. Como consecuencia del suceso que ha conmocionado a la tercera mayor ciudad de Francia, todos los partidos políticos decidieron suspender temporalmente sus campañas electorales, buscando un respiro en la polarización política.</p></div>
+    </div>
+    </body></html>
+    
