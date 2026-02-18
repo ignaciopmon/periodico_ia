@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scariolo vuelve al Carpena: Berni Rodríguez revive la era dorada</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Deportes</span>
+            <h1>Scariolo vuelve al Carpena: Berni Rodríguez revive la era dorada</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">Berni Rodríguez, capitán de la etapa dorada de Unicaja, analiza el emotivo regreso de Sergio Scariolo a Málaga al frente del Real Madrid, destacando el vínculo especial y los recuerdos imborrables.</p>
+        </header>
+        <img src="https://e01-xlk-ue-marca.uecdn.es/files/article_main_microformat/uploads/2026/02/14/6990ac334f6ce.jpeg" class="article-img-full">
+        <div class="article-body"><h3>El regreso de una leyenda al Carpena</h3><p>Sergio Scariolo, figura clave en la historia de Unicaja, vuelve al Martín Carpena. Ahora al frente del Real Madrid, su visita a Málaga (19:00 h) no es una más, despertando un torbellino de emociones y simbolismo. Berni Rodríguez, capitán en la época dorada bajo Scariolo, comparte con 'El Diario IA' lo que esta figura representa para el club, la ciudad y para él mismo.</p><h3>Un vínculo inquebrantable con Málaga</h3><p>«Cada vez que Sergio Scariolo vuelve a Málaga parece que pasa algo especial. ¿Por qué?», preguntó nuestro periodista. Berni Rodríguez respondió: «Porque fueron cinco temporadas muy intensas. Vivimos momentos increíbles y se creó un vínculo muy fuerte. Sergio siempre ha estado muy conectado con la ciudad y con el club, pendiente de los resultados incluso cuando ha sido seleccionador. No es una visita cualquiera.» Aunque ahora llega con un «Madrid enorme y con un proyecto muy importante para él», Berni enfatiza: «amigos después del partido. Durante los 40 minutos toca intentar hacer nuestra parte y buscar la victoria.»</p><h3>Anécdotas y celebraciones inolvidables</h3><p>Al recordar los innumerables momentos compartidos, Berni evoca con cariño las celebraciones. «Hay millones de anécdotas, muchas no se pueden contar. Pero siempre me quedo con los momentos de celebración. Ganar títulos y poder celebrarlo con él,» confiesa. Entre risas, rememora una tradición: «Recuerdo que nos hacía mucha ilusión despeinarle después de las victorias, meterle bajo la ducha… y eso que sigue teniendo el mismo pelo 20 años después.»</p><h3>La Liga de Málaga: Ilusión, aprendizaje e intensidad</h3><p>La etapa con Scariolo en Unicaja es sinónimo de «ilusión, aprendizaje y mucha intensidad» para Berni. «Recuerdo especialmente la Liga de Málaga. Después de diez meses de competición, ganar ese título fue una explosión de emociones. Son vivencias que se te quedan para siempre,» subraya el ex-capitán. Esa época no solo forjó un equipo ganador, sino también una conexión profunda entre el técnico, los jugadores y la afición.</p><h3>El desafío del Real Madrid de Scariolo</h3><p>Centrándose en el inminente encuentro, Berni describe al Real Madrid de Scariolo como un rival «muy sólido.» «Como suele pasar con sus equipos, empezaron de menos a más. Hay jugadores nuevos que han tenido que adaptarse, pero ahora es un Madrid más equilibrado y con una idea de juego muy clara,» explica. A pesar de la proximidad de la Copa del Rey contra el mismo rival, Berni insiste en la importancia de «sumar ahora en liga. Entrar en el Playoff va a ser complicado, hay mucha competencia, y ganar en casa es clave.»</p><h3>Unicaja en el Carpena: «Todo puede pasar»</h3><p>Ante la pregunta sobre las opciones reales de Unicaja, Berni es realista pero optimista. «Sabemos la diferencia de potencial entre los dos clubes, eso es evidente. Pero con humildad también creemos que tenemos nuestras posibilidades de ganar,» afirma. Concluye con un mensaje de esperanza para la afición malagueña: «En el Carpena, con nuestra gente, todo puede pasar.»</p></div>
+    </div>
+    </body></html>
+    

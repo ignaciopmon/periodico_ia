@@ -1,0 +1,105 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detenido exjefe de gabinete de Delegación del Gobierno por pelotazo urbanístico</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Nacional</span>
+            <h1>Detenido exjefe de gabinete de Delegación del Gobierno por pelotazo urbanístico</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">La UCO arresta a Rafael Pineda y su mujer por una operación de compraventa de un solar de Emvisesa que generó más de dos millones de euros de beneficio.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2025/11/07/17625400671868.jpg" class="article-img-full">
+        <div class="article-body"><h3>Arresto por presunto fraude urbanístico</h3>
+La Unidad Central Operativa (UCO) de la Guardia Civil ha detenido este martes a Rafael Pineda, quien fuera hasta septiembre jefe de gabinete de la Delegación del Gobierno en Andalucía, por su presunta implicación en un "pelotazo" urbanístico relacionado con una empresa de su familia. Fuentes de la investigación confirman a EL MUNDO que también ha sido arrestada su mujer y otras personas vinculadas a la operación. Pineda, que ocupó diversos cargos en el Ayuntamiento de Sevilla durante gobiernos socialistas, dimitió de su puesto en la Delegación del Gobierno el pasado septiembre, tras conocerse las primeras noticias de la investigación que dirige el Juzgado de Instrucción número 10 de Sevilla.
+
+<h3>La trama del solar de Emvisesa</h3>
+La jueza titular, Pilar Ordóñez, investiga la adjudicación de un solar de la Empresa Municipal de la Vivienda de Sevilla (Emvisesa) el 4 de septiembre de 2024. El terreno fue vendido a la sociedad Higuerón Real Estate, propiedad de la mujer de Rafael Pineda, por un precio de 1,7 millones de euros. Apenas cuatro meses después, el 22 de enero de 2025, el mismo solar fue revendido a la empresa Eryel Invest por 3,95 millones de euros, generando un beneficio de más de dos millones de euros para la mujer del ex alto cargo.
+
+<h3>Comisiones y ventajas previas</h3>
+Para facilitar esta operación, se habría contado con la participación de un funcionario de Emvisesa, al que supuestamente se le abonó una comisión de 78.650 euros. Emvisesa ha iniciado una investigación interna y ha suspendido de empleo (pero no de sueldo) al trabajador implicado. Cabe destacar que la venta del solar a la empresa de la mujer de Pineda se produjo durante el actual mandato del alcalde del PP, José Luis Sanz. Sin embargo, la empresa beneficiaria ya era la arrendataria previa del solar por 50 años (operación realizada durante gobiernos socialistas), lo que le habría otorgado una posición ventajosa para adquirir la propiedad a un precio muy favorable.
+
+<h3>Investigación en curso y otras ramificaciones</h3>
+La UCO ya había acudido a mediados de septiembre a la sede de Emvisesa para recabar información sobre los expedientes urbanísticos bajo sospecha, incautándose de diversa documentación y material informático. Además, según ha publicado Diario de Sevilla, la Guardia Civil habría descubierto en el transcurso de la investigación judicial otros hechos que apuntan a un supuesto trato de favor de Rafael Pineda, desde su puesto en la Delegación del Gobierno, a un empresario vinculado al blanqueo de capitales procedentes del narcotráfico, a quien habría ayudado en la regulación de varias personas extranjeras.
+
+<h3>Impacto en la Delegación del Gobierno</h3>
+Este caso marca la segunda ocasión en que un alto cargo del entorno del delegado de Gobierno, Pedro Fernández, abandona su puesto tras verse salpicado por un caso de presunta corrupción. Previamente, fue relevado Toño Fernández, coordinador técnico de Infraestructuras, presuntamente vinculado a una de las empresas de la trama beneficiada por Koldo García, asesor del exministro José Luis Ábalos, lo que añade una capa de preocupación sobre la gestión en la Delegación.</div>
+    </div>
+    </body></html>
+    
