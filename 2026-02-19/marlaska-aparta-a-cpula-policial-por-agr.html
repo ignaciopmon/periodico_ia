@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marlaska aparta a cúpula policial por agresión sexual; Sánchez le respalda</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Nacional</span>
+            <h1>Marlaska aparta a cúpula policial por agresión sexual; Sánchez le respalda</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">El ministro del Interior, Fernando Grande-Marlaska, asegura desconocer la presunta agresión sexual del jefe de la Policía Nacional, quien ha dimitido junto a su 'número dos' por coacción, recibiendo el respaldo total de Pedro Sánchez.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/18/17714185127473.jpg" class="article-img-full">
+        <div class="article-body"><h3>Marlaska aparta a la cúpula policial tras denuncia por agresión sexual y coacción</h3><p>El ministro del Interior, Fernando Grande-Marlaska, ha asegurado desconocer la presunta agresión sexual que llevó a la dimisión del jefe de la Policía Nacional, el comisario principal José Ángel González, quien era el máximo mando uniformado y hombre de confianza del ministro. González se ha visto obligado a dimitir tras la denuncia de una agente. Además, Marlaska ha apartado también al 'número dos' del jefe de la Policía, quien intentó coaccionar a la denunciante ofreciéndole elegir destino y enviarlo por WhatsApp. La contundencia de la respuesta del Ministerio se produce tras conocerse la gravedad de los hechos.</p><h3>El respaldo incondicional de Moncloa a la gestión de Interior</h3><p>Desde Nueva Delhi, donde se encuentra de viaje oficial, el presidente del Gobierno, Pedro Sánchez, ha cerrado filas con la actuación de Marlaska y su departamento. Sánchez ha afirmado que el Ejecutivo conoció la noticia este martes y que se actuó con "contundencia" desde el primer momento, manifestando su "apoyo a la víctima y retirar de su responsabilidad al DAO". Fuentes gubernamentales reiteran la "confianza total en Marlaska", defendiendo que se enteraron por la prensa y reaccionaron en hora y media, desmintiendo cualquier conocimiento previo.</p><h3>Un ministro incombustible ante las crisis</h3><p>Fernando Grande-Marlaska es uno de los pocos ministros que ha acompañado a Pedro Sánchez desde su llegada a La Moncloa en 2018. A lo largo de su mandato, ha protagonizado diversas crisis, desde migratorias hasta diplomáticas con Marruecos, siempre contando con el respaldo y el cierre de filas del presidente. A pesar de haber estado en varias quinielas para salir del gabinete, Marlaska ha permanecido, demostrando una resiliencia política que se repite en esta ocasión, donde su gestión ha sido nuevamente blindada por el jefe del Ejecutivo.</p><h3>Credibilidad a la víctima frente a la crítica del PP</h3><p>El Gobierno ha insistido en que "se ha actuado con contundencia" y "se le ha dado credibilidad a la víctima, en base a lo que siempre hemos defendido". Este caso, que afecta a una institución clave, surge en un momento de sensibilidad social por las denuncias de acoso. Sin embargo, el Partido Popular ha pedido directamente la dimisión de Marlaska, acusándolo de conocer el caso de agresión sexual del DAO. Una posibilidad que, según fuentes cercanas a Sánchez, no pasa por la cabeza del presidente.</p><h3>La 'doble vara de medir' del PP, según Sánchez</h3><p>Pedro Sánchez ha aprovechado las críticas del PP para contraponer la actuación de su Gobierno con lo sucedido en el municipio madrileño de Móstoles, donde una concejala denunció acoso al alcalde. "Que se lo apliquen a sí mismos", ha espetado Sánchez, acusando a los populares de no dar crédito al testimonio de las víctimas en sus propios casos. Para el jefe del Ejecutivo, existe una "doble vara de medir" y una "ley del embudo que no debería admitirse en caso de agresión sexual", rechazando "lecciones de quienes cuando tienen estos casos no hacen nada y estigmatizan a las víctimas".</p></div>
+    </div>
+    </body></html>
+    

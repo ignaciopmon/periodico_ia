@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yolanda Díaz se ausenta mientras Rufián y Delgado proponen frente común</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Nacional</span>
+            <h1>Yolanda Díaz se ausenta mientras Rufián y Delgado proponen frente común</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">La ausencia de Yolanda Díaz en la presentación de la nueva alianza de izquierdas aviva el debate sobre su futuro, mientras Gabriel Rufián y Emilio Delgado lanzan una propuesta de unidad para frenar a PP y Vox.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/18/17714424340768.jpg" class="article-img-full">
+        <div class="article-body"><h3>La Izquierda busca unidad: Rufián y Delgado proponen un frente común</h3><p>La política española de izquierdas vive una semana crucial marcada por la ausencia de Yolanda Díaz en la presentación de una nueva alianza, lo que intensifica el debate sobre su continuidad al frente de Sumar. En este contexto de incertidumbre, Gabriel Rufián y Emilio Delgado han irrumpido en escena con una propuesta audaz que busca revolucionar el espacio alternativo al PSOE: un frente común de todas las fuerzas, incluidas las independentistas, para plantar cara a PP y Vox. Aclamados como estrellas en la sala Galileo Galilei, los dos políticos han defendido la necesidad de "orden, eficacia y método" para ganar escaños "provincia a provincia", recuperando un poder de convocatoria que la izquierda no veía en años.</p><h3>La fórmula de la "especialización" y el reparto territorial</h3><p>La propuesta central de Rufián y Delgado se basa en que los partidos políticos lleguen a un gran acuerdo para renunciar a competir entre sí y se repartan las provincias en función de su arraigo territorial. "Yo no le pido a nadie que renuncie a sus siglas, a lo que es o a lo que defiende. Lo único que pido es que por primera vez en nuestra historia haya orden, eficacia y método", ha enfatizado Rufián, portavoz de ERC en el Congreso. El objetivo es claro: evitar la dispersión del voto de izquierdas y maximizar la obtención de escaños para frenar el avance de la ultraderecha, actuando después de las elecciones de forma coordinada en el Congreso con una misma línea de acción política. "¿Qué sentido tiene que 14 izquierdas representando lo mismo nos presentemos en el mismo sitio? Porque si no, nos van a fusilar políticamente por separado", sentenció Rufián.</p><h3>Reacciones encontradas y ausencias notables</h3><p>A pesar del entusiasmo de sus impulsores, la propuesta ha encontrado resistencia en varias formaciones. Partidos como ERC, Bildu, BNG y Podemos se muestran reacios o directamente se niegan, mientras que IU, Sumar o Más Madrid marcan distancias. De hecho, el presidente de ERC, Oriol Junqueras, ha descartado la fórmula en Cataluña, ratificando que su partido se presentará en las cuatro provincias catalanas. La ausencia más notoria en el acto fue la de Podemos, cuya dirección no envió a ningún representante, aunque sí acudieron ex cargos como Gloria Elizo o Roberto Sotomayor. No obstante, sí se vieron diputados y cuadros medios de ERC y Más Madrid, así como representantes de IU, Sumar (Lara Hernández y Lander Martínez), Comunes (Gerardo Pisarello) y Compromís (Alberto Ibáñez), entre otros.</p><h3>Un evento que recupera el pulso de la izquierda</h3><p>La sala Galileo Galilei se quedó pequeña para acoger a alrededor de 40 cargos y excargos políticos, junto a medio centenar de personas de público. Las entradas se agotaron en minutos, evidenciando un "poder de convocatoria y de expectación" que la izquierda alternativa al PSOE no experimentaba desde los primeros años de Podemos y Sumar. El ambiente, con Rufián y Delgado saludando como estrellas, recordaba a tiempos de mayor efervescencia política. Entre los asistentes destacaron figuras de la cultura y el periodismo como Antonio Lobato, Antonio Maestre, Fernando Tejero o Ramoncín, lo que añadió un toque de glamour al evento.</p><h3>El discurso complementario: conectar con nuevos sectores</h3><p>Mientras Rufián se centró en el "cómo" de la estrategia electoral, Emilio Delgado, diputado de Más Madrid, puso el acento en el "discurso" y la necesidad de que la izquierda hable a sectores tradicionalmente alejados, como los jóvenes de los barrios o las personas del campo. Delgado alertó sobre el "problema de alcance serio" que tiene la izquierda para permear en estos grupos, que hoy pueden sentirse atraídos por discursos de la ultraderecha. "Lo relevante es ampliar las bases sociales y no regalar a Vox a determinados sectores sociales", recalcó, instando a la izquierda a entrar en debates como la seguridad o el "reto" de la inmigración para evitar la pérdida de la "periferia" y los perdedores de la desindustrialización.</p><h3>La urgencia ante la amenaza de la ultraderecha</h3><p>Ambos ponentes compartieron una profunda preocupación por el avance de la ultraderecha. Rufián advirtió: "Lo que viene es salvaje, imitadores baratos de Milei y Trump", y rechazó la idea de la izquierda de "quién es más puro", porque "vienen ilegalizaciones, encarcelamientos y un sufrimiento terrible" si PP y Vox alcanzan los 200 diputados. En este contexto de urgencia, Rufián subrayó la "imprescindibilidad" de Podemos en este frente común, defendiendo la inclusión de figuras como Pablo Iglesias, Irene Montero o Ione Belarra, una reflexión que, sin embargo, levantó algún grito de rechazo entre el público. La llamada a "hacer algo diferente" y a priorizar el "ganar" sobre el "ilusionar" resonó como un clamor en la sala.</p></div>
+    </div>
+    </body></html>
+    

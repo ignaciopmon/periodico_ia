@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ginebra: Conversaciones de paz Ucrania-Rusia terminan abruptamente</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Internacional</span>
+            <h1>Ginebra: Conversaciones de paz Ucrania-Rusia terminan abruptamente</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">La segunda jornada de negociaciones en Suiza concluyó en solo dos horas, destacando el control del Donbás como punto clave de disputa y la influencia de Donald Trump en la postura de ambas partes.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/18/17714129286747.jpg" class="article-img-full">
+        <div class="article-body"><h3>Fracaso en Ginebra: Conversaciones de Paz Abruptas</h3><p>La segunda jornada de conversaciones de paz entre Ucrania y Rusia en Ginebra concluyó abruptamente tras solo dos horas, evidenciando una vez más la profunda división en torno al control del Donbás, que sigue siendo el principal escollo. Auspiciadas por Estados Unidos, estas negociaciones se celebraron a pocos días de que la guerra cumpla cuatro años, bajo la atenta mirada de Donald Trump, cuya influencia parece dictar la cautela de ambas partes para no ser percibidas como contrarias a su visión de un final dialogado.</p><h3>La Sombra de Trump y el Donbás</h3><p>El negociador jefe ruso, Vladimir Medinsky, declaró a la prensa en el vestíbulo del hotel ginebrino que las conversaciones "iban por buen camino" y que pronto se celebrarían nuevas negociaciones, sin especificar fecha. Rusia busca proyectar una imagen de buena fe en las negociaciones, no solo para evitar la "culpa" ante Trump, sino también para mitigar posibles paquetes de sanciones. Mantenerse "en la mesa" les permite seguir atacando mientras se presentan como la parte "razonable", sin hacer concesiones sustanciales.</p><h3>Estrategias Opuestas en la Mesa de Negociación</h3><p>Por su parte, Ucrania evita aparecer como el obstáculo ante Trump, buscando proteger el menguante apoyo de Estados Unidos. Mostrar una exploración de vías diplomáticas ayuda a gestionar la fatiga social interna sin realizar concesiones territoriales explícitas. Sin embargo, Ucrania también busca "europeizar" la mesa de negociación para no quedar aislada frente a un EE.UU. cada vez más hostil y la ocupación rusa, de ahí su interés en la presencia de asesores occidentales en las conversaciones.</p><p>El jefe de la delegación ucraniana, Kirilo Budanov, declaró en Telegram que las conversaciones fueron "difíciles, pero importantes", aunque sin revelar detalles. Rustem Umerov, otro negociador ucraniano, añadió que se debatieron "parámetros de seguridad y mecanismos para implementar posibles soluciones", con algunos temas aclarados y otros pendientes de coordinación. El objetivo es sentar "bases prácticas, no meramente formales", para futuras soluciones presidenciales.</p><h3>Acusaciones Mutuas y Puntos Muertos</h3><p>El presidente ucraniano, Volodimir Zelenski, calificó las discusiones de "difíciles" y acusó a Rusia de intentar retrasar deliberadamente el progreso. Rusia, por su parte, sigue exigiendo la retirada ucraniana de los territorios controlados en Donetsk, mientras que Kiev busca garantías de seguridad. Los representantes rusos expresaron su descontento con las recientes declaraciones públicas de Zelenski, sugiriendo que busca popularidad nacional en lugar de negociaciones serias. El panel político quedó en punto muerto durante la mañana del miércoles, según fuentes de Axios, debido a la postura de Medinsky, mientras que el grupo militar sí avanzó.</p><h3>Próximos Pasos y la Presión Internacional</h3><p>Zelenski escribió en X que "las reuniones fueron realmente difíciles y podemos afirmar que Rusia está tratando de prolongar las negociaciones que podrían haber llegado ya a la etapa final". Minutos después, la agencia RIA Novosti informó el fin de las conversaciones. A pesar de las dificultades, ambas partes acordaron futuras rondas. Medinsky mantuvo una reunión a puerta cerrada de dos horas con la delegación ucraniana tras el final de las conversaciones formales, en un intento de mantener el diálogo. La presión de Estados Unidos es palpable, con Donald Trump instando a Ucrania a "sentarse a la mesa rápido", subrayando la urgencia de una resolución a un conflicto que se acerca a su cuarto aniversario.</p></div>
+    </div>
+    </body></html>
+    
