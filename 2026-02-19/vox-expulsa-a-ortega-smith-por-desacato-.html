@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vox expulsa a Ortega Smith por 'desacato' tras negarse a dejar portavocía</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Nacional</span>
+            <h1>Vox expulsa a Ortega Smith por 'desacato' tras negarse a dejar portavocía</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">El Comité de Garantías de Vox ha suspendido temporalmente de militancia a Javier Ortega Smith, fundador del partido, por desobedecer la orden de la cúpula de dejar su cargo como portavoz en el Ayuntamiento de Madrid.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/19/17715093171659.jpg" class="article-img-full">
+        <div class="article-body"><h3>Crisis Interna en Vox: Ortega Smith Expulsado por "Desacato"</h3><p>No hay marcha atrás. Los puentes entre la dirección de Vox y Javier Ortega Smith están rotos, con el histórico dirigente encaminado a una salida forzosa del partido. El Comité de Garantías de la formación abrió ayer un expediente disciplinario al político y lo suspendió temporalmente de militancia, después de que este "desacatara" una orden de la cúpula de la formación. Lejos de tratar de acercar posturas con Ortega Smith, Santiago Abascal se ha reafirmado este jueves en la decisión tomada: "Vox es un partido en el que la Asamblea elige a una dirección y la dirección toma las decisiones, y es la dirección la que manda y eso va a seguir siendo así", ha dicho desde Peñafiel (Valladolid).</p><h3>La Cúpula de Vox Impone su Autoridad</h3><p>El líder de Vox se ha mostrado crítico con que la expulsión de Ortega Smith sea asunto de interés para los medios de comunicación, y bajo ese argumento ha esquivado dar más explicaciones al respecto. "A mí me preocupan los problemas de la gente [...] y yo no voy a perder el tiempo mirándome el ombligo, sería una irresponsabilidad por mi parte", ha sostenido ante los periodistas. "Este debate que tienen ustedes, para ustedes", ha agregado.</p><p>La dirección de Vox decidió el pasado jueves, 12 de febrero, relevar a Ortega Smith de su cargo como portavoz del grupo parlamentario en el Ayuntamiento de Madrid. Sin embargo, el dirigente se negó a aceptar esta sustitución, según explicaron fuentes del partido a este periódico, y ello derivó en la apertura del expediente disciplinario y la suspensión temporal de militancia.</p><h3>Incertidumbre sobre los Cargos de Ortega Smith</h3><p>A esta hora, sin embargo, sigue abierta la incógnita sobre qué sucederá con los cargos que Ortega Smith ostenta en nombre de Vox: es diputado en el Congreso y concejal en el Ayuntamiento de la capital -y portavoz, hasta que se materialice el relevo-. Sobre el primero de ellos, Abascal ha dicho no "temer" que el dirigente decida conservar su acta en la Cámara Baja -"no temo a nada ni a nadie"-. Respecto al segundo, no se le ha preguntado al líder de Vox, aunque el partido ya ha iniciado movimientos para desplazarle como portavoz en el consistorio.</p><p>Este jueves, el secretario general de Vox, Ignacio Garriga, ha presentado un escrito dirigido a la Secretaría General del Pleno del Ayuntamiento de Madrid indicando el procedimiento sancionador abierto a Ortega Smith, según ha anunciado en rueda de prensa la vicealcaldesa de la capital, Inma Sanz. "La Secretaría del Pleno tendrá que ver concretamente cuál es el contenido de ese escrito y, a partir de ahí, cuál es la situación que se pueda producir", se ha limitado a señalar. La Junta de Portavoces del Pleno del consistorio municipal se ha reunido este jueves, y Ortega Smith ha acudido a dicha reunión, según ha podido saber este diario. Más allá de la "orden" trasladada por la dirección de Vox, el cambio en la portavocía del grupo parlamentario es una decisión que el grupo municipal debe comunicar al Pleno, con lo que compete a los concejales de Vox en el Ayuntamiento ejecutar el relevo que quiere la cúpula del partido.</p><h3>Un Fundador en la Cuerda Floja</h3><p>La expulsión de Ortega Smith de la formación política que contribuyó a fundar es temporal, pues ahora se abre un periodo de alegaciones, pero pone fin a un proceso de pérdida paulatina de peso que viene arrastrando desde hace meses. Abascal, sin embargo, ha restado relevancia al hecho de que uno de los dirigentes históricos de su partido está ahora en esta situación: "Vox tiene más fundadores que afiliados", ha ironizado.</p><p>El líder del partido más a la derecha del abanico político ha asegurado que no les cabrá "ninguna duda" cuando tengan "que tomar decisiones internas, y también en la política española", aun cuando estas "parecen difíciles".</p></div>
+    </div>
+    </body></html>
+    

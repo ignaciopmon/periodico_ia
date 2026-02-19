@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feijóo exige dimisión de Marlaska por escándalo DAO y protección policial</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Nacional</span>
+            <h1>Feijóo exige dimisión de Marlaska por escándalo DAO y protección policial</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">Feijóo insiste en la dimisión de Marlaska tras la querella contra el DAO por agresión sexual y la supuesta coacción a la víctima, mientras Interior ofrece protección policial a la denunciante.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/19/17715087198214.jpg" class="article-img-full">
+        <div class="article-body"><h3>Exigencia de Dimisión por el Escándalo DAO</h3><p>El presidente del Partido Popular, Alberto Núñez Feijóo, ha vuelto a exigir la dimisión o destitución inmediata del ministro del Interior, Fernando Grande-Marlaska, tras el estallido del escándalo de la querella por presunta agresión sexual. La denuncia, presentada por una subordinada contra el hasta ahora director adjunto operativo (DAO) de la Policía Nacional, José Ángel González, ha provocado una fuerte controversia política. La querella se hizo pública el pasado martes por la tarde, y el comisario principal presentó su dimisión horas después, un hecho que Feijóo ha calificado de insuficiente.</p><h3>Claves de la Querella y Presiones Internas</h3><p>El líder de los populares ha subrayado la estrecha relación entre Marlaska y González, quien ha acompañado al ministro desde 2018. Además, la situación se agrava con la implicación del comisario Óscar San Juan, mano derecha de González, apartado de sus responsabilidades tras conocerse que, según la querella, habría presionado laboralmente a la presunta víctima. Se le acusa de ofrecer un "destino laboral a elección" a cambio de su silencio, lo que ha derivado en su relevo y la apertura de una "información reservada". Interior, por su parte, ha ofrecido protección policial a la denunciante.</p><h3>Acusaciones de Incompetencia y Encubrimiento</h3><p>Feijóo ha manifestado que, con la información disponible, "cuesta mucho creer que Marlaska no conociese para nada ni lo que hacía el número uno de su Policía ni lo que hacía el número dos". En caso contrario, ha sentenciado, el ministro sería "un verdadero incompetente". El jefe de la oposición considera que lo que está ocurriendo es "una vergüenza nacional e internacional" y ha acusado al Gobierno de Pedro Sánchez de "despachar todo buscando culpables fuera". Ha recordado que "hay medios de comunicación que han publicado que conocía los hechos desde hacía varios meses".</p><h3>La Postura de Marlaska y la Insistencia del PP</h3><p>Aunque Feijóo reconoce que "en el sumario y en el juzgado se acreditarán los hechos", insiste en que "la responsabilidad política del ministro es incompatible con seguir en el cargo". El líder del PP exige que, si Marlaska no dimite, sea destituido por Sánchez, ya que, a su juicio, "ni el responsable de Interior ni el presidente del Gobierno están a la altura de sus responsabilidades". Ayer, en el Congreso, Marlaska descartó renunciar salvo si la víctima "no se ha sentido protegida o ha entendido que le he fallado".</p><h3>Críticas a la Izquierda y el Caos en Rodalies</h3><p>Durante su visita a Granollers (Barcelona), Feijóo también ha abordado otros temas de la actualidad política. Ha ironizado sobre el acto de Gabriel Rufián, portavoz de ERC, sobre la unidad de la izquierda, comentando: "Me resulta muy simpático que un independentista quiera ser presidente de España". Ha criticado la supuesta fractura en ERC, señalando que "ERC tendrá que explicar cómo considera que España es un país extranjero y, sin embargo, su máximo dirigente en Madrid quiere presidir ese país".</p><h3>Compromisos del PP para Cataluña</h3><p>El presidente del PP ha aprovechado para denunciar el "caos" en el servicio de Rodalies en Cataluña, afirmando que "los privilegios de las fuerzas políticas separatistas no solucionan los problemas de los ciudadanos". Ha comparado la situación con la de un "país subdesarrollado" en contraste con los impuestos "de un país nórdico". Feijóo ha prometido que, si llega al Gobierno, su ministro de Fomento "se desplazará cada tres meses a Cataluña para rendir cuentas" sobre el funcionamiento y mejora de la red de cercanías.</p><h3>Conclusión y Crítica al Gobierno</h3><p>Feijóo ha asegurado que su gobierno firmaría un contrato para exigir la mejora del servicio de trenes, incluyendo la conexión con el aeropuerto de El Prat y la eliminación de "embudos" en los túneles. Ha demandado "una auditoría real" y la ejecución de la inversión presupuestada para Cataluña. Finalmente, ha criticado al Gobierno de Sánchez, argumentando que, a diferencia del PP de Rajoy en tiempos de crisis, el actual ejecutivo "paga más impuestos y hay más deuda pública que nunca".</p></div>
+    </div>
+    </body></html>
+    

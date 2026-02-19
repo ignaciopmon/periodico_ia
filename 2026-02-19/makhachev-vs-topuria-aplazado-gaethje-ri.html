@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makhachev vs Topuria aplazado: Gaethje, rival de 'El Matador' en Casa Blanca</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Deportes</span>
+            <h1>Makhachev vs Topuria aplazado: Gaethje, rival de 'El Matador' en Casa Blanca</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">UFC aplaza Makhachev vs Topuria; 'El Matador' se medirá a Gaethje en Casa Blanca.</p>
+        </header>
+        <img src="https://e01-xlk-ue-marca.uecdn.es/files/article_main_microformat/uploads/2025/11/16/6919eab88fa2a.jpeg" class="article-img-full">
+        <div class="article-body"><h3>Makhachev vs Topuria: El Supercombate se Aplaza</h3><p>Tras varios días de incertidumbre, se ha confirmado lo que se preveía: no habrá un Islam Makhachev vs Ilia Topuria para UFC Casa Blanca. El peleador daguestaní ha revelado que, a pesar de su insistencia, la promotora dirigida por Dana White tiene otros planes a corto plazo, y que 'El Matador' tiene ya otro oponente asignado para esta cartelera. Por tanto, habrá que esperar para realizar uno de los combates más importantes de la historia de las MMA, un choque que muchos ya consideraban 'la pelea más grande'.</p><h3>La Ambición de Topuria Choca con los Planes de la UFC</h3><p>Durante los últimos días, Makhachev se había mostrado abierto a recibir a Topuria en el peso wélter para darle la oportunidad de ser el primer triple campeón de la historia de la UFC, algo con lo que Ilia lleva tiempo soñando. El propio Islam Makhachev había afirmado previamente que "no hay una pelea más grande ahora que el Makhachev vs Topuria", reflejando la magnitud del encuentro. 'El Matador' también quiere un combate contra el mejor amigo de Khabib Nurmagomedov, pero según la compañía todavía es pronto.</p><h3>Islam Makhachev Confirma la Negativa de la Promotora</h3><p>La UFC, sin embargo, aún no está interesada en esta pelea, una postura confirmada por el propio Islam Makhachev. En una entrevista con Ushatayka, el campeón daguestaní declaró: "Creo que el Makhachev vs Topuria definitivamente no sucederá en la Casa Blanca... porque ya tiene rival. UFC aún no está interesada en esta pelea". Posiblemente Islam haya tenido contacto directo con la compañía y haya recibido la negativa, por lo que tendrá que realizar su primera defensa de cinturón de peso wélter ante otro oponente, mientras que Topuria enfocará su atención en un nuevo desafío.</p><h3>Justin Gaethje, el Nuevo Desafío de 'El Matador' en Casa Blanca</h3><p>En cuanto a ese rival de Topuria del que habla Makhachev, está más que claro que es Justin Gaethje, actual campeón interino de peso ligero. El peleador estadounidense es una baza clave para el UFC Casa Blanca, ya que la compañía tiene una oportunidad de oro para ponerle en el evento estelar contra Topuria con tal de unificar cinturones y contentar a Donald Trump, quien se espera que asista al evento. Este combate promete ser un espectáculo de alto voltaje, manteniendo la expectación por 'El Matador' en uno de los eventos más mediáticos del año.</p><h3>El Papel de Ali Abdelaziz y el Futuro del Enfrentamiento</h3><p>Más allá de las conversaciones que hayan podido tener con la UFC, Ali Abdelaziz -mánager de Gaethje y Makhachev- también ha podido jugar un papel clave para decirle a Islam que se espere y que deje a Gaethje resolver sus cuentas pendientes con Topuria. De hecho, Ali escribió hace unos días que Makhachev realizaría su primera defensa contra un peso wélter natural, y todo hace indicar que así será. Por tanto, ese ansiado combate entre Topuria y Makhachev tendrá que esperar como mínimo a finales de 2026, cuando ambos hayan realizado una defensa de cinturón en sus respectivas divisiones y la UFC tenga la excusa perfecta para llevar a cabo la pelea. Mientras tanto, es cuestión de semanas que la promotora anuncie los primeros combates de la Casa Blanca, donde salvo sorpresa estará 'El Matador'.</p><h3>El Universo UFC en Ebullición: McGregor y la Expansión Global</h3><p>Este anuncio llega en un momento de gran ebullición para la UFC, con rumores sobre el posible regreso de grandes figuras como Conor McGregor, quien parece estar "a un paso de volver a la UFC", generando aún más expectación en el universo de las artes marciales mixtas. Además, la expansión global de este deporte continúa, con Graham Boylan confirmando la llegada de Cage Warriors a España con "un evento en 2026, más en 2027", consolidando el crecimiento de las MMA en el país. Mientras tanto, eventos como el WOW 26 Bilbao ya han coronado a sus protagonistas, Jonathan Garcia y Aitana Álvarez, demostrando la vitalidad de la escena local.</p></div>
+    </div>
+    </body></html>
+    
