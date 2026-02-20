@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detenido el ex príncipe Andrés por traición; Carlos III exige justicia</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Internacional</span>
+            <h1>Detenido el ex príncipe Andrés por traición; Carlos III exige justicia</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">El arresto del duque de York por "conducta inapropiada" destapa un posible delito continuado de alta traición, poniendo en jaque la imagen de la Corona británica y la credibilidad de la realeza.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/20/17715700415749.jpg" class="article-img-full">
+        <div class="article-body"><h3>El Escándalo de la Alta Traición sacude Buckingham</h3><p>Andrés Mountbatten-Windsor, ex príncipe del Reino Unido, ha sido detenido por "conducta inapropiada", sumando un nuevo capítulo a su interminable caída. La investigación, que va más allá de la "mala conducta en cargo público", apunta a un posible delito continuado de alta traición, una acusación que resuena con la célebre frase de La Rochefoucauld: "Más traiciones se cometen por debilidad que por un propósito firme de hacer traición". Este arresto, que se añade a la sordidez de su compadreo con el pedófilo Jeffrey Epstein y las acusaciones de abusos a menores, ahora lo envuelve en la infamia y el deshonor, rasgos de particular deshonra para cualquier miembro de una dinastía reinante en la Vieja Europa.</p><p>La antigua Ley de Traición del siglo XIV, con sus sucesivas actualizaciones, cobra hoy una fuerza renovada en el imaginario colectivo británico. La ciudadanía, que ya no se cura de espanto, añade a las sombras de depredador sexual y beneficiario de presuntas corruptelas, las de un prevaricador de manual, cerniéndose sobre el hermano del actual rey Carlos III.</p><h3>Documentos desclasificados revelan la trama con Epstein</h3><p>De la última tacada de archivos desclasificados por el Departamento de Justicia de Estados Unidos se desprende que el duque de York envió a Jeffrey Epstein documentos confidenciales del Gobierno británico. Estos documentos estaban relacionados con los viajes oficiales que el entonces príncipe realizó a destinos sensibles como Hong Kong, Vietnam o Singapur, sugiriendo que el empresario organizó encuentros, viajes y presentaciones aprovechándose de las conexiones del hijo de la reina, quien a su vez se benefició de su cargo, contactos e influencia.</p><p>Uno de los reportes que forman parte de la investigación policial está fechado en la Nochebuena de 2010, cuando Andrés facilitó al financiero datos sensibles sobre inversiones en Helmand (Afganistán). Esto ocurrió a pesar de que Epstein ya estaba bajo el cerco judicial y había sido condenado en 2008 por solicitar servicios de prostitución a una menor. De aquel mismo 2010, meses antes de las Navidades, es el intercambio de correos en el que Epstein invitaba al miembro de los Windsor a conocer a una "rusa de 26 años, hermosa y confiable" para cenar en Londres, a lo que Andrés respondió que estaría "encantado de verla". En total, los explosivos documentos desclasificados contienen hasta 1.821 menciones al hermano de Carlos III.</p><h3>¿Chantaje o ambición? Los motivos detrás de la traición</h3><p>Si el hijo de la reina llegó a traicionar a la Corona y a la patria filtrando documentos secretos, como un espía de Epstein en Londres, la pregunta inevitable es a cambio de qué lo hizo. Los británicos especulan tanto con la ambición económica de un príncipe enfangado en la corrupción, como con el fácil chantaje de un Epstein en posesión de numerosas fotos comprometedoras de Andrés, que acabarían saliendo a la luz años después, condenándole a la defenestración. Entre ellas, las instantáneas con Virginia Giuffre, quien le acusó de abuso sexual, o las más recientes, de hace unos 25 años, en las que aparece arrodillado junto a una mujer con semblante lascivo.</p><h3>El cinismo de la élite británica y la trayectoria controvertida</h3><p>El profundo escándalo que produce la detención de quien durante años fue el segundo en la línea de sucesión al trono no puede ocultar el cinismo y la clara voluntad de la élite británica por hacer la vista gorda con Andrés hasta que el asunto explotó como la mayor bomba para la Monarquía en la era moderna. Cabe preguntarse hacia qué lado miraron los responsables políticos del país cuando, en el verano de 2011, el Palacio de Buckingham confirmó que el príncipe abandonaba su cargo de representante especial del Reino Unido para Comercio e Inversión.</p><p>Faltaban aún varios años para que Giuffre implicara al duque de York en sus experiencias como víctima del tráfico sexual. Sin embargo, detrás de aquel "castigo" de 2011 ya estaban casi todos los ingredientes que definirían al personaje. Los medios llevaban tiempo criticándole por su amistad con figuras controvertidas como Saif Gadafi o Timor Kulibayev, así como con el propio Epstein. Y, con todo, el entonces primer ministro David Cameron, con una actitud cortesana que tanto daño hace a la institución monárquica, le ofreció su pleno respaldo, agradeciéndole su "gran contribución", hasta que no quedó más remedio que dejar caer al duque. Una historia que, por desgracia, resuena en España, cambiando el "la ley es igual para todos" por el "la justicia debe seguir su curso" de Carlos III.</p><h3>La Monarquía británica en su hora más baja</h3><p>En 2011, la Corona británica vivía un momento dulce de popularidad, con el extraordinario apoyo a Isabel II y el encantamiento por la boda de Guillermo y Kate Middleton. Ante escándalos como los que ya afectaban a Andrés, todos preferían imitar al avestruz. Pero el estado de ánimo del pueblo es pendular, y en este febrero de 2026, una de las preguntas más repetidas en el Reino Unido es: ¿desde cuándo sabía la familia real de los tejemanejes de Andrés y qué nivel de conocimiento tenían de los mismos?</p><p>El congresista demócrata de EE. UU., Ro Khanna, promotor de la ley que ha permitido el acceso a material del FBI sobre Epstein, se mostró apocalíptico al afirmar: "Puede ser el fin de la Monarquía británica". Aunque cuesta pensar que una institución milenaria pueda caer por el caso Epstein, es inquietante que ya no estemos solo ante turbios asuntos sexuales, sino también ante la corrosiva mancha de la corrupción en las alfombras palaciegas. Carlos III, tras despojar a su hermano de títulos y honores, y hasta de la dignidad principesca, poco más puede hacer para enfrentar este vendaval.</p><p>Las encuestas sitúan la popularidad de la Monarquía hoy en el 45%, el nivel más bajo de su historia reciente. En este estado de cosas, lo único que puede ayudar es que los británicos perciban una justicia implacable contra Andrés. Todo príncipe sabe que no hay delito más imperdonable en alguien cercano al trono que el de traición. Y él traicionó hace demasiado tiempo todo lo que en el siglo XXI representa y sigue dando sentido a la pervivencia de la Corona.</p></div>
+    </div>
+    </body></html>
+    

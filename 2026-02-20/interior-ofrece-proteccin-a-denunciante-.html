@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior ofrece protección a denunciante del DAO; Marlaska en la cuerda floja</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Nacional</span>
+            <h1>Interior ofrece protección a denunciante del DAO; Marlaska en la cuerda floja</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">El ministro del Interior, Fernando Grande-Marlaska, se enfrenta a una creciente presión por su gestión del caso del ex-DAO, José Ángel González, mientras la denunciante de la presunta violación recibe protección policial.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/19/17715344355024.jpg" class="article-img-full">
+        <div class="article-body"><h3>La Dimisión de Marlaska, un Kilo de Dignidad Democrática</h3>Por cada minuto que pasa sin que el ministro del Interior dimita, el Estado pierde un kilo de dignidad democrática. Las carnes de nuestra calidad institucional ya están magras, pero ahora amenaza el raquitismo. Fernando Grande-Marlaska, que un día fue juez, ha decidido escarbar un poco más en la poza séptica en la que el Gobierno de coalición ha enterrado la responsabilidad política y, para sorpresa de nadie, lo está logrando con el respaldo del presidente. Ya sabíamos que se trata de un concepto vaporoso para este Ejecutivo. Si afecta a la corrupción del entorno personal del jefe, directamente no existe. Si la ponzoña baja un peldañito y atrapa al personal de máxima confianza, esos números dos rana que ya son legión, se solventa con cinismo cronométrico. Es decir, se da por resuelta la crisis entre celebraciones por la celeridad en la que se ordena una destitución. Siempre que no sea la propia. Si atañe al de enfrente, nada es suficiente.<p></p><h3>El Caso DAO: Compendio de Podredumbre Institucional</h3>El caso del director adjunto operativo de la Policía (DAO) parece ser un compendio de toda la podredumbre que carcome la confianza de los ciudadanos. La tenacidad en este empeño va a terminar por convencerlos de que su voto no es parte de un compromiso permanente con sus dirigentes, sino un papel que se coloca en una urna un domingo y luego no vale un mojón, en la acepción más escatológica del término.<p></p><h3>Fidelidad Perruna y Decreto de la DANA</h3>Al tema no le falta de nada. Fernando Grande-Marlaska no eligió a José Ángel González como máximo mando del Cuerpo Nacional de Policía por su trayectoria intachable, sino por su fidelidad perruna. Tanto la valoraba que aprovechó un real decreto sobre medidas para la dana para perpetuarlo en el cargo. Repítanselo en la cabeza: aprovechó una norma para paliar los efectos de una catástrofe que se cobró la vida de 200 personas, hirió a miles y arruinó a cientos de miles para mantener en el machito a su cargo de máxima confianza.<p></p><h3>Poder Omnímodo y la Cuestión de la Impunidad</h3>El DAO entendió perfectamente que su cometido principal no era proteger a los españoles de los delitos, sino proteger a su Gobierno. También lo entendieron sus compañeros y los jueces, que comenzaron a asignar las causas de corrupción sin apenas excepción a la UCO de la Guardia Civil, cuya independencia el Ejecutivo siempre ha confundido con oposición. Con semejante poder omnímodo otorgado por Marlaska, ¿cómo no iba a creerse José Ángel González impune ante una humilde subordinada? Les cambio el orden de los factores sin que altere el producto: ¿cómo su presunta víctima no iba a quedar a la intemperie frente a sus presuntos abusos de un superior de no ser por la autoridad ilimitada que le daba el ministro? Y ahora va la pregunta retórica: ¿de verdad Marlaska toma a la ciudadanía por tonta?<p></p><h3>La "Innovación" de Marlaska: La Víctima Decide su Dimisión</h3>Dice el ministro que sólo se marchará si la presunta víctima considera que se ha sentido desprotegida por él. Tremenda innovación. A una denunciante ya no se le exige sólo vencer el miedo a llevar ante el juez a un todopoderoso jefe protegido por la elite gobernante, sino que también se deposita en ella la tarea de ventilar las responsabilidades políticas derivadas de su caso. En esto ha quedado el sentido de Estado de quien, al parecer, un día fue su defensor. Mientras tanto, la denunciante de la violación del DAO tendrá protección policial tras ofrecérselo Interior.</div>
+    </div>
+    </body></html>
+    

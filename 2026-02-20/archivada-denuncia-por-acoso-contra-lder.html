@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archivada denuncia por acoso contra líder sindical UFP</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Nacional</span>
+            <h1>Archivada denuncia por acoso contra líder sindical UFP</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">El juez archivó provisionalmente la denuncia por acoso cibernético contra Víctor Manuel Duque León, líder del sindicato UFP, pese a indicios que lo vinculaban con la difusión del número de teléfono de su ex pareja en páginas de contactos.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/19/17715327987807.jpg" class="article-img-full">
+        <div class="article-body"><h3>El inicio de la denuncia por acoso cibernético</h3><p>Antes de que el nombre del director adjunto operativo (DAO) José Ángel González saltara a los titulares por una presunta agresión sexual, la inspectora que lo ha denunciado ya había sufrido otro presunto episodio de hostigamiento. En junio de 2017, siendo oficial de policía, interpuso una denuncia por acoso contra Víctor Manuel Duque León, entonces secretario general del sindicato Unión Federal de Policía (UFP), después de que su número de teléfono privado comenzara a aparecer en páginas de contactos sexuales. La inspectora presentó su denuncia formal el 15 de septiembre de 2017 ante la Dirección General de la Policía y Duque fue detenido dos meses después por acoso cibernético relacionado con los celos.</p><h3>La investigación tecnológica y los indicios</h3><p>La Brigada Central de Investigación Tecnológica rastreó el origen de los datos, detectando que la dirección IP desde la que se había publicado la información de la agente correspondía a la sede del sindicato UFP en la plaza de Carabanchel, Madrid, lugar donde trabajaban tanto la denunciante como Duque. Durante la inspección del despacho del sindicalista, los investigadores encontraron un portátil cuyo historial de navegación había sido borrado el 16 de octubre de 2017, fecha que la inspectora ya había señalado en su declaración. También se detectó una conexión desde un iPhone al portal Chatpolis y se encontró un archivo comprimido en una cuenta de Dropbox. Pese a estas evidencias, Duque se negó a facilitar las credenciales de acceso.</p><h3>El archivo provisional de la causa</h3><p>El caso fue instruido por el Juzgado de Violencia sobre la Mujer número 1 de Arganda del Rey (Madrid), pero en marzo de 2019 el juez lo archivó provisionalmente. El magistrado consideró que, aunque la investigación fue «completa y compleja», no logró determinar qué dispositivo realizó concretamente la conexión ni quién tenía el control en ese momento. Señaló, además, que varias personas tenían acceso al despacho y a las contraseñas del investigado, incluyendo su secretaria, el informático y la propia denunciante. Duque negó los hechos en todo momento, y el juez entendió que los indicios no eran suficientes para continuar el proceso, descartando también delitos de amenazas, coacciones y acoso laboral por falta de pruebas concretas.</p><h3>La guerra judicial posterior: denuncias cruzadas</h3><p>El archivo de la denuncia por acoso no puso fin al enfrentamiento entre las partes. Posteriormente, el sindicato UFP denunció a la inspectora por presunta apropiación indebida de material, en concreto un móvil y enganches a internet. En respuesta, la inspectora acusó a Duque y a otro dirigente sindical, secretario de organización, de cargar gastos personales, como comidas y copas, en tarjetas del sindicato. Esta acusación derivó en una investigación por apropiación indebida y malversación de fondos.</p><h3>Procesamiento por malversación: un nuevo capítulo</h3><p>La denuncia de la inspectora por malversación llevó a un juez de Madrid a procesar al sindicalista en octubre de 2023. En septiembre de 2025, se dictó auto de procesamiento contra Duque y el otro sindicalista por apropiación indebida de 500.000 euros. Este auto fue recurrido por ambos, solicitando la imputación de la denunciante, una resolución que aún está pendiente en la Audiencia Provincial de Madrid. Mientras tanto, el caso por la difusión de los datos de la inspectora en webs de prostitución nunca fue reabierto, y el archivo de 2019 sigue vigente, a pesar de que la inspectora denunció haber sufrido acoso laboral y amenazas durante todo este tiempo.</p></div>
+    </div>
+    </body></html>
+    

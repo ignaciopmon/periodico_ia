@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Jincho lanza 'NO Gregario' y arremete contra la política</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Política</span>
+            <h1>El Jincho lanza 'NO Gregario' y arremete contra la política</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">El rapero español El Jincho vuelve a la carga con un nuevo tema que critica duramente a la clase política y la situación del país, con una mención especial a Sarah Santaolalla.</p>
+        </header>
+        <img src="https://e01-xlk-ue-marca.uecdn.es/files/article_main_microformat/uploads/2026/02/19/699732e5b1214.jpeg" class="article-img-full">
+        <div class="article-body"><h3>El Jincho, el azote de la política española, lanza 'NO Gregario'</h3><p>El rapero El Jincho, una de las figuras más influyentes del panorama musical español actual, ha vuelto a sacudir el tablero político con el lanzamiento de su último tema, 'NO Gregario'. Conocido por su marcada tendencia anti-izquierda y sus críticas a todo el espectro político, desde Podemos hasta Vox, el artista madrileño se consolida como una voz incómoda y necesaria en el debate público.</p><h3>'NO Gregario': Un nuevo dardo contra el sistema</h3><p>Lanzada este miércoles, 18 de febrero, 'NO Gregario' sigue la estela de su exitoso 'Voto en blanco' (2023), que junto a Swit Eme, acumula casi dos millones de escuchas mensuales en Spotify. En esta nueva entrega, El Jincho no se muerde la lengua al alertar sobre la situación del país, los problemas de los trabajadores y la evolución de los tiempos, repasando sin piedad a varios personajes políticos actuales.</p><h3>Sarah Santaolalla, en el punto de mira del rapero</h3><p>Una de las dedicatorias más directas y polémicas de 'NO Gregario' va dirigida a la periodista Sarah Santaolalla. El Jincho no escatima en críticas, afirmando en su letra: "La Sarah Santaolalla está fatal, cada vez que la veo cambio de canal. Si ella es periodista con ese coeficiente intelectual, yo puedo ser físico cuántico de bioquímica nuclear”. Una clara muestra del tono incisivo y personal que caracteriza al rapero.</p><h3>Corrupción, economía y la llamada a la "revolución"</h3><p>La canción es un compendio de denuncias sociales y políticas. Desde la "corrupción en el senado" y la petición de "presidente dimisión", hasta la crítica a la supuesta similitud entre PSOE y PP, El Jincho no deja títere con cabeza. Aborda la pérdida de las "raíces" de España, la precariedad laboral y la inestabilidad económica, señalando a Pedro Sánchez como "culpable" y a sus votantes como "responsables". El tema concluye con una llamada a la acción: "la violencia no es la solución, pero es necesario armar una revolución".</p><h3>Más allá de 'NO Gregario': Un historial de crítica política</h3><p>La postura de El Jincho no es nueva. Temas como 'La rata', junto al rapero Aloy, ya pedían la dimisión de Pedro Sánchez, consolidando su imagen de artista comprometido con la crítica social y política. Su música se ha convertido en un altavoz para el descontento de una parte de la sociedad española, que encuentra en sus letras un reflejo de sus propias frustraciones y demandas.</p><h3>B Jones, entre lágrimas tras perder su pelo: "El cáncer me está enseñando quién soy de verdad"</h3><p>La DJ B Jones ha compartido un emotivo testimonio sobre su lucha contra el cáncer, revelando entre lágrimas la pérdida de su cabello. "El cáncer me está enseñando quién soy de verdad", afirmó, conmoviendo a sus seguidores y visibilizando la dura realidad de la enfermedad y el proceso de autodescubrimiento que esta conlleva.</p><h3>Pilar Rodríguez, profesora, sorprende con su opinión sobre los 'therians'</h3><p>La profesora Pilar Rodríguez ha ofrecido una perspectiva inesperada sobre la creciente moda de los 'therians', personas que se identifican como animales. "No me pilla por sorpresa... me pilla en horario lectivo", declaró, sugiriendo que este fenómeno ya es una realidad en las aulas y plantea nuevos desafíos educativos y sociales para los docentes.</p><h3>Hacienda endurece el control sobre la vivienda habitual</h3><p>Las nuevas normativas de Hacienda complican la justificación de una vivienda como habitual. Empadronarse ya no será suficiente, ya que la Agencia Tributaria podrá revisar el consumo de luz y agua para verificar la residencia efectiva, endureciendo así los criterios para acceder a beneficios fiscales asociados a la vivienda habitual.</p><h3>Edificios con plazas para bicicletas: ¿Más caro el precio de la vivienda?</h3><p>La propuesta del Gobierno de incluir plazas obligatorias para bicicletas en los nuevos edificios podría tener un impacto significativo en el mercado inmobiliario. Expertos advierten que esta medida, aunque busca fomentar la movilidad sostenible, podría encarecer aún más el precio de la nueva vivienda, añadiendo costes adicionales a las promotoras y, por ende, a los compradores.</p><h3>Precio de la luz por horas mañana, sábado 21 de febrero</h3><p>Los consumidores españoles estarán atentos al precio de la luz por horas para mañana, sábado 21 de febrero. Conocer los tramos horarios más baratos y más caros es crucial para optimizar el consumo energético y reducir la factura, en un contexto de fluctuaciones constantes en el mercado eléctrico.</p></div>
+    </div>
+    </body></html>
+    
