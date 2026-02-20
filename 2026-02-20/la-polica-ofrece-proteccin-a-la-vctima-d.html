@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Policía ofrece protección a la víctima del acoso del ex-DAO</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Nacional</span>
+            <h1>La Policía ofrece protección a la víctima del acoso del ex-DAO</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">La DAO interina de la Policía Nacional ha ofrecido protección a la agente que denunció al ex-DAO por acoso sexual y abuso de poder, mientras el ministro del Interior es criticado por su falta de contacto con la víctima.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/19/17714994330854.jpg" class="article-img-full">
+        <div class="article-body"><h3>Protección Policial para la Denunciante del Escándalo DAO</h3>La subdirectora general de Recursos Humanos y Formación, Gemma Barroso, quien ha asumido de forma interina la Dirección Adjunta Operativa (DAO) de la Policía Nacional, ha contactado con la denunciante de un delito de abuso sexual para ofrecerle protección policial. Según ha informado el Ministerio del Interior, la presunta víctima, una agente de policía, ha aceptado esta protección ofrecida por la comisaria principal, en un caso que ha sacudido los cimientos de la institución.<br/><br/><h3>El Calvario de la Víctima y el Apoyo Psicosocial</h3>La querella fue interpuesta por la agente durante una baja laboral concedida tras comunicar a Barroso, el pasado 24 de julio, su incapacidad para trabajar por cuestiones de salud mental. En ese momento, mientras se incorporaba a su nuevo destino en la Subdirección de Recursos Humanos, recibió una llamada del despacho del ex DAO José Ángel González, a la que no contestó. Tras informar a Barroso, la mujer fue puesta a disposición del equipo de apoyo psicosocial, cuya asistencia continúa recibiendo, y permanece de baja con el armamento retirado.<br/><br/><h3>"Borrica, Estás Gilipollas": La Naturaleza del Acoso</h3>Los abusos del ex DAO, recogidos en la querella criminal presentada el pasado 9 de enero, se remontan a abril de 2025, cuando José Ángel González habría comenzado a llamar "múltiples" veces a la víctima, instándola a reunirse con él, tras haber mantenido una relación que ella decidió finalizar. La denuncia describe "acercamientos de naturaleza sexual", "blitzkriegs telefónicos intimidatorios" y mensajes de WhatsApp con expresiones como "Borrica" o "Estás gilipollas".<br/><br/><h3>Marlaska en el Punto de Mira: Ausencia de Contacto</h3>El abogado de la denunciante, Jorge Piedrafita, ha criticado duramente al ministro del Interior, Fernando Grande-Marlaska, por no haberse puesto en contacto con su cliente. "Ni el ministro Grande-Marlaska ha hablado con mi cliente ni ha hablado conmigo", reprochó el letrado en entrevistas a 'Onda Cero' y Tele 5, cuestionando la "empatía" que el Gobierno dice tener con las víctimas de delitos sexuales. Piedrafita considera que no es la víctima quien debe pedir la dimisión del ministro, sino que este debe asumir su responsabilidad por los errores cometidos.<br/><br/><h3>La Empatía de Barroso Frente a la Indiferencia Ministerial</h3>En contraste con la postura del ministro, el abogado Piedrafita ha agradecido públicamente a la DAO interina, Gemma Barroso, por la "empatía" y el "tacto" con el que atendió a su cliente. Barroso, según el letrado, "se quedó de piedra ante lo que le estaba contando" y animó a la denunciante "a que siguiera hasta el final con todas las consecuencias", asegurándole que estaba haciendo lo correcto. Esta reacción contrasta con las afirmaciones de Pedro Sánchez sobre la "contundencia, empatía y coherencia" del Ejecutivo en este asunto.</div>
+    </div>
+    </body></html>
+    

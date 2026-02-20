@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trump inaugura su Junta de Paz global con pompa y polémica</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Internacional</span>
+            <h1>Trump inaugura su Junta de Paz global con pompa y polémica</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">La Junta de Paz, concebida por Donald Trump para supervisar el alto el fuego en Gaza y competir con la ONU, celebró su primera reunión en Washington bajo el inconfundible estilo del expresidente.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/19/17715179734165.jpg" class="article-img-full">
+        <div class="article-body"><h3>La Junta de Paz de Trump: Un Nuevo Actor Global al Estilo del Magnate</h3><p>La Junta de Paz, el organismo inicialmente diseñado por el equipo de Donald Trump para supervisar el alto el fuego y la transición en la Franja de Gaza, ha dado sus primeros pasos este jueves en Washington. Reconvertida en un experimento inédito y aún indefinido para competir con la ONU en la resolución de conflictos globales, su inauguración se celebró al más puro estilo Trump: un acto grandilocuente con líderes mundiales, cámaras y él mismo como maestro de ceremonias.</p><h3>Un Espectáculo Personalista con Poca Atención a Gaza</h3><p>El evento fue una exhibición del carisma (y egocentrismo) del expresidente. Trump pronunció un discurso lleno de anécdotas personales, bromas, muestras de complicidad con los presentes y loas a sí mismo, a su gabinete y a su gestión, llegando a mencionar su merecimiento del Nobel de la Paz. La situación en Gaza, la supuesta razón de ser de la Junta, apenas se abordó. Los primeros datos sobre la Franja no se escucharon hasta pasada una hora, y la voz del comisionado para la reconstrucción, Ali Shaath, llegó aún más tarde, tras un aplauso solicitado para Benjamin Netanyahu.</p><h3>Una "Junta de Accionistas" Global y una Lista de Invitados Reveladora</h3><p>Jared Kushner, yerno del presidente, explicó que la idea era emular una junta de accionistas empresarial, enfocada en "cambiar el futuro". Trump, por su parte, presumió de la asistencia de "los líderes mundiales más importantes", destacando el apoyo de figuras como Javier Milei. La lista de países presentes, aunque limitada, fue llamativa, incluyendo desde aliados cercanos como Hungría y El Salvador, hasta naciones que buscan su lugar o temen represalias, como México, o potencias tradicionales como Japón y el Reino Unido.</p><h3>Malestar Europeo y Control Absoluto de Trump</h3><p>La presencia de 14 miembros de la Unión Europea, incluyendo a Italia, Alemania y Finlandia, así como la vicepresidenta de la Comisión Europea, ha generado malestar interno en Europa. Muchos países aceptaron un rol subsidiario, otorgando legitimidad a un órgano diseñado a la medida de Trump, donde él, como presidente vitalicio, ostenta un control absoluto sobre el presupuesto, la agenda y la capacidad de veto, incluso después de dejar la presidencia de Estados Unidos. Esta estructura es vista como un claro intento de minar el poder de la ONU y reescribir el sistema internacional.</p><h3>Financiación y Ambiciones Globales: "Supervisar a las Naciones Unidas"</h3><p>Estados Unidos prometió una contribución de 10.000 millones de dólares, sumándose a los 7.000 millones adicionales de países del Golfo y Asia Central para la ayuda a Gaza. El general Jeffers anunció planes para desplegar 12.000 policías y 20.000 soldados de fuerzas de seguridad en la Franja. Sin embargo, las verdaderas intenciones de Trump se hicieron patentes al afirmar que la Junta de Paz "prácticamente supervisará a las Naciones Unidas y se asegurará de que funcionen correctamente", prometiendo "recuperarlas" y "fortalecerlas" bajo su influencia.</p><h3>Gaza, la Excusa; el Poder, el Fondo</h3><p>A pesar de ser el pretexto oficial, Gaza fue apenas mencionada en el discurso central de Trump, sin referencias a la situación actual, los muertos palestinos o las necesidades de reconstrucción. La asistencia de tantos países se explica por el temor a quedar fuera de la órbita de Trump, la oportunidad de negocio o el miedo a que sus rivales ocupen ese espacio. La escenografía, los elogios y los vídeos propagandísticos estuvieron centrados en el expresidente y su círculo más cercano, dejando claro que la exhibición de poder y la sumisión de sus homólogos eran el verdadero fondo de esta inaugural Junta de Paz.</p></div>
+    </div>
+    </body></html>
+    
