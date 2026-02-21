@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alonso sufre en Bahréin; Antonelli y Audi sorprenden</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Deportes</span>
+            <h1>Alonso sufre en Bahréin; Antonelli y Audi sorprenden</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">Fernando Alonso cierra una pretemporada aciaga con problemas mecánicos, mientras Antonelli y Audi destacan con tiempos prometedores.</p>
+        </header>
+        <img src="https://e01-xlk-ue-marca.uecdn.es/files/article_main_microformat/uploads/2026/02/19/699735f1e6e98.jpeg" class="article-img-full">
+        <div class="article-body"><h3>Alonso, un final de pretemporada abrupto y preocupante</h3><p>El último día de pretemporada para Fernando Alonso antes de Australia concluyó de forma brusca y anticipada. El piloto español estaba realizando sus primeras tandas largas del invierno con el AMR26, que resultaron ser extremadamente lentas. Tras 28 vueltas, se oyó al coche decelerar y, finalmente, un ruido de piezas rompiéndose, presumiblemente de la caja de cambios o transmisión, antes de que el monoplaza se apagara completamente en la recta previa a la curva 5.</p><h3>Problemas mecánicos y versiones contradictorias en Aston Martin</h3><p>Este incidente fue el colofón a tres semanas (tres días y medio para Alonso) a bordo de un coche de diseño radical, pero con una imagen trágica en pista. Un inicio a contrapié, con un motor que parece capado por varios motivos, incluyendo la fragilidad de elementos como la refrigeración y la caja de cambios. La nota oficial de Aston Martin hablaba de un “problema en la unidad de potencia” y una parada “por precaución”, intentando no señalar a Honda. Sin embargo, el sonido claro a rotura de transmisión y otras versiones que apuntaban a un problema de baterías, con el protocolo de descarga eléctrica activado, generaron confusión. Las imágenes y sonidos eran muy confusos, pues el motor seguía subiendo de vueltas mientras la velocidad decaía, sugiriendo un problema más en la transmisión que en la unidad de potencia, evocando el infame “GP2 engine” de 2015.</p><h3>Fernando Alonso, a ciegas hacia Melbourne</h3><p>La acumulación de problemas significa que Alonso apenas ha rodado en tandas de calidad o solidez, lo que lo llevará a ciegas a Melbourne para el inicio de la temporada. Ni siquiera ha podido ensayar una salida en parrilla junto a sus rivales, algo que el resto de pilotos sí ha hecho. Aunque su compañero Lance Stroll ya habla de un coche muy distinto y con soluciones para Albert Park, cuesta creer en una transformación tan radical en las dos semanas que restan para la primera cita del calendario.</p><h3>Antonelli y Mercedes, la sorpresa en la cima</h3><p>En la parte alta de la tabla de tiempos, la pretemporada dejó una sorpresa inesperada: Antonelli, con el Mercedes, marcó el mejor tiempo hasta el momento. Dos coches con motor Mercedes bajaron a 1:32, con Piastri quedándose a media décima del italiano. Verstappen y Hamilton se mostraron muy cerca, demostrando que los cuatro equipos de los que saldrá el ganador en Australia están en plena forma. Además, Franco Colapinto sorprendió con un 1:33.8 con el Alpine (también motor Mercedes).</p><h3>Audi, la revelación inesperada con un motor envidiable</h3><p>La mayor sorpresa, sin embargo, fue la de Audi, que con Hulkenberg y un modesto Sauber, logró un impresionante 1:33.9. Han logrado un chasis muy decente que se comporta bien en curva y es rápido en tandas, y han construido un motor desde cero en Neuburg que es la envidia de Honda (y, por extensión, de Aston Martin) en estos momentos, beneficiándose de condiciones más ventajosas en su inicio. El mérito es mayúsculo para la firma de los cuatro aros, que esta semana ha mostrado que llega para ser una referencia en pocos años. Sin duda, la revelación de la pretemporada, aunque tendrán que confirmarlo en Australia.</p><h3>Contrastes en Bahréin: Preocupación y esperanza antes de Australia</h3><p>Así, el día 2 de Bahréin 2 dejó un panorama de contrastes: la preocupación por un Fernando Alonso que llega a la primera cita del año con más dudas que certezas, y la esperanza que generan las prometedoras actuaciones de jóvenes talentos como Antonelli y la sorprendente irrupción de Audi, que promete agitar la parrilla en un futuro cercano. Melbourne dictará sentencia.</p></div>
+    </div>
+    </body></html>
+    
