@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mühlegg: El oro olímpico español que acabó en el infierno del dopaje</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Deportes</span>
+            <h1>Mühlegg: El oro olímpico español que acabó en el infierno del dopaje</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">La historia de Johann 'Juanito' Mühlegg, el esquiador que pasó de héroe a 'apestado' por dopaje en Salt Lake City 2002, resurge con el nuevo oro español.</p>
+        </header>
+        <img src="https://e01-xlk-ue-marca.uecdn.es/files/article_main_microformat/uploads/2026/02/20/69988fe398c2d.jpeg" class="article-img-full">
+        <div class="article-body"><h3>El recuerdo amargo de un oro manchado</h3><p>Mientras el deporte español celebra su primer oro en 54 años en los Juegos Olímpicos de Invierno, es inevitable recordar la escabrosa historia de Johann 'Juanito' Mühlegg. Este esquiador de fondo de origen alemán, que representó a España, ganó tres oros en los Juegos de Salt Lake City 2002, solo para ver cómo su gloria olímpica se desvanecía en el infierno del dopaje apenas unas horas después. Su caso se ha convertido en una pesadilla recurrente del olimpismo español, un recordatorio de los peligros de nacionalizar deportistas con entornos conflictivos en busca de medallas en disciplinas minoritarias como el esquí de fondo.</p><h3>De promesa alemana a abanderado español</h3><p>Mühlegg ya era un prometedor esquiador en la década de los 90, participando en tres Juegos Olímpicos como alemán. Sin embargo, a finales de 1999, tras romper con la federación alemana por "daños espirituales", se nacionalizó español. Rápidamente, 'Juanito' se convirtió en el referente de los deportes de invierno en España, un país que anhelaba un nuevo éxito tras los hermanos Fernández Ochoa. En 2001, en los mundiales de Lahti, ya sumaba un oro y una plata, disparando las expectativas para Salt Lake City 2002.</p><p>"A mí Johann me da pena. Estaba influido por un entorno peculiar", aseguraba Luis Algar, entonces presidente de la Federación de Deportes de Invierno, en un reportaje de MARCA de 2022, rememorando los 20 años de su ascenso y caída.</p><h3>La efímera gloria de Salt Lake City</h3><p>Los Juegos de Salt Lake City comenzaron de manera triunfal para Mühlegg. El 10 de febrero, ganó el oro en los 30 km estilo libre, un éxito rotundo para España. Cuatro días después, se impuso en los 10 kilómetros persecución, desatando una ola de admiración por el "chico rubio" que representaba a la Federación murciana. La euforia era tal que Mühlegg decidió participar también en los 50 km, una prueba que no había contemplado inicialmente. Contra todo pronóstico, 'Juanito' volvió a ganar, haciendo sonar el himno español por tercera vez. Estaba en la cima del Olimpo.</p><h3>El amargo despertar: dopaje y desposesión</h3><p>Pero el dulce sueño duró apenas unas horas. El control antidopaje oficial detectó darbepoetina, una versión sintética de la eritropoyetina que mejora el transporte de oxígeno a los músculos. Este positivo, que pudo haberse evitado con análisis previos en laboratorios españoles, desató el escándalo. Mühlegg negó cualquier comportamiento antideportivo y su familia habló de complot, pero la realidad fue implacable. El complejo proceso legal culminó en 2003, cuando el Tribunal de Arbitraje Deportivo (TAS) despojó definitivamente a Johann de sus tres medallas de oro.</p><p>Benjamín Fernández, responsable médico del equipo español en esos Juegos, reflexionaba en MARCA: "Lo perdió todo por ambición. A lo mejor en los Juegos no hubiera sido primero con tres minutos de ventaja sino tercero dos minutos por detrás, pero hubiera hecho algo seguro porque sus condiciones eran excepcionales".</p><h3>Una vida en el anonimato brasileño</h3><p>A las medallas perdidas se sumaron dos años de suspensión para el esquiador. Aunque llegó a solicitar el reingreso en el equipo español y estuvo inscrito para los Juegos de 2006, Mühlegg optó finalmente por la retirada. Buscando el mayor anonimato posible, 'desapareció' de la vida pública. Tras un breve periodo en Portugal, se mudó hace 20 años a Natal, Brasil, donde se casó y tiene una hija. Su desvinculación de España es tal que en 2015 se nacionalizó brasileño.</p><p>Actualmente, en Natal, gestiona un negocio inmobiliario llamado Jericons Construção y elude cualquier contacto con los medios. Es probable que 'Juanito' ni siquiera haya seguido los éxitos recientes de Oriol Cardona y Ana Alonso, pero su historia sigue siendo un eco persistente de un esquiador que pudo reinar en el deporte español y acabó en el infierno del olvido y el estigma del dopaje.</p></div>
+    </div>
+    </body></html>
+    

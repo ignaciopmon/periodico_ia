@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Washington desmantela Cubazuela: fin de la alianza Castro-Chávez</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Internacional</span>
+            <h1>Washington desmantela Cubazuela: fin de la alianza Castro-Chávez</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">El protectorado de Washington sobre Venezuela está desmantelando sistemáticamente la alianza revolucionaria 'Cubazuela', forzando el regreso de funcionarios cubanos y reorientando la influencia de Caracas de La Habana a la capital estadounidense.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/21/17716946685888.jpg" class="article-img-full">
+        <div class="article-body"><h3>El Desmantelamiento de Cubazuela por Washington</h3><p>Uno de los principales objetivos del protectorado de Washington sobre el chavismo reciclado, que algunos historiadores avezados ya comparan con el realizado sobre Japón tras la II Guerra Mundial, se cumple por plazos y a rajatabla: la demolición de Cubazuela, la alianza revolucionaria creada por Hugo Chávez y Fidel Castro, que fue más allá de lo político, económico y militar para convertirse en un agente de poder en el continente.</p><p>El enorme cordón umbilical creado entre el castrismo y el chavismo se enredó de tal forma en Venezuela que ha asfixiado durante años la esperanza de libertad de los criollos. El castrismo se extendió dentro de la revolución bolivariana, que copió buena parte de sus manuales de dominación y control social. Su influencia fue tal que fueron los cubanos quienes convencieron al comandante supremo para que nombrara su sucesor a Nicolás Maduro, formado en la escuela de cuadros del Partido Comunista de Cuba (PCC).</p><h3>La Ruina Económica y el Giro Capitalista</h3><p>Sólo la ruina económica que provocó la adopción del modelo económico cubano, que llevó a Venezuela a la escasez de alimentos y el desabastecimiento de productos básicos, forzó el cambio al capitalismo salvaje en el que ha participado en primera línea la presidenta encargada, Delcy Rodríguez.</p><h3>El Éxodo Cubano y la Presión del Comando Sur</h3><p>Según ha confirmado la agencia Reuters a partir de 11 fuentes distintas, los funcionarios cubanos instalados en Venezuela han iniciado su regreso a la isla, pese a la importancia trascendental de sus agentes, sobre todo en cuarteles militares y en el anillo de seguridad presidencial. La muerte de 32 escoltas de Nicolás Maduro durante la operación militar estadounidense del 3 de enero no sólo supuso el fin de una leyenda.</p><p>Así de claro lo ha dejado el general Francis Donovan, jefe del Comando Sur, a sus interlocutores en Caracas: hay que echar de Venezuela a cubanos, iraníes y rusos. De momento, la presidente encargada, Delcy Rodríguez, ya no se rodea de los agentes cubanos que protegieron durante 25 años a Hugo Chávez y al dictador, preso hoy en Nueva York. Pero, si estos eran importantes para el régimen, aún más lo han sido los militares de Inteligencia que han vigilado los cuarteles venezolanos como si se tratara de la propia Cuba, codo con codo con los temibles miembros de la Dirección General de Contrainteligencia Militar (DGCIM), quienes aparecen en los informes de derechos humanos de Naciones Unidas como los peores torturadores y abusadores en tiempos de revolución.</p><p>"Quienes colonizaron Venezuela son los cubanos. Fueron los cubanos quienes protegieron a Maduro. No estaba custodiado por guardaespaldas venezolanos, tenía guardaespaldas cubanos", insistió el secretario de Estado, Marco Rubio.</p><h3>La Dependencia de La Habana y el Bloqueo Naval</h3><p>Durante 25 años, La Habana ha sobrevivido gracias al "trabajo" de sus agentes y sus médicos en Venezuela, que no sólo significaba el envío de más de 100.000 barriles de petróleo por día, sino también el pago de una suculenta cuota en millones de dólares. Al acabar cada año, Chávez y Fidel (luego Raúl) hacían la cuenta y a Venezuela siempre le tocaba pagar.</p><p>La demolición de Cubazuela también influye, y de qué forma, en la presión de Washington contra La Habana. El Gobierno estadounidense no sólo ha cerrado el grifo del petróleo venezolano: con su bloqueo naval impide que México y Rusia sustituyan parte de los envíos de crudo desde Caracas.</p><h3>El Fin de una Era: De La Habana a Washington</h3><p>"Asistimos al fin de Cubazuela, seguro. La operación de Caracas y la creciente presión sobre Cuba no es un nuevo punto de equilibrio, sino uno de inflexión hacia el cambio. De hecho, Cubazuela dejó de existir el 3 de enero porque, desde esa fecha, en Caracas no se consulta a La Habana, sino a Washington", explica a EL MUNDO Juan Antonio Blanco, director del Laboratorio de Ideas Cuba Siglo XXI y coautor de Cubazuela: crónica de una intervención cubana.</p><p>Las investigaciones de Blanco, creador en 2007 del concepto Cubazuela, confirmaron que, durante los años de represión, entre el grupo aproximado de 22.000 cubanos, incluidos generales que habían participado en las guerras de África, estaban quienes tomaron el control de instituciones estratégicas en Venezuela. Entre sus grandes logros figura su asesoramiento para reprimir a sangre y fuego las protestas de los demócratas a través del GRUCE, un grupo de coordinación y enlace de Cuba. Unas protestas en las que se repetía el grito de "Y no, y no, y no me da la gana, una dictadura como la cubana".</p><p>Tal fue la simbiosis entre las dos revoluciones que, durante un tiempo, Fidel acarició la idea de integrar formalmente a los dos países. Un sueño pulverizado hoy por la actualización trumpista de la Doctrina Monroe.</p></div>
+    </div>
+    </body></html>
+    

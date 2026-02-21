@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podemos se blinda en su pureza y rechaza alianzas de izquierda</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Nacional</span>
+            <h1>Podemos se blinda en su pureza y rechaza alianzas de izquierda</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">El partido morado rechaza las propuestas de alianza de la nueva coalición y Rufián, reafirmando su camino en solitario por la 'pureza' de la izquierda.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/20/17715894217296.jpg" class="article-img-full">
+        <div class="article-body"><h3>Podemos se Aferra a la Pureza y Rechaza Alianzas</h3><p>Podemos acelera su camino en solitario hacia las urnas, rechazando de plano las dos propuestas de alianza que tenía sobre la mesa: la de la nueva coalición que sustituye a Sumar y la promovida por Gabriel Rufián. El partido morado se aferra a la pureza y las esencias de la izquierda, dispuesto a pagar el precio que sea por mantener su independencia.</p><p>La secretaria general de Podemos, Ione Belarra, ha defendido esta postura, afirmando que "a veces la vida no va de cantidad, sino de calidad". Para Podemos, la política no se trata de aglutinar siglas para crecer, sino de tener un objetivo claro y evitar la sumisión al PSOE y sus límites, una crítica directa a las propuestas actuales.</p><h3>Críticas al "Cálculo Electoral" y la "Inacción" del Gobierno</h3><p>Este viernes, Podemos formalizó su rechazo a la propuesta de Gabriel Rufián, diputado de ERC, argumentando que los planteamientos basados en el "cálculo electoral" solo conducen al "barrido" de la izquierda. La dirección morada insiste en su tarea de "poner en pie" a una izquierda con "ambición" y que no actúe "desde el miedo" a Vox, una visión que, a su juicio, las alianzas propuestas no garantizan.</p><p>Belarra ha sido contundente al señalar que la "inacción" del Gobierno es la que "está alimentando el malestar que alimenta a su vez a la extrema derecha". Por ello, ha criticado que la conclusión de Rufián o de los partidos en torno a Sumar sea "seguir apoyando al PSOE a cualquier precio". La líder morada advierte que un enfoque puramente electoralista podría llevar a barrer a la izquierda, al feminismo y al ecologismo, en lugar de combatir eficazmente a la extrema derecha.</p><h3>Una Izquierda "En Pie" Frente al Miedo</h3><p>Frente a esta situación, Podemos propone una izquierda "en pie", capaz de ofrecer un proyecto firme para la gente trabajadora desde una lógica "feminista, antirracista, ecologista y antifascista". Belarra ha reivindicado la impronta de su partido con una polémica comparación: "Ya han hecho más cuatro diputadas valientes de Podemos que cinco ministros de Sumar", subrayando su convicción en la efectividad de su enfoque independiente.</p><p>La dirigente morada acelera en este carril que aleja a Podemos de Yolanda Díaz y Sumar, buscando resurgir a través de los nuevos descontentos. Belarra ha apelado a "toda esa gente que está desencantada, que está desconectada con este Gobierno", invitándoles a unirse a una izquierda que "a pesar del miedo, se ponga de pie" y defienda sus principios "con orgullo" en las calles y las instituciones.</p></div>
+    </div>
+    </body></html>
+    
