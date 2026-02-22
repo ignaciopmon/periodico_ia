@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyon clama 'Justicia para Quentin' en masiva marcha nacionalista</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Internacional</span>
+            <h1>Lyon clama 'Justicia para Quentin' en masiva marcha nacionalista</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">Miles de nacionalistas marchan en Lyon por Quentin Deranque, entre polémica política y acusaciones a la extrema izquierda.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/21/17716902383097.jpg" class="article-img-full">
+        <div class="article-body"><h3>Lyon se tiñe de luto y protesta</h3><p>A los gritos de "¡Justicia para Quentin!" y "¡Antifas asesinos!", más de tres mil manifestantes han recorrido las calles de Lyon este sábado en memoria del joven nacionalista muerto tras un enfrentamiento con activistas de extrema izquierda. La marcha llegó precedida de una fuerte polémica, tras la petición expresa del alcalde de la ciudad, Grégory Doucet, de Los Ecologistas, de que no fuera autorizada por temor a disturbios, declarando: "No quiero que Lyon se convierta en la capital de la extrema derecha". Sin embargo, el ministro del Interior, Laurent Núñez, autorizó el acto con un fuerte dispositivo policial, alegando la necesidad de encontrar un término medio entre la libertad de expresión y la seguridad. La familia de Quentin Deranque, por su parte, decidió no participar y pidió "calma, moderación y ausencia de expresiones políticas" a quienes se sumaran a la marcha.</p><h3>Acusaciones directas y perfiles de los asistentes</h3><p>Durante la manifestación, "Quentin, matado por la milicia de Jean-Luc Mélenchon" podía leerse en el ubicuo poster del joven fallecido, en una referencia directa a la Guardia Joven y al líder de La Francia Insumisa, partido del que dos asistentes parlamentarios figuran entre los siete detenidos. La presencia de jóvenes ultras, con mascarillas negras, fue mayoritaria en la marcha, que arrancó unas emotivas declaraciones de Domitille Casarotto, amiga de Quentin: "Era un joven discreto y recto, católico y nacionalista; para mí, como un hermano y un amigo". El acto de homenaje fue convocado por Aliette Espieux, portavoz de la Marcha por la Vida, quien pidió a los manifestantes que "no mancharan con violencia el nombre de Quentin" y se comprometió a "una plena cooperación con la Policía" para evitar disturbios. Más de un centenar de agentes vigilaron la comitiva, que avanzó hacia el barrio universitario y culminó con una ofrenda de rosas blancas y tulipanes en la calle Victor Lafarge, donde fue linchado el joven nacionalista, despedido como "un héroe silencioso" por las activistas del grupo Némesis. "Tu fe en un ejemplo para los jóvenes franceses", podía leerse en una pancarta enarbolada por Sabine Petit, de 64 años, quien afirmó ser "apolítica" pero "conmovida por la historia de Quentin y sus convicciones religiosas", y presente para "recordar el mensaje cristiano y pedir el fin de la violencia".</p><h3>Reacciones políticas nacionales</h3><p>La marcha de homenaje a Quentin, inicialmente convocada por el grupo de extrema derecha Audace, se propagó por las redes a otras ciudades, ante la preocupación de posibles disturbios por la celebración simultánea de manifestaciones de la extrema izquierda. Jordan Bardella, presidente de Agrupación Nacional (RN), dirigió personalmente el viernes una carta a los responsables del partido pidiendo que sus militantes no acudieran a las marchas conmemorativas por la muerte de Quentin, ante el temor de una asociación de su partido con la extrema derecha. Bardella aseguró que, si su partido llega al Gobierno, prohibirá "las milicias de extrema izquierda y de extrema derecha". Desde París, Emmanuel Macron se sumó "al momento de recuerdo y respeto por nuestro joven compatriota que fue asesinado, por su familia y sus familiares", advirtiendo que "luego llegará el momento de rendir cuentas y pedir responsabilidades". Macron planea convocar la semana próxima una cumbre especial para "hacer una actualización completa sobre todos los grupos de acción violenta y que tienen vínculos con los partidos políticos". A comienzos de semana, tras la detención de un asistente parlamentario de La Francia Insumisa de Jean-Luc Mélenchon, el presidente recalcó que "no es ningún misterio que se trata de un partido de extrema izquierda", y enfatizó: "En la República, ninguna violencia es legítima. Las fuerzas políticas deben actuar dentro del orden republicano y no hay lugar para las milicias, vengan de donde vengan".</p><h3>Eco internacional y tensiones diplomáticas</h3><p>La Administración Trump se sumó desde lejos a los comentarios políticos a raíz de la tragedia. "El extremismo violento de izquierda está en aumento y su papel en la muerte de Quentin Deranque demuestra la amenaza que supone para la seguridad pública", podía leerse en un mensaje difundido en X por la Oficina de Lucha contra el Terrorismo y compartido por la embajada de Estados Unidos en Francia. El mensaje concluía: "Seguiremos monitoreando la situación y esperamos que los autores de esta violencia sean llevados ante la Justicia". La primera ministra italiana, Giorgia Meloni, calificó esta semana la muerte de Quentin como "una herida para toda Europa" y acusó a la extrema izquierda de crear "un clima de odio ideológico que se extiende por varios países". Macron criticó sus palabras como una interferencia en los asuntos internos de Francia: "Siempre me ha llamado la atención el hecho de que las personas nacionalistas, que no quieren ser molestadas en casa, son las primeras en comentar lo que le está sucediendo a los demás".</p><h3>Un llamado a la calma en medio de la polarización</h3><p>En medio de la polarización política y las fuertes acusaciones cruzadas, el llamado a la calma y la moderación por parte de la familia de Quentin Deranque resuena como un contrapunto a la tensión. Mientras la investigación sigue su curso y las autoridades buscan esclarecer responsabilidades, la tragedia de Lyon subraya la creciente preocupación por el extremismo y la violencia política en Francia y Europa, con líderes nacionales e internacionales pidiendo el fin de las milicias y la actuación dentro del orden republicano.</p></div>
+    </div>
+    </body></html>
+    

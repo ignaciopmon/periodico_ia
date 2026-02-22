@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joven de 18 años muere apuñalado por menor de 13 en Valladolid</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Nacional</span>
+            <h1>Joven de 18 años muere apuñalado por menor de 13 en Valladolid</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">Un joven de 18 años ha fallecido en Valladolid tras ser apuñalado supuestamente por un menor de 13 años, un suceso que la Policía investiga y que podría estar relacionado con bandas latinas.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/20/17716058381685.jpg" class="article-img-full">
+        <div class="article-body"><h3>Trágico Suceso en la Calle Democracia</h3><p>Un joven de 18 años ha perdido la vida este viernes en Valladolid tras ser apuñalado, presuntamente, por un menor de 13 años. El fatal incidente tuvo lugar en la calle Democracia de la capital vallisoletana, en torno a las 14:30 horas, conmocionando a la ciudad.</p><h3>Detención y Primeras Investigaciones</h3><p>Según ha confirmado a EFE el subdelegado del Gobierno, Jacinto Canales, la Policía Nacional pondrá a disposición de la Fiscalía al menor de edad, señalado como el supuesto autor material del acuchillamiento. Además, la Policía investiga a una joven, también menor de edad, y a una mujer adulta que se encontraban en el lugar de los hechos y que han sido trasladadas a dependencias policiales para esclarecer su implicación.</p><h3>Posible Vínculo con Bandas Latinas</h3><p>Fuentes cercanas al caso han revelado a EFE que, aunque no se descarta ninguna hipótesis, una de las principales líneas de investigación apunta a una posible conexión con bandas latinas. Se baraja que la agresión a la víctima, que habría sido atacada por compatriotas, podría ser una represalia por su intención de abandonar la banda de los Dominican Don't Play, según informa Europa Press.</p><h3>Respuesta de Emergencias y Fallecimiento</h3><p>El Servicio de Emergencias 112 de Castilla y León recibió varias llamadas a las 14:33 horas solicitando asistencia sanitaria para un joven gravemente herido por arma blanca en el tórax. Tras el aviso, se movilizó a la Policía Nacional, Policía Municipal y una UVI móvil de Emergencias Sanitarias - Sacyl. El personal sanitario atendió al lesionado y lo trasladó al Hospital Clínico Universitario de Valladolid, donde lamentablemente falleció este viernes por la tarde, según confirmaron fuentes de la Subdelegación del Gobierno.</p><h3>Condena Social y Continuación de la Investigación</h3><p>La Policía Nacional continúa con las investigaciones para esclarecer todos los detalles del suceso, su desencadenante y las circunstancias que rodearon esta agresión mortal. El alcalde de Valladolid, Jesús Julio Carnero, ha expresado su “repulsa” ante el “terrible” acontecimiento a través de la red social X, transmitiendo su pésame a la familia de la víctima y enfatizando: “¡Nunca admitiremos actitudes violentas y menos entre los jóvenes!”</p></div>
+    </div>
+    </body></html>
+    

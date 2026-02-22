@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alcaraz gana Doha con clase magistral en 50 minutos</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Deportes</span>
+            <h1>Alcaraz gana Doha con clase magistral en 50 minutos</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">Carlos Alcaraz se corona campeón en Doha tras una final relámpago de 50 minutos contra Arthur Fils, sumando su vigesimosexto título.</p>
+        </header>
+        <img src="https://e01-xlk-ue-marca.uecdn.es/files/article_main_microformat/uploads/2026/02/21/6999fea41bfcd.jpeg" class="article-img-full">
+        <div class="article-body"><h3>Alcaraz, de Jeque a Emir en Doha</h3><p>Carlos Alcaraz ha elevado su estatus en Doha de 'jeque' a 'emir' tras imponerse este sábado a Arthur Fils en la final del torneo de categoría 500. Con un contundente 6-2 y 6-1 en apenas 50 minutos, el número uno español no solo se ha proclamado campeón, sino que ha sumado su vigesimosexto título en una carrera aún incipiente. A sus 22 años y 292 días, Alcaraz demuestra tener el potencial y las herramientas para reescribir la historia del tenis, con la mira puesta incluso en ser el primer tenista en ganar tres veces en Doha y llevarse el codiciado halcón de oro.</p><h3>Clase Magistral y Miedo Escénico de Fils</h3><p>Esta era la trigésimo cuarta final para el jugador de El Palmar, pero la primera contra un rival más joven. Arthur Fils, con el descaro de sus 21 años, no pudo hacer frente al vendaval español. El 'miedo escénico' que a menudo siente al representar a Francia en la Copa Davis pareció manifestarse desde el intercambio inicial, afectando su muñeca y su juego. A pesar de contar con un gran campeón como Goran Ivanisevic en su banquillo, el carácter ganador no se transmite, y Fils, verdugo de Jakub Mensik en semifinales, perdió su primer turno de saque, yendo siempre a remolque en el marcador.</p><h3>El Azote del Tenis Francés</h3><p>Carlitos se ha consolidado esta semana como el azote del tenis francés, superando a Arthur Rinderknech, Valentin Royer y, finalmente, a Fils. Con esta racha, Alcaraz acumula 25 victorias en 28 partidos posibles contra adversarios de esa nacionalidad, lo que complica el panorama para Francia en la era Alcaraz en Roland Garros. A los 16 minutos de la final, el marcador ya reflejaba un 4-1 a favor del campeón. Alcaraz, quien cedió solo cinco puntos al servicio en todo el partido, incluso encontró tiempo para sonreír en la silla de cambios al leer un cartel en castellano que rezaba: 'tienes dos opciones: adóptame o firma aquí'.</p><h3>Frustración en la Pista y Récords Históricos</h3><p>La impotencia de Fils se hizo patente cuando, cediendo 3-0 en el segundo parcial, pagó su frustración con la raqueta. Aunque logró salvar el 'rosco' al anotarse el quinto juego, su rostro era un poema. Es cierto que Fils arrastra la excusa de haber jugado apenas cuatro torneos desde que se fracturó la vértebra L5 en la pasada edición de Roland Garros. Mientras tanto, Alcaraz sigue haciendo historia: sus 26 coronas antes de cumplir los 23 años le igualan a Mats Wilander en este selecto ranking, acercándose a leyendas como Björn Borg (46), Jimmy Connors (39) o Rafael Nadal (36) en el mismo rango de edad.</p><h3>Legado Español y Próximos Desafíos</h3><p>Con esta victoria, Alcaraz firma el póquer de españoles que han inscrito su nombre en el palmarés de Doha, siguiendo los pasos de Rafael Nadal (2014), David Ferrer (2015) y Roberto Bautista (2019 y 2022). Tras esta exhibición en Doha, el joven prodigio español tiene previsto pasar una semana en Murcia antes de viajar el próximo domingo a Indian Wells, donde buscará mantener su invicto este curso. Alcaraz se encuentra ahora a cinco victorias del récord de Federer y a ocho del de Nadal, consolidando su posición como una de las figuras más prometedoras y dominantes del tenis mundial.</p></div>
+    </div>
+    </body></html>
+    
