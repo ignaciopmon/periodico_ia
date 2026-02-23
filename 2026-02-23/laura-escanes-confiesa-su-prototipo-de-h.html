@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laura Escanes confiesa su prototipo de hombre: "Testosterónicos" y comunicadores</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Famosos</span>
+            <h1>Laura Escanes confiesa su prototipo de hombre: "Testosterónicos" y comunicadores</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">La popular influencer Laura Escanes ha revelado en el podcast ‘Moderneces’ que, aunque le atraen los hombres "testosterónicos", valora sobre todo la comunicación, algo que lamenta no haber encontrado con frecuencia.</p>
+        </header>
+        <img src="https://e01-xlk-ue-marca.uecdn.es/files/article_main_microformat/uploads/2026/02/22/699aff4368b9d.jpeg" class="article-img-full">
+        <div class="article-body"><h3>Laura Escanes, más allá de las redes: una confesión íntima</h3><p>Laura Escanes, una de las influencers más influyentes de España con más de dos millones de seguidores en Instagram, ha vuelto a ser el centro de atención. Sin embargo, esta vez no es por sus habituales publicaciones o colaboraciones, sino por una revelación personal y sincera sobre sus preferencias en el amor. La madrileña se ha abierto en el vídeopodcast ‘Moderneces’, conducido por Raquel Córcoles y Carlos Carrero en Movistar+, desvelando el prototipo de hombre que realmente le atrae.</p><h3>El dilema entre la atracción física y la conexión emocional</h3><p>Durante la entrevista, la presentadora Raquel Córcoles no dudó en ir al grano, preguntándole directamente: “¿Te gustan los tíos testosterónicos? ¿El clásico empotrador?”. La respuesta de Escanes, acompañada de una carcajada, fue contundente y sin tapujos: “No te voy a engañar, sí”. Esta afirmación, que podría parecer superficial, fue rápidamente matizada por la influencer, quien profundizó en lo que para ella es verdaderamente esencial en una relación.</p><h3>La comunicación, un pilar fundamental y escaso</h3><p>A pesar de la atracción inicial por un perfil más "testosterónico", Laura Escanes enfatizó la importancia crucial de la comunicación. “Pero luego para mí es muy importante, y eso lamentablemente, pues no es lo común, que sean muy comunicadores, ¿sabes?”, explicó. La influencer lamentó la dificultad de encontrar hombres con los que poder abordar los problemas de forma abierta y constructiva, sin que las preocupaciones se conviertan en un "drama" o una "pereza" para la otra persona. “Que haya un problema y vamos a hablarlo, y esto lo solucionamos juntos... yo no me he encontrado a muchísimos así”, concluyó, evidenciando una frustración común en las relaciones modernas.</p><h3>Reacciones en redes: entre la comprensión y la crítica</h3><p>Como es habitual con cada declaración de Laura Escanes, las redes sociales no tardaron en hacerse eco de sus palabras. Los usuarios reaccionaron con una mezcla de apoyo y crítica. Comentarios como “Yo también pensaba que no existían… pero sí que hay, y muchos. Pero hay que saberlos en qué entorno encontrarlos” mostraban empatía, mientras que otros, más escépticos o críticos, lanzaban frases como “Uff, qué pereza”, “Lo dice la que se lía con tíos que podrían ser su padre” o “Sin duda, Risto fue el amor de su vida”, haciendo alusión a sus relaciones pasadas. La conversación en línea demuestra el impacto constante de sus opiniones en la esfera pública.</p><h3>Un debate que va más allá de la influencer</h3><p>La confesión de Laura Escanes no solo genera debate sobre sus preferencias personales, sino que también pone de manifiesto una conversación más amplia sobre las expectativas y realidades en las relaciones de pareja. La búsqueda de un equilibrio entre la atracción física y la compatibilidad emocional, especialmente en lo que respecta a la comunicación, es un desafío que muchos enfrentan. Este tipo de declaraciones de figuras públicas como Escanes abren la puerta a reflexiones sobre los roles de género y las dinámicas interpersonales en la sociedad actual.</p></div>
+    </div>
+    </body></html>
+    

@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vox amenaza sorpasso al PP, Feijóo lucha por reunificación del centroderecha</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Nacional</span>
+            <h1>Vox amenaza sorpasso al PP, Feijóo lucha por reunificación del centroderecha</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">El PP enfrenta un desánimo sin precedentes ante la estrategia de "lepenización" de Vox, que busca el "sorpasso" y complica los esfuerzos de Alberto Núñez Feijóo por unificar el centroderecha español.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/21/17716957690036.png" class="article-img-full">
+        <div class="article-body"><h3>El Desafío Inédito de Feijóo ante el Ascenso de Vox</h3><p>Alberto Núñez Feijóo, líder del Partido Popular, se enfrenta a un escenario sin precedentes en la historia de su formación. Sus propias palabras, "No creo que ningún presidente del Partido Popular haya estado en una circunstancia como la que está el PP en este momento. Quizás la refundación de Aznar después de suceder a Fraga", revelan la magnitud de su empeño por lograr una mayoría de gobierno con un electorado de centroderecha fragmentado. Si bien en Galicia logró la reunificación, en el ámbito nacional, cuatro años después de su llegada a Madrid, la tarea se antoja mucho más ardua.</p><h3>La "Lepenización" de Vox y el Desánimo en el PP</h3><p>A diferencia de la efímera irrupción de Ciudadanos, el PP lidia ahora con un fenómeno como Vox, surgido de su propia base electoral más radical. La progresión de Vox, que algunos denominan "lepenización" con el objetivo de un "sorpasso" y alcanzar el 35%, es "aparentemente imparable en los sondeos", como se observa en Extremadura y Aragón. Este crecimiento está envenenando los sueños del PP, generando un profundo desánimo en sus sedes. "No paran de crecer... no hay nada que les desgaste, ni nada que les pase factura. Es increíble", lamentan internamente, comparando la situación con la zozobra del PSOE ante Podemos en 2015.</p><h3>Feijóo: La Estrategia del "Siempre Ganador" frente a la Irresponsabilidad</h3><p>Frente a este estado de ánimo descorazonador, Feijóo se aferra a su historial de victorias. Fuentes de la dirección del PP destacan que "la diferencia con otros presidentes del PP es que Feijóo siempre ha ganado". Acusan al PSOE y a la izquierda de alimentar artificialmente a Vox, mientras el PP se ve obligado a "navegar entre la irresponsabilidad de Sánchez y la irresponsabilidad de Vox". Este último, según el PP, "únicamente trabaja para destruir y que no quiere implicarse en la gestión de Gobierno" por temor a perder apoyo.</p><h3>La Soledad del Equipo de Feijóo ante un Competidor Antisistema</h3><p>El equipo de colaboradores de Feijóo comparte este sentimiento de desafío, considerándose "solos" en la lucha contra un "competidor antisistema" por primera vez desde la fundación del PP. Perciben un entorno mediático y sociológico que "resta valor" a sus logros, como las victorias en Extremadura (43% de votos) y Aragón (34%), que paradójicamente son interpretadas como fracasos. La incertidumbre sobre la gobernabilidad en estas autonomías, donde Vox no muestra preocupación por facilitar la investidura, agrava la situación.</p><h3>Vox como "15-M de Derechas": ¿Venganza o Gestión?</h3><p>Miembros de la dirección del PP analizan la postura de Vox, señalando que "Vox está en el diván del psicoanalista, ahora mismo es un partido antisistema". Creen que si gobiernan con el PP, perderán su narrativa contra el bipartidismo. El equipo de Feijóo, por su parte, resalta que un sector de la población busca "venganza, no victoria" contra Sánchez, y es ahí donde Vox, comparado con un "15-M de derechas", canaliza esa ira. El PP, en cambio, elige confrontar al PSOE en la gestión, buscando atraer votos del centroizquierda desencantado con Sánchez tras la amnistía y la corrupción, una estrategia de la que no piensan moverse.</p></div>
+    </div>
+    </body></html>
+    

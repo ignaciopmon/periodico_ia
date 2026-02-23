@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presos políticos en huelga de hambre masiva por ley de amnistía "chucuta"</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap');
+
+:root { --black: #111; --accent: #b91c1c; --bg: #fdfbf7; --border: #d1d5db; --opinia-bg: #1a1a1a; --opinia-text: #f0f0f0; }
+
+body { font-family: 'Libre Baskerville', serif; background-color: var(--bg); color: var(--black); margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+
+/* HEADER */
+header { border-bottom: 1px solid var(--black); padding: 20px 0; text-align: center; background: white; }
+.brand { font-family: 'Cinzel', serif; font-size: 4rem; text-transform: uppercase; margin: 0; letter-spacing: -1px; line-height: 1; }
+.meta-bar { border-top: 1px solid var(--black); border-bottom: 4px double var(--black); max-width: 1200px; margin: 15px auto 0; padding: 10px 0; display: flex; justify-content: space-between; font-family: 'Roboto', sans-serif; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; padding-left: 20px; padding-right: 20px;}
+
+/* NAV HEMEROTECA */
+.nav-wrapper { background: #f4f4f4; padding: 10px 0; text-align: center; border-bottom: 1px solid #ddd; }
+.nav-wrapper select { padding: 8px; font-family: 'Roboto', sans-serif; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* GRID LAYOUT */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+
+/* HERO */
+.card-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; border-bottom: 3px solid var(--black); padding-bottom: 40px; margin-bottom: 20px; }
+.card-hero img { width: 100%; height: 500px; object-fit: cover; border-radius: 2px; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; }
+.hero-content h2 { font-size: 3rem; line-height: 1.05; margin: 10px 0 20px 0; letter-spacing: -0.5px; }
+.hero-content .bajada { font-size: 1.25rem; color: #444; margin-bottom: 25px; line-height: 1.4; }
+
+/* CARDS */
+.card { display: flex; flex-direction: column; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+.card img { width: 100%; height: 240px; object-fit: cover; margin-bottom: 15px; filter: contrast(1.05); }
+.card h2 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+.tag { font-family: 'Roboto', sans-serif; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; display: inline-block; margin-bottom: 5px; }
+.leer-mas { font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 0.85rem; text-decoration: underline; margin-top: auto; padding-top: 15px; display: block; }
+
+/* SECCIÓN OpinIA */
+.opinia-section {
+    background-color: var(--opinia-bg);
+    color: var(--opinia-text);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-top: 10px solid var(--accent);
+}
+.opinia-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
+.opinia-brand { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--accent); border-bottom: 2px solid #444; padding-bottom: 20px; margin-bottom: 20px; }
+.opinia-meta { font-family: 'Roboto', sans-serif; color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 30px; }
+.opinia-content h2 { font-family: 'Libre Baskerville', serif; font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; color: white; }
+.opinia-body { font-size: 1.2rem; line-height: 1.8; color: #ddd; font-family: 'Georgia', serif; }
+.opinia-body p { margin-bottom: 20px; }
+.opinia-firma { text-align: right; font-style: italic; margin-top: 30px; font-weight: bold; color: var(--accent); }
+
+/* ARTÍCULO INDIVIDUAL */
+.article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.article-header h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+.article-img-full { width: 100%; height: auto; margin: 30px 0; max-height: 600px; object-fit: cover; }
+.article-body { font-size: 1.25rem; line-height: 1.8; color: #111; }
+.back-btn { display: inline-block; margin: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; padding: 10px 20px; background: #eee; border-radius: 4px; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+    .card-hero { grid-template-columns: 1fr; }
+    .card-hero img { order: -1; height: 350px; }
+    .opinia-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .brand { font-size: 2.5rem; }
+    .container { grid-template-columns: 1fr; gap: 30px; }
+    .meta-bar { flex-direction: column; text-align: center; gap: 5px; }
+    .card h2 { font-size: 1.4rem; }
+    .card-hero h2 { font-size: 2rem; }
+    .opinia-section { padding: 40px 20px; }
+    .opinia-content h2 { font-size: 1.8rem; }
+    .article-header h1 { font-size: 2.2rem; }
+    .article-body { font-size: 1.1rem; }
+}
+</style></head><body>
+    <a href="../index.html" class="back-btn">← PORTADA</a>
+    <div class="article-container">
+        <header class="article-header">
+            <span class="tag" style="display:block; text-align:center;">Internacional</span>
+            <h1>Presos políticos en huelga de hambre masiva por ley de amnistía "chucuta"</h1>
+            <p style="text-align:center; font-style:italic; color:#555; font-size:1.2rem;">Más de 200 presos políticos, incluidos militares y extranjeros, se declaran en huelga de hambre en la peor cárcel de América Latina, El Rodeo 1, exigiendo liberaciones inmediatas ante la deficiente Ley de Amnistía y la lentitud gubernamental.</p>
+        </header>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2026/02/22/17717844415146.jpg" class="article-img-full">
+        <div class="article-body"><h3>Huelga de hambre masiva en el "infierno en la tierra"</h3><p>Más de 200 presos políticos se han declarado en huelga de hambre en El Rodeo 1, considerada la peor cárcel de América Latina, en protesta por la "chucuta" (parcial, incompleta y deficiente) Ley de Amnistía y la lentitud de las autoridades en cumplir con los compromisos de liberación del Gobierno. Muchos militares, que se saben excluidos de la ley forzada por Washington, y extranjeros encabezan esta protesta en lo que expertos en derechos humanos denominan "el infierno en la tierra". Informaciones recogidas por familiares elevan a 213 los presos en huelga desde el viernes, 81 de ellos sin comida ni agua, incluyendo al gendarme argentino Nahuel Gallo.</p><p>Entre los huelguistas se encuentran dos de los seis presos políticos hispanovenezolanos que aún no han recuperado la libertad. Se trata del estudiante Fernando Noya, de 33 años, cuñado del capitán Antonio Sequea y detenido en 2020 durante la fallida Operación Gedeón, quien sufre ataques de ansiedad desde la semana pasada, según confirmó su hermana. También resiste el empresario Uaiparu Guerere, de 70 años, en prisión desde 2023, víctima de la maquinaria extorsiva de la DGCIM. Guerere, quien regresó a Venezuela para vender sus empresas, fue retenido y acusado falsamente de conspiración, y por su edad debería estar bajo arresto domiciliario.</p><h3>Clamor por libertad y apoyo médico</h3><p>La principal demanda de los manifestantes es la liberación inmediata de personas mayores y de sus familiares. "No voy a desistir, varios están graves. Necesitamos apoyo médico y que avisen a la Cruz Roja y al cardenal Baltazar Porras", transmitió el capitán Sequea, conocido por liberar a Leopoldo López en 2019, a su familia. Juan Pablo Guanipa, número dos de la Plataforma Unitaria, quien recuperó su libertad tras la aprobación de la Ley de Amnistía, reaccionó exigiendo "la libertad plena, inmediata e incondicional de todos los presos políticos civiles y militares" y alertó sobre el "precario estado de salud de la gran mayoría de los presos de conciencia" en El Rodeo 1.</p><h3>La "chucuta" Ley de Amnistía deja a muchos atrás</h3><p>La Ley de Amnistía, con sus propias "trampas", no garantiza la libertad para todos, ya que excluye a quienes hayan participado en rebeliones u operaciones para provocar un golpe de Estado o un cambio de Gobierno. Esta limitación afecta a un grupo de hispanovenezolanos que aún sueñan con la libertad.</p><p>Entre ellos se encuentra Jorge Alayeto, de 53 años, el preso extranjero de doble nacionalidad que lleva más tiempo entre rejas, desde 2017. Permanece en el penal de Tocuyito, acusado falsamente de financiar la Operación David, por haber hospedado, sin saberlo, a uno de sus participantes. Desde 2018, Ángela Expósito, de 60 años, profesora universitaria jubilada y directora de Fundanimal, también está encarcelada. Su "pecado" fue proteger a las mascotas de Óscar Pérez, el policía rebelde ejecutado en 2018. Fue sentenciada por terrorismo en la causa del supuesto atentado de los drones contra Nicolás Maduro en 2018, lo que pone en duda su liberación.</p><p>María Auxiliadora Delgado Taborsky, de 51 años, y Karen Hernández, de 39, aguardan la libertad en las cárceles del INOF y Las Crisálidas, respectivamente. Osman Delgado, padre de María Auxiliadora, desvela que su hija "está muy angustiada y desesperada, ya no aguanta más la espera tras siete años". Condenada a 30 años por el caso de los drones, el verdadero objetivo de la DGCIM era su hermano, militar en el exilio. Por su parte, Karen Hernández, socióloga, fue condenada a 30 años por ser la compañera sentimental de otro de los acusados de la Operación Gedeón.</p><h3>Liberaciones parciales y el plan represivo</h3><p>Desde el 8 de enero, cuando Washington forzó la puesta en marcha de liberaciones y la posterior aprobación de la Ley de Amnistía, 10 ciudadanos hispanovenezolanos y cuatro nacidos en España recuperaron la libertad. Todos ellos fueron capturados entre 2024 y 2025, en un periodo electoral y tras el "megafraude" del 28 de julio, en el marco de un plan represivo que la Comisión Interamericana de Derechos Humanos ha calificado como "terrorismo de Estado".</p></div>
+    </div>
+    </body></html>
+    
